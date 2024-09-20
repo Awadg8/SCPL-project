@@ -74,7 +74,7 @@ function Products() {
           </div>
 
           {/* Product 1 start here */}
-          <div id="red-chillies" className="section-padding pad-bot-50">
+          <div id="red-chillies" className="section-padding">
             <div className="row align-items-center">
               <p
                 style={{ fontSize: "15px", marginBottom: "25px" }}
@@ -149,7 +149,7 @@ function Products() {
           {/* Product 1 ends here */}
 
           {/* Product 2 starts here */}
-          <div id="groundnuts" className="section-padding pad-bot-50">
+          <div id="groundnuts" className="section-padding">
             <div className="row align-items-center">
               <div
                 className="col-lg-6 col-md-12"
@@ -218,7 +218,7 @@ function Products() {
           {/* Product 2 ends here */}
 
           {/* Product 3 start here */}
-          <div id="sesame-seeds" className="section-padding pad-bot-50">
+          <div id="sesame-seeds" className="section-padding">
             <div className="row align-items-center">
               <div
                 className="col-lg-6"
@@ -275,7 +275,7 @@ function Products() {
           {/* Product 3 ends here */}
 
           {/* Product 4 starts here */}
-          <div id="cumin-seeds" className="section-padding pad-bot-50">
+          <div id="cumin-seeds" className="section-padding">
             <div className="row align-items-center">
               <div
                 className="col-lg-6 col-md-12"
@@ -331,7 +331,7 @@ function Products() {
           {/* Product 4 ends here */}
 
           {/* Product 5 start here */}
-          <div id="coriander-seeds" className="section-padding pad-bot-50">
+          <div id="coriander-seeds" className="section-padding">
             <div className="row align-items-center mb-30">
               <div
                 className="col-lg-6"
@@ -385,7 +385,7 @@ function Products() {
           {/* Product 5 ends here */}
 
           {/* Product 6 starts here */}
-          <div id="chickpeas" className="section-padding pad-bot-50">
+          <div id="chickpeas" className="section-padding">
             <div className="row align-items-center">
               <div
                 className="col-lg-6 col-md-12"
@@ -440,7 +440,7 @@ function Products() {
           {/* Product 6 ends here */}
 
           {/* Product 7 start here */}
-          <div id="fennel-seeds" className="section-padding pad-bot-50">
+          <div id="fennel-seeds" className="section-padding">
             <div className="row align-items-center mb-30">
               <div
                 className="col-lg-6"
@@ -497,7 +497,7 @@ function Products() {
           {/* Product 7 ends here */}
 
           {/* Product 8 starts here */}
-          <div id="fenugreek-seeds" className="section-padding pad-bot-50">
+          <div id="fenugreek-seeds" className="section-padding">
             <div className="row align-items-center">
               <div
                 className="col-lg-6 col-md-12"
@@ -551,7 +551,7 @@ function Products() {
           {/* Product 8 ends here */}
 
           {/* Product 9 start here */}
-          <div id="basil-seeds" className="section-padding pad-bot-50">
+          <div id="basil-seeds" className="section-padding">
             <div className="row align-items-center mb-30">
               <div
                 className="col-lg-6"
@@ -605,7 +605,7 @@ function Products() {
           {/* Product 9 ends here */}
 
           {/* Product 10 start here */}
-          <div id="raisin" className="section-padding pad-bot-50">
+          <div id="raisin" className="section-padding">
             <div className="row align-items-center">
               <div
                 className="col-lg-6 col-md-12"
@@ -660,7 +660,7 @@ function Products() {
           {/* Product 10 ends here */}
 
           {/* Product 11 start here */}
-          <div id="turmeric" className="section-padding pad-bot-50">
+          <div id="turmeric" className="section-padding">
             <div className="row align-items-center mb-30">
               <div
                 className="col-lg-6"
