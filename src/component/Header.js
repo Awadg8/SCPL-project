@@ -288,13 +288,30 @@ function Header() {
 
                                   <li>
                                     <a
+                                      href="/about/awards"
+                                      className=""
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToAnchor(
+                                          "/about",
+                                          "awards",
+                                          navigate
+                                        );
+                                      }}
+                                    >
+                                      Awards
+                                    </a>
+                                  </li>
+
+                                  <li>
+                                    <a
                                       href="/about/certificates"
                                       className=""
                                       onClick={(e) => {
                                         e.preventDefault();
                                         scrollToAnchor(
                                           "/about",
-                                          "team",
+                                          "certificates",
                                           navigate
                                         );
                                       }}

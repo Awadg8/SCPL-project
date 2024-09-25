@@ -36,7 +36,7 @@ function Products() {
   return (
     <div id="product" className="">
       {/* Breadcrumb starts here */}
-      <div className="breadcroumb-area bread-bg">
+      <div className="breadcroumb-area breadcroumb-area-product bread-bg">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -113,7 +113,7 @@ function Products() {
                 data-aos-duration="2000"
               >
                 <div className="tab-content-inner">
-                  <div className="text mb-30">
+                  <div className="text">
                     <h1
                       style={{
                         color: "#b88124",
@@ -332,7 +332,7 @@ function Products() {
 
           {/* Product 5 start here */}
           <div id="coriander-seeds" className="section-padding">
-            <div className="row align-items-center mb-30">
+            <div className="row align-items-center">
               <div
                 className="col-lg-6"
                 data-aos="zoom-in-right"
@@ -441,7 +441,7 @@ function Products() {
 
           {/* Product 7 start here */}
           <div id="fennel-seeds" className="section-padding">
-            <div className="row align-items-center mb-30">
+            <div className="row align-items-center">
               <div
                 className="col-lg-6"
                 data-aos="zoom-in-right"
@@ -552,7 +552,7 @@ function Products() {
 
           {/* Product 9 start here */}
           <div id="basil-seeds" className="section-padding">
-            <div className="row align-items-center mb-30">
+            <div className="row align-items-center ">
               <div
                 className="col-lg-6"
                 data-aos="zoom-in-right"
@@ -661,7 +661,7 @@ function Products() {
 
           {/* Product 11 start here */}
           <div id="turmeric" className="section-padding">
-            <div className="row align-items-center mb-30">
+            <div className="row align-items-center">
               <div
                 className="col-lg-6"
                 data-aos="zoom-in-right"

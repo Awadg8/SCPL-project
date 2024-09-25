@@ -17,7 +17,7 @@ function Career() {
   return (
     <div id="career" className="">
       {/* Breadcrumb starts here */}
-      <div className="breadcroumb-area bread-bg">
+      <div className="breadcroumb-area breadcroumb-area-career bread-bg">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">

@@ -27,7 +27,7 @@ function Contact() {
   return (
     <div id="contact-us" className="">
       {/* Breadcrumb starts here */}
-      <div className="breadcroumb-area bread-bg">
+      <div className="breadcroumb-area breadcroumb-area-contact bread-bg">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -50,10 +50,16 @@ function Contact() {
       <div id="contact" className="section-padding">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-md-6 col-12" data-aos="zoom-in-right">
+            <div
+              className="col-lg-6 col-md-6 col-12"
+              data-aos="zoom-in-right"
+              data-aos-duration="2000"
+            >
               <div className="contact-info">
                 <div className="section-title">
-                  <h6 style={{ fontSize: "22px", marginLeft:"0px" }}>Contact Us</h6>
+                  <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
+                    Contact Us
+                  </h6>
 
                   <h2>
                     Get in <b>Touch</b>
@@ -358,7 +364,11 @@ function Contact() {
               </div>
             </div>
 
-            <div className="col-lg-6 col-md-6 col-12" data-aos="zoom-in-left">
+            <div
+              className="col-lg-6 col-md-6 col-12"
+              data-aos="zoom-in-left"
+              data-aos-duration="2000"
+            >
               <div className="contact-form">
                 <form action="index.html">
                   <div className="row">
@@ -400,263 +410,6 @@ function Contact() {
           </div>
         </div>
       </div>
-
-      {/* <div className="section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <h3 className="bottom-0">Address</h3>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-xl-12 ">
-              <div className="tabs horizontal-tabs r-tabs">
-                <ul className="horizontal-tabs__header r-tabs-nav">
-                  <li
-                    className={`r-tabs-tab ${
-                      activeTab === "yard-1"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    onClick={() => handleTabClick("yard-1")}
-                  >
-                    <a href="#yard-1v" className="r-tabs-anchor">
-                      <span>1</span>
-                    </a>
-                  </li>
-
-                  <li
-                    className={`r-tabs-tab ${
-                      activeTab === "yard-2"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    onClick={() => handleTabClick("yard-2")}
-                  >
-                    <a href="#yard-2v" className="r-tabs-anchor">
-                      <span>2</span>
-                    </a>
-                  </li>
-
-                  <li
-                    className={`r-tabs-tab ${
-                      activeTab === "yard-3"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    onClick={() => handleTabClick("yard-3")}
-                  >
-                    <a href="#yard-3v" className="r-tabs-anchor">
-                      <span>3</span>
-                    </a>
-                  </li>
-
-                  <li
-                    className={`r-tabs-tab ${
-                      activeTab === "yard-4"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    onClick={() => handleTabClick("yard-4")}
-                  >
-                    <a href="#icd-morbiv" className="r-tabs-anchor">
-                      <span>4</span>
-                    </a>
-                  </li>
-
-                  <li
-                    className={`r-tabs-tab ${
-                      activeTab === "yard-5"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    onClick={() => handleTabClick("yard-5")}
-                  >
-                    <a href="#yard-5" className="r-tabs-anchor">
-                      <span>5</span>
-                    </a>
-                  </li>
-                </ul>
-
-                <div className="horizontal-tabs__content">
-                  <div
-                    className={`horizontal-tabs__item r-tabs-panel ${
-                      activeTab === "yard-1"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    id="yard-1"
-                    style={{
-                      display: activeTab === "yard-1" ? "block" : "none",
-                    }}
-                  >
-                    <div className="col-md-12">
-                      <h5 className="contacts__title">NAVKAR CFS 1</h5>
-
-                      <div className="contacts-item">
-                        <div className="contacts-item__img">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512"
-                            style={{ width: "60px", heigth: "60px" }}
-                          >
-                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                          </svg>
-                        </div>
-
-                        <div className="contacts-item__details">
-                          <span>
-                            2ND FLOOR, 205-206, J.K. CHAMBER, SECTOR-17, VASHI,
-                            NAVI MUMBAI, THANE, MAHARASHTRA, 400703
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`horizontal-tabs__item r-tabs-panel ${
-                      activeTab === "yard-2"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    id="yard-2"
-                    style={{
-                      display: activeTab === "yard-2" ? "block" : "none",
-                    }}
-                  >
-                    <div className="col-md-12 top-50 top-md-0">
-                      <h5 className="contacts__title">NAVKAR CFS 2</h5>
-
-                      <div className="contacts-item">
-                        <div className="contacts-item__img">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512"
-                          >
-                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                          </svg>
-                        </div>
-
-                        <div className="contacts-item__details">
-                          <span>
-                            D.NO.113-131, NEAR SAKSHI NEWS PAPER OFFICE, NH.16,
-                            ANKIREDDIPALEM VILLAGE, GUNTUR, GUNTUR, ANDHRA
-                            PRADESH - 522005
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`horizontal-tabs__item r-tabs-panel ${
-                      activeTab === "yard-3"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    id="yard-3"
-                    style={{
-                      display: activeTab === "yard-3" ? "block" : "none",
-                    }}
-                  >
-                    <div className="col-md-12">
-                      <h5 className="contacts__title">NAVKAR CFS 3</h5>
-
-                      <div className="contacts-item">
-                        <div className="contacts-item__img">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512"
-                          >
-                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                          </svg>
-                        </div>
-
-                        <div className="contacts-item__details">
-                          <span>
-                            DOOR NO 4-5-104, MIRCHI MARKET ROAD,BIJJALAVARI
-                            STREET, KHAMMAM, KHAMMAM, TELANGANA
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`horizontal-tabs__item r-tabs-panel ${
-                      activeTab === "yard-4"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    id="icd-morbi"
-                    style={{
-                      display: activeTab === "yard-4" ? "block" : "none",
-                    }}
-                  >
-                    <div className="col-md-12 top-50 top-md-0">
-                      <h5 className="contacts__title">ICD Morbi</h5>
-
-                      <div className="contacts-item">
-                        <div className="contacts-item__img">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512"
-                          >
-                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                          </svg>
-                        </div>
-
-                        <div className="contacts-item__details">
-                          <span>
-                            SURVEY NO 216, RAMPARA -2, PIPAVAV PORT ROAD, TAL.
-                            -RAJULA, DIST. AMRELI , 365560, GUJARAT
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`horizontal-tabs__item r-tabs-panel ${
-                      activeTab === "yard-5"
-                        ? "r-tabs-state-active"
-                        : "r-tabs-state-default"
-                    }`}
-                    id="icd-morbi"
-                    style={{
-                      display: activeTab === "yard-5" ? "block" : "none",
-                    }}
-                  >
-                    <div className="col-md-12 top-50 top-md-0">
-                      <h5 className="contacts__title">ICD Morbi</h5>
-
-                      <div className="contacts-item">
-                        <div className="contacts-item__img">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 384 512"
-                          >
-                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-                          </svg>
-                        </div>
-
-                        <div className="contacts-item__details">
-                          <span>
-                            SURVEY NO 85/1 SOTHUPAKKAM ROAD,THEERTHAKRIAMPET,
-                            REDHILLS, CHENNAI, 600052
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* Contact us ends here */}
 

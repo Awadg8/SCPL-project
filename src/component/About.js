@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import "animate.css"; // For animations
+import Slider from "react-slick"; //For slider
 
 // import aboutImg from "../assets/img/about/about.png";
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
@@ -27,10 +28,42 @@ function About() {
     }, 0);
   };
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+    ],
+  };
+
   return (
     <div id="about" className="">
       {/* Breadcrumb area start here */}
-      <div className="breadcroumb-area bread-bg">
+      <div className="breadcroumb-area breadcroumb-area-about bread-bg">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -383,16 +416,16 @@ function About() {
         </div>
       </div> */}
 
-      <div id="vision" class="vision-area section-padding theme-2 parallax">
-        <div class="container">
-          <div class="row parallax-content">
+      <div id="vision" className="vision-area section-padding theme-2 parallax">
+        <div className="container">
+          <div className="row parallax-content">
             <div
-              class="col-sm-6 col-lg-6"
+              className="col-sm-6 col-lg-6"
               data-aos="zoom-in-right"
               data-aos-duration="2000"
             >
-              <div class="icon-item">
-                <div class="icon-item__img">
+              <div className="icon-item">
+                <div className="icon-item__img">
                   <GoGoal
                     style={{
                       width: "100px",
@@ -402,12 +435,12 @@ function About() {
                   />
                 </div>
 
-                <h5 class="icon-item__title" style={{ color: "white" }}>
+                <h5 className="icon-item__title" style={{ color: "white" }}>
                   Our Vision
                 </h5>
 
                 <p
-                  class="icon-item__text"
+                  className="icon-item__text"
                   style={{
                     color: "white",
                     fontSize: "15px",
@@ -424,12 +457,12 @@ function About() {
             </div>
 
             <div
-              class="col-sm-6 col-lg-6"
+              className="col-sm-6 col-lg-6"
               data-aos="zoom-in-left"
               data-aos-duration="2000"
             >
-              <div class="icon-item">
-                <div class="icon-item__img">
+              <div className="icon-item">
+                <div className="icon-item__img">
                   <GoRocket
                     style={{
                       width: "100px",
@@ -439,12 +472,12 @@ function About() {
                   />
                 </div>
 
-                <h5 class="icon-item__title" style={{ color: "white" }}>
+                <h5 className="icon-item__title" style={{ color: "white" }}>
                   Our Mission
                 </h5>
 
                 <p
-                  class="icon-item__text"
+                  className="icon-item__text"
                   style={{
                     color: "white",
                     fontSize: "15px",
@@ -1040,6 +1073,351 @@ function About() {
         </div>
       </div>
       {/* Team area ends here */}
+
+      {/* Awards area starts here */}
+      <div id="awards" className="awards-area gray-bg section-padding">
+        <div className="container">
+          <div
+            className="row justify-content-center"
+            data-aos="zoom-in-down"
+            data-aos-duration="2000"
+          >
+            <div className="col-lg-12">
+              <div className="section-title text-center">
+                <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
+                  Our Awards
+                </h6>
+
+                <h2>
+                  Recognition<b></b>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <Slider {...settings}>
+            <div className="elements">
+              <h3>2006-07</h3>
+
+              <div className="heading mt-10">
+                {/* <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="25px"
+                  height="25px"
+                  style={{ marginRight: "15px" }}
+                >
+                  <path
+                    fill="#017d3f"
+                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  />
+                </svg> */}
+
+                <p className="mb-10">
+                  Highest Chilies Exporter -<b>Spices Board</b>.
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  Certificate of Commendation -<b>AMC Guntur</b>.
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2009-10</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  1st Place in Excellence in Export of Groundnuts -{" "}
+                  <b>IOPEPC</b>.
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2010-11 </h3>
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  Silver Trophy Outstanding Performance in Export of Groundnuts
+                  -<b>APEDA</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  2nd Place in Excellence in Export of Groundnuts -{" "}
+                  <b>IOPEPC</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">
+                  Certificate of Merit - <b>Spices Board</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2011-12 </h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  Golden Trophy Outstanding Performance in Export of Groundnuts
+                  - <b>APEDA</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  2nd Place in Excellence in Export of Groundnuts -<b>IOPEPC</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">
+                  Certificate of Merit - <b>Spices Board</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2012-13</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  1st Place in Excellence in Export of Groundnuts -<b>IOPEPC</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  Silver Trophy Outstanding Performance in Export of Groundnuts
+                  - <b>APEDA</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2013-14 </h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  Silver Trophy Outstanding Performance in Export of Groundnuts
+                  - <b>APEDA</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  2nd Place in Excellence in Export of Groundnuts -<b>IOPEPC</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">
+                  Certificate of Merit - <b>Spices Board</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2014-15</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  Golden Trophy Top Most Exporter of Spices-<b>Spices Board</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">
+                  Silver Trophy Outstanding Performance in Export of Groundnuts
+                  - <b>APEDA</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2015-16</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  Silver Trophy Top Most Exporter of Spices-<b>Spices Board</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">
+                  Silver Trophy Outstanding Performance in Export of Groundnuts
+                  - <b>APEDA</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2016-17</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  Western Region Export Excellence (Three Star Export House)-
+                  <b>FIEO</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">
+                  Silver Trophy Top Most Exporter of spices- <b>Spices Board</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2018-19</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  2nd Top most exporter of spices and Spice Products during year
+                  <b> 2018-19</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">
+                  Top Most Exporter of chilles during <b>2018-19</b>
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>2019-20</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-0">
+                  3rd Top most exporter of spices and Spice Products during
+                  <b> 2019-20</b>
+                </p>
+              </div>
+            </div>
+          </Slider>
+
+          <div className="full-form mt-40">
+            <p>
+              * 1. IOPEPC - Indian Oilseeds and Produce Export Promotion
+              Council.
+            </p>
+
+            <p>
+              &nbsp; 2. APEDA - Agricultural and Processed Food Products Export
+              Development Authority.
+            </p>
+
+            <p>&nbsp; 3. FIEO Federation of Indian Export Organizations.</p>
+          </div>
+          {/* 
+          <div>
+            <p>
+              The Company is consistently leading the industry in Red Chilles
+              and Groundnuts in the last two decades. We bagged lots of awards
+              for top positions by APEDA, Spices Board, FIEO, and IOPEPC.
+              Further, the Company has filed nominations: -
+            </p>
+            <p>
+              FIEO Awards for Year 2020-21 & 2021-22 For mentioned below
+              Category -
+            </p>{" "}
+            <p>
+              1) Highest Foreign Exchange Earner-Western Region from Non MSME
+            </p>{" "}
+            <p>2) Three Star Export House Category from Non MSME</p> 3){" "}
+            <p>
+              Highest Foreign Exchange Earner- Maharashtra State from Non MSME.
+            </p>
+            <p>
+              {" "}
+              "Spice Board has been Short listed us for following of Export
+              Trophy/Award categories for the year 2020-21
+            </p>{" "}
+            <p>
+              "Outstanding Performance in Export of Groundnuts" for the year
+              2019-20 & 2020-21 with the APEDA.
+            </p>
+            <p> 1) Trophy for TOP MOST EXPORTER of Spices & Spice Products.</p>
+            <p> 2) Award for TOP MOST EXPORTER of chilies.</p>
+          </div> */}
+        </div>
+      </div>
+      {/* Awards areas ends here */}
+
+      {/* Certificates area starts here */}
+      <div
+        id="certificates"
+        className="certificates-area gray-bg section-padding"
+      >
+        <div className="container">
+          <div
+            className="row justify-content-center"
+            data-aos="zoom-in-down"
+            data-aos-duration="2000"
+          >
+            <div className="col-lg-12">
+              <div className="section-title text-center">
+                <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
+                  Our Certificates
+                </h6>
+
+                <h2>
+                  Dedicated <b>Team</b>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="zoom-in-right"
+              data-aos-duration="2000"
+            >
+              <div className="single-team-member">
+                <div className="team-member-bg certificate-img-1"></div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="zoom-in-up"
+              data-aos-duration="2000"
+            >
+              <div className="single-team-member">
+                <div className="team-member-bg certificate-img-2"></div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="zoom-in-down"
+              data-aos-duration="2000"
+            >
+              <div className="single-team-member">
+                <div className="team-member-bg certificate-img-3"></div>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-3 col-md-6"
+              data-aos="zoom-in-left"
+              data-aos-duration="2000"
+            >
+              <div className="single-team-member">
+                <div className="team-member-bg certificate-img-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Certificates area ends here */}
 
       {/* Progress wrap start here  */}
       <div
