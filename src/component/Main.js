@@ -294,7 +294,7 @@ function Main() {
           <div className="row align-items-center">
             <div
               className="col-lg-6"
-              data-aos="zoom-in-right"
+              data-aos="fade-right"
               data-aos-duration="2000"
             >
               <div className="about-content-area">
@@ -315,7 +315,7 @@ function Main() {
 
             <div
               className="col-lg-6 col-md-12"
-              data-aos="zoom-in-left"
+              data-aos="fade-left"
               data-aos-duration="2000"
             >
               <div className="tab-content-inner mt-20">
@@ -350,7 +350,7 @@ function Main() {
           <div className="row align-items-center">
             <div
               className="col-lg-12"
-              data-aos="zoom-in-up"
+              data-aos="fade-up"
               data-aos-duration="2000"
             >
               <div className="tab-content-inner">
