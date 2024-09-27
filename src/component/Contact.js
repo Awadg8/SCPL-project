@@ -47,7 +47,7 @@ function Contact() {
       {/* Breadcrumb ends here */}
 
       {/* Contact us starts here */}
-      <div id="contact" className="section-padding">
+      <div id="contact" className="contact-area section-padding">
         <div className="container">
           <div className="row">
             <div

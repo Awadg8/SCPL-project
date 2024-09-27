@@ -283,7 +283,7 @@ function Footer() {
           <div className="row justify-content-center align-items-center">
             <div className="col-lg-6 col-md-6 col-sm-12">
               <p className="copyright-line text-left">
-                © 2024 Agoora. All rights reserved.
+                © 2024 Sidhhartha Corporation Pvt. Ltd. All rights reserved.
               </p>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12">

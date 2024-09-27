@@ -804,6 +804,11 @@ textarea:focus::-webkit-input-placeholder {
 /* Main Menu 
 ============== */
 
+.header-area .main-menu .navbar-nav .nav-link:hover {
+  color: #fcdb5a;
+  transition: all 0.3s ease-in-out;
+}
+
 .header-area .navigation {
   padding: 0px 30px;
   background: #fff;
@@ -1061,13 +1066,14 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .info-bg.bg-cover {
-  height: 282px;
+  height: 320px;
   background-position: top center;
   border-radius: 5px 0 0 5px;
 }
 
 .info-content {
   padding: 35px;
+  /* padding-bottom: 0; */
   border-left: 10px solid #fcdb5a;
   height: 100%;
 }
@@ -1868,6 +1874,10 @@ p.privacy {
 /* About Section # 02
 ============== */
 
+.about-area {
+  overflow: hidden;
+}
+
 .about-certify {
   background: #fcdb5a;
   padding: 25px;
@@ -1887,7 +1897,108 @@ p.privacy {
   margin: 20px 0;
 }
 
+.card {
+  position: relative;
+  /* width: 250px; */
+  height: 350px;
+  /* color: #2e2d31; */
+  /* background: #131313; */
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  margin-bottom: 30px;
+}
+
+.temporary_text {
+  font-weight: bold;
+  font-size: 24px;
+  /* padding: 6px 12px; */
+  color: #f8f8f8;
+}
+
+.card_title {
+  font-weight: bold;
+}
+
+.card_content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: #f2f2f2;
+  border-top-left-radius: 20px;
+  transition: transform 0.25s;
+}
+
+.card1 {
+  transform: translateY(150px);
+}
+
+.card2 {
+  transform: translateY(95px);
+}
+
+.card3 {
+  transform: translateY(125px);
+}
+
+.card4 {
+  transform: translateY(95px);
+}
+
+.card_content::before {
+  content: "";
+  position: absolute;
+  top: -47px;
+  right: -45px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(-175deg);
+  border-radius: 50%;
+  box-shadow: inset 48px 48px #f2f2f2;
+}
+
+.card_title {
+  color: #dc4628;
+  line-height: 15px;
+  margin-bottom: 15px;
+}
+
+.card_subtitle {
+  display: block;
+  font-size: 12px;
+}
+
+.card_description {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  margin-bottom: 0;
+}
+
+.card:hover .card_content {
+  transform: translateY(0);
+}
+
+.card:hover .card_description {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
 /* Vision & Mission  */
+
+.vision-area {
+  overflow: hidden;
+}
+
+.facility-area {
+  overflow: hidden;
+}
+
+.coreValues-area {
+  overflow: hidden;
+}
 
 .parallax {
   position: relative;
@@ -1911,7 +2022,6 @@ p.privacy {
   z-index: 2;
   color: white;
 }
-
 
 /* Core Values Section */
 
@@ -2116,6 +2226,10 @@ p.privacy {
 
 /* Team Section 
 ============== */
+
+.team-area {
+  overflow: hidden;
+}
 
 .team-member-bg {
   background-size: cover;
@@ -2326,9 +2440,14 @@ ul.team-social li a {
 #contact button.main-btn {
   border: none;
   width: 200px;
+  margin-bottom: 20px;
 }
 
 /* Career page css */
+
+.career-area {
+  overflow: hidden;
+}
 
 .heading__pre-title {
   display: inline-block;
@@ -2510,6 +2629,10 @@ a {
 
 /* Awards css */
 
+.awards-area {
+  overflow: hidden;
+}
+
 .elements {
   padding: 10px;
 }
@@ -2530,6 +2653,10 @@ a {
 
 /* Certificates css */
 
+.certificates-area {
+  overflow: hidden;
+}
+
 .certificate-img-1 {
   background-image: url("../img/certificates/certificates1.jpeg");
 }
@@ -2544,96 +2671,4 @@ a {
 
 .certificate-img-4 {
   background-image: url("../img/certificates/certificates4.jpeg");
-}
-
-
-
-.card {
-  position: relative;
-  /* width: 250px; */
-  height: 350px;
-  /* color: #2e2d31; */
-  /* background: #131313; */
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
-}
-
-.temporary_text {
-  font-weight: bold;
-  font-size: 24px;
-  /* padding: 6px 12px; */
-  color: #f8f8f8;
-}
-
-.card_title {
-  font-weight: bold;
-}
-
-.card_content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  /* edit the width to fit card */
-  width: 100%;
-  padding: 20px;
-  background: #f2f2f2;
-  border-top-left-radius: 20px;
-  /* edit here to change the height of the content box */
-  transition: transform 0.25s;
-}
-
-.card1 {
-  transform: translateY(150px);
-}
-
-.card2 {
-  transform: translateY(95px);
-}
-
-.card3 {
-  transform: translateY(125px);
-}
-
-.card4 {
-  transform: translateY(95px);
-}
-
-.card_content::before {
-  content: "";
-  position: absolute;
-  top: -47px;
-  right: -45px;
-  width: 100px;
-  height: 100px;
-  transform: rotate(-175deg);
-  border-radius: 50%;
-  box-shadow: inset 48px 48px #f2f2f2;
-}
-
-.card_title {
-  color: #dc4628;
-  line-height: 15px;
-  margin-bottom: 15px;
-}
-
-.card_subtitle {
-  display: block;
-  font-size: 12px;
-}
-
-.card_description {
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.5s;
-  margin-bottom: 0;
-}
-
-.card:hover .card_content {
-  transform: translateY(0);
-}
-
-.card:hover .card_description {
-  opacity: 1;
-  transition-delay: 0.25s;
 }

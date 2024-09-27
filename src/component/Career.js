@@ -36,7 +36,7 @@ function Career() {
       </div>
       {/* Breadcrumb ends here */}
 
-      <div className="section-padding">
+      <div className="career-area section-padding">
         <div className="container">
           <div className="row flex-column-reverse flex-xl-row">
             <div className="col-xl-12">
@@ -85,9 +85,10 @@ function Career() {
               </div>
 
               <p>
-                Thanks for checking for opportunities with Sidhhartha Corporation Pvt.
-                Ltd. If you could not find a relevant position please upload
-                your Resume, we will include it in our talented database.
+                Thanks for checking for opportunities with Sidhhartha
+                Corporation Pvt. Ltd. If you could not find a relevant position
+                please upload your Resume, we will include it in our talented
+                database.
               </p>
 
               <p>

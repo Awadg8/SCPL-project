@@ -4,7 +4,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { GoRocket } from "react-icons/go";
 import { GoGoal } from "react-icons/go";
 
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -471,7 +470,7 @@ function About() {
       {/* Vision area ends here */}
 
       {/* Facility area starts here */}
-      <div id="facilities" className="vision-area section-padding theme-2">
+      <div id="facilities" className="facility-area section-padding theme-2">
         <div className="container">
           <div
             className="section-title"
@@ -495,7 +494,7 @@ function About() {
             </h2>
           </div>
 
-          <div className="row align-items-center mb-30">
+          <div className="row align-items-center">
             <div
               className="col-lg-6"
               data-aos="fade-right"
@@ -566,7 +565,7 @@ function About() {
             </div>
           </div>
 
-          <div className="row align-items-center mb-30">
+          <div className="row align-items-center">
             <div
               className="col-lg-6 col-md-12"
               data-aos="fade-right"
@@ -637,12 +636,10 @@ function About() {
           </div>
         </div>
       </div>
-
-
       {/* Facility area ends here */}
 
       {/* Corevalues starts here */}
-      <div id="coreValues" className="section-padding theme-2">
+      <div id="coreValues" className="coreValues-area section-padding theme-2">
         <div className="container">
           <div
             className="section-title"
