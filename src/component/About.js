@@ -4,6 +4,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { GoRocket } from "react-icons/go";
 import { GoGoal } from "react-icons/go";
 
+// import Card from "./Card";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -243,36 +245,6 @@ function About() {
                     standards of sourcing, quality control, packaging and
                     transportation.
                   </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="row align-items-center"
-            data-aos="zoom-in-up"
-            data-aos-duration="2000"
-          >
-            <div className="col-lg-12 animate__animated animate__fadeInRight">
-              <div className="tab-content-inner">
-                <div className="text mb-30">
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                    <b>SCPL</b> takes pride in sourcing our products from
-                    various regions of India, collaborating with trusted farmers
-                    and suppliers to maintain the highest quality standards. We
-                    are committed to ensuring customer satisfaction by meeting
-                    their unique requirements and establishing long-term
-                    partnerships.
-                  </p>
-
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                    Our commitment to excellence has helped us build a leading
-                    brand and win several awards from prestigious organizations
-                    year after year becoming a testimony of the brand we have
-                    built. Our success today is because of the foundation of
-                    trust, integrity and a shared vision for the future shared
-                    by each and every working member of our organization.
-                  </p>
 
                   <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                     <b>
@@ -421,8 +393,8 @@ function About() {
           <div className="row parallax-content">
             <div
               className="col-sm-6 col-lg-6"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
+              data-aos="flip-left"
+              data-aos-duration="3000"
             >
               <div className="icon-item">
                 <div className="icon-item__img">
@@ -458,8 +430,8 @@ function About() {
 
             <div
               className="col-sm-6 col-lg-6"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
+              data-aos="flip-right"
+              data-aos-duration="3000"
             >
               <div className="icon-item">
                 <div className="icon-item__img">
@@ -518,19 +490,20 @@ function About() {
             </h6>
 
             <h2>
-              All these <b>processes</b> take place at our facilities in{" "}
-              <b>Guntur</b> and <b>Khammam </b>.
+              All these <b>processes</b> take place at our facilities in
+              <b> Guntur </b>,<b> Khammam </b>,<b> Chennai </b> and
+              <b> Pipavav</b>.
             </h2>
           </div>
 
           <div className="row align-items-center mb-30">
             <div
               className="col-lg-6"
-              data-aos="zoom-in-right"
+              data-aos="fade-right"
               data-aos-duration="2000"
             >
-              <div className="about-content-area">
-                <div className="single-popup-wrap">
+              <article className="card">
+                <div className="temporary_text">
                   <img
                     className="img-fluid"
                     src={facilityImg}
@@ -538,21 +511,16 @@ function About() {
                     style={{
                       width: "100%",
                       height: "350px",
-                      borderRadius: "8px",
                     }}
                   />
                 </div>
-              </div>
-            </div>
 
-            <div
-              className="col-lg-6 col-md-12"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
-              <div className="tab-content-inner">
-                <div className="text mb-30">
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                <div className="card_content card1">
+                  <h2 className="card_title" style={{ fontSize: "27px" }}>
+                    Guntur
+                  </h2>
+
+                  <p className="card_description">
                     Our facility at <b>Guntur (Andhra Pradesh)</b> is developed
                     on 3.85 acres of land, with 56,000 sq. ft. warehouse
                     facility and 88,000 sq.ft open facility- where we carry out
@@ -561,59 +529,16 @@ function About() {
                     stuffing for all of our products.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row align-items-center mb-30">
-            <div
-              className="col-lg-6 col-md-12"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
-            >
-              <div className="tab-content-inner">
-                <div className="text mb-30">
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                    Similarly we have another facility at{" "}
-                    <b>Khammam (Telangana) </b>
-                    where we have developed 4 acres of land into a modern
-                    warehouse of 31,000 sq.ft. and an open facility of 95,000
-                    sq.ft to carry out all the processes.
-                  </p>
-                </div>
-              </div>
+              </article>
             </div>
 
             <div
               className="col-lg-6"
-              data-aos="zoom-in-left"
+              data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <div className="about-content-area">
-                <div className="single-popup-wrap">
-                  <img
-                    className="img-fluid"
-                    src={aboutImg3}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                      borderRadius: "8px",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row align-items-center mb-30">
-            <div
-              className="col-lg-6"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
-            >
-              <div className="about-content-area">
-                <div className="single-popup-wrap">
+              <article className="card">
+                <div className="temporary_text">
                   <img
                     className="img-fluid"
                     src={facilityImg}
@@ -621,21 +546,52 @@ function About() {
                     style={{
                       width: "100%",
                       height: "350px",
-                      borderRadius: "8px",
                     }}
                   />
                 </div>
-              </div>
-            </div>
 
+                <div className="card_content card2">
+                  <h2 className="card_title" style={{ fontSize: "27px" }}>
+                    Khammam
+                  </h2>
+
+                  <p className="card_description">
+                    Similarly we have another facility at
+                    <b> Khammam (Telangana) </b>
+                    where we have developed 4 acres of land into a modern
+                    warehouse of 31,000 sq.ft. and an open facility of 95,000
+                    sq.ft to carry out all the processes.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div className="row align-items-center mb-30">
             <div
               className="col-lg-6 col-md-12"
-              data-aos="zoom-in-left"
+              data-aos="fade-right"
               data-aos-duration="2000"
             >
-              <div className="tab-content-inner">
-                <div className="text mb-30">
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+              <article className="card">
+                <div className="temporary_text">
+                  <img
+                    className="img-fluid"
+                    src={facilityImg}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "350px",
+                    }}
+                  />
+                </div>
+
+                <div className="card_content card3">
+                  <span className="card_title" style={{ fontSize: "27px" }}>
+                    Chennai
+                  </span>
+
+                  <p className="card_description">
                     Our facility at <b>Chennai (Tamil Nadu)</b> Godown premises
                     consists of 22,500 sq ft. Our open facility- where we carry
                     out all the end-to-end execution of all our operations like
@@ -643,19 +599,33 @@ function About() {
                     for all of our products.
                   </p>
                 </div>
-              </div>
+              </article>
             </div>
-          </div>
 
-          <div className="row align-items-center">
             <div
-              className="col-lg-6 col-md-12"
-              data-aos="zoom-in-right"
+              className="col-lg-6"
+              data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <div className="tab-content-inner">
-                <div className="text mb-30">
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+              <article className="card">
+                <div className="temporary_text">
+                  <img
+                    className="img-fluid"
+                    src={facilityImg}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "350px",
+                    }}
+                  />
+                </div>
+
+                <div className="card_content card4">
+                  <span className="card_title" style={{ fontSize: "27px" }}>
+                    Pipavav
+                  </span>
+
+                  <p className="card_description">
                     Our facility at
                     <b> Pipavav (Gujarat) </b>
                     where we have a modern warehouse of 2500 sq mtr. area and an
@@ -663,32 +633,14 @@ function About() {
                     Bagging, Loading, etc.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-6"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
-              <div className="about-content-area">
-                <div className="single-popup-wrap">
-                  <img
-                    className="img-fluid"
-                    src={aboutImg3}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                      borderRadius: "8px",
-                    }}
-                  />
-                </div>
-              </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
+
+      {/* <Card /> */}
+
       {/* Facility area ends here */}
 
       {/* Corevalues starts here */}
@@ -881,7 +833,7 @@ function About() {
         <div className="container">
           <div
             className="row justify-content-center"
-            data-aos="zoom-in-down"
+            data-aos="zoom-out-down"
             data-aos-duration="2000"
           >
             <div className="col-lg-12">
@@ -900,7 +852,7 @@ function About() {
           <div className="row">
             <div
               className="col-lg-3 col-md-6"
-              data-aos="zoom-in-right"
+              data-aos="zoom-out-right"
               data-aos-duration="2000"
             >
               <div className="single-team-member">
@@ -943,7 +895,7 @@ function About() {
 
             <div
               className="col-lg-3 col-md-6"
-              data-aos="zoom-in-up"
+              data-aos="zoom-out-up"
               data-aos-duration="2000"
             >
               <div className="single-team-member">
@@ -986,7 +938,7 @@ function About() {
 
             <div
               className="col-lg-3 col-md-6"
-              data-aos="zoom-in-down"
+              data-aos="zoom-out-down"
               data-aos-duration="2000"
             >
               <div className="single-team-member">
@@ -1029,7 +981,7 @@ function About() {
 
             <div
               className="col-lg-3 col-md-6"
-              data-aos="zoom-in-left"
+              data-aos="zoom-out-left"
               data-aos-duration="2000"
             >
               <div className="single-team-member">
@@ -1309,11 +1261,13 @@ function About() {
             </p>
 
             <p>
-              &nbsp; 2. APEDA - Agricultural and Processed Food Products Export
-              Development Authority.
+              &nbsp;&nbsp; 2. APEDA - Agricultural and Processed Food Products
+              Export Development Authority.
             </p>
 
-            <p>&nbsp; 3. FIEO Federation of Indian Export Organizations.</p>
+            <p>
+              &nbsp;&nbsp; 3. FIEO Federation of Indian Export Organizations.
+            </p>
           </div>
           {/* 
           <div>
@@ -1367,9 +1321,7 @@ function About() {
                   Our Certificates
                 </h6>
 
-                <h2>
-                  Dedicated <b>Team</b>
-                </h2>
+                <h2>Certificates</h2>
               </div>
             </div>
           </div>

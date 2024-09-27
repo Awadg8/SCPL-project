@@ -318,8 +318,8 @@ function Main() {
               data-aos="zoom-in-left"
               data-aos-duration="2000"
             >
-              <div className="tab-content-inner mt-30">
-                <div className="text mb-30">
+              <div className="tab-content-inner mt-20">
+                <div className="text">
                   <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                     With over 3 decades of relentless commitment to excellence,
                     <b> Sidhhartha Corporation Pvt. Ltd.</b> where we pride
@@ -331,7 +331,10 @@ function Main() {
                     excellence is evident in every product we offer.
                   </p>
 
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  <p
+                    className="mb-0"
+                    style={{ fontSize: "15px", lineHeight: "1.6" }}
+                  >
                     Our endeavor is to establish ourselves as one of the key
                     players in this Agro Industry Domain, leveraging our own
                     resources as well as the strength of India as a sourcing
@@ -351,8 +354,11 @@ function Main() {
               data-aos-duration="2000"
             >
               <div className="tab-content-inner">
-                <div className="text mb-30 mt-30">
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                <div className="text mt-20">
+                  <p
+                    className="mb-0"
+                    style={{ fontSize: "15px", lineHeight: "1.6" }}
+                  >
                     By harnessing the latest technology and employing an
                     experienced team of professionals, we ensure the purity,
                     safety, and efficacy of every product. Our dedicated and
