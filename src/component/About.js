@@ -4,7 +4,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { GoRocket } from "react-icons/go";
 import { GoGoal } from "react-icons/go";
 
-// import Card from "./Card";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -639,7 +638,6 @@ function About() {
         </div>
       </div>
 
-      {/* <Card /> */}
 
       {/* Facility area ends here */}
 
