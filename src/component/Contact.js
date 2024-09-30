@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import axios from 'axios';
 import { NavLink, useNavigate } from "react-router-dom";
 
 import AOS from "aos";
@@ -9,6 +10,11 @@ function Contact() {
 
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("yard-1");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -23,6 +29,23 @@ function Contact() {
       }
     }, 0);
   };
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   axios.post('http://localhost:3000/send-email', {
+  //     name,
+  //     email,
+  //     phoneNumber,
+  //     subject,
+  //     message
+  //   })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // };
 
   return (
     <div id="contact-us" className="">
@@ -370,22 +393,22 @@ function Contact() {
               data-aos-duration="2000"
             >
               <div className="contact-form">
-                <form action="index.html">
+                {/* <form onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="text" placeholder="Your Name" />
+                      <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Your Name" />
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="email" placeholder="E-mail" />
+                      <input type="email" value={name} onChange={(event) => setName(event.target.value)} placeholder="E-mail" />
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="tel" placeholder="Phone Number" />
+                      <input type="tel" value={name} onChange={(event) => setName(event.target.value)} placeholder="Phone Number" />
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="text" placeholder="Subject" />
+                      <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Subject" />
                     </div>
 
                     <div className="col-lg-12">
@@ -404,7 +427,7 @@ function Contact() {
                       </button>
                     </div>
                   </div>
-                </form>
+                </form> */}
               </div>
             </div>
           </div>

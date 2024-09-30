@@ -56,7 +56,7 @@ function Products() {
       {/* Breadcrumb ends here */}
 
       {/* Product area starts here */}
-      <div id="facilities" className="vision-area section-padding theme-2">
+      <div id="product" className="product-area section-padding theme-2">
         <div className="container">
           <div
             className="section-title"
@@ -99,7 +99,7 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
                         borderRadius: "8px",
                       }}
                     />
@@ -206,7 +206,7 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
                         borderRadius: "8px",
                       }}
                     />
@@ -233,7 +233,7 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
                         borderRadius: "8px",
                       }}
                     />
@@ -319,7 +319,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
@@ -346,7 +347,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
@@ -428,7 +430,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
@@ -455,7 +458,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
@@ -539,7 +543,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
@@ -566,7 +571,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
@@ -648,7 +654,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
@@ -675,7 +682,8 @@ function Products() {
                       alt=""
                       style={{
                         width: "100%",
-                        height: "350px",
+                        height: window.innerWidth < 576 ? "270px" : "350px",
+
                         borderRadius: "8px",
                       }}
                     />
