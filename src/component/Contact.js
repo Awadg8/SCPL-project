@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import axios from 'axios';
+import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import AOS from "aos";
@@ -15,6 +15,7 @@ function Contact() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -30,22 +31,35 @@ function Contact() {
     }, 0);
   };
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   axios.post('http://localhost:3000/send-email', {
-  //     name,
-  //     email,
-  //     phoneNumber,
-  //     subject,
-  //     message
-  //   })
-  //     .then((response) => {
-  //       console.log(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
-  // };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setIsLoading(true);
+
+    axios
+      .post("http://localhost:3000/send-email", {
+        name,
+        email,
+        phoneNumber,
+        subject,
+        message,
+      })
+      .then((response) => {
+        console.log(response.data);
+
+        // Clear the form fields after successful submission
+        setName("");
+        setEmail("");
+        setPhoneNumber("");
+        setSubject("");
+        setMessage("");
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setIsLoading(false);
+      });
+  };
 
   return (
     <div id="contact-us" className="">
@@ -393,22 +407,46 @@ function Contact() {
               data-aos-duration="2000"
             >
               <div className="contact-form">
-                {/* <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Your Name" />
+                      <input
+                        type="text"
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                        placeholder="Your Name"
+                        required
+                      />
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="email" value={name} onChange={(event) => setName(event.target.value)} placeholder="E-mail" />
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        placeholder="E-mail"
+                        required
+                      />
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="tel" value={name} onChange={(event) => setName(event.target.value)} placeholder="Phone Number" />
+                      <input
+                        type="tel"
+                        value={phoneNumber}
+                        onChange={(event) => setPhoneNumber(event.target.value)}
+                        placeholder="Phone Number"
+                        required
+                      />
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-12">
-                      <input type="text" value={name} onChange={(event) => setName(event.target.value)} placeholder="Subject" />
+                      <input
+                        type="text"
+                        value={subject}
+                        onChange={(event) => setSubject(event.target.value)}
+                        placeholder="Subject"
+                        required
+                      />
                     </div>
 
                     <div className="col-lg-12">
@@ -417,17 +455,34 @@ function Contact() {
                         id="message"
                         cols="30"
                         rows="10"
+                        value={message}
+                        onChange={(event) => setMessage(event.target.value)}
                         placeholder="Write Message"
+                        required
                       ></textarea>
                     </div>
 
                     <div className="col-lg-6 col-md-6 col-12">
-                      <button className="main-btn" type="button">
-                        Submit
+                      <button
+                        className="main-btn"
+                        type="submit"
+                        disabled={isLoading}
+                      >
+                        {isLoading ? (
+                          <>
+                            <span style={{ marginRight: "8px" }}>
+                              Sending...
+                            </span>
+
+                            <span className="loader"></span>
+                          </>
+                        ) : (
+                          "Submit"
+                        )}
                       </button>
                     </div>
                   </div>
-                </form> */}
+                </form>
               </div>
             </div>
           </div>

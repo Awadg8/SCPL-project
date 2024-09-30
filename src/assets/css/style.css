@@ -459,7 +459,7 @@ button[type="submit"] {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -2671,4 +2671,33 @@ a {
 
 .certificate-img-4 {
   background-image: url("../img/certificates/certificates4.jpeg");
+}
+
+
+/* Loader in Contact Form */
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  color: #b88124;
+  /* Customize color as needed */
+  margin-top: 10px;
 }

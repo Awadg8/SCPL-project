@@ -78,8 +78,8 @@ function Career() {
 
       <div className="section-padding">
         <div className="container">
-          <div className="row flex-column-reverse flex-xl-row">
-            <div className="col-xl-6 mt-30">
+          <div className="row flex-column-reverse flex-md-row">
+            <div className="col-lg-6 col-md-6 col-12 mt-30">
               <div className="heading mb-20">
                 <span className="heading__pre-title">CURRENT OPENINGS</span>
               </div>
@@ -99,9 +99,9 @@ function Career() {
             </div>
 
             <div
-              className="col-lg-6"
+              className="col-lg-6 col-md-6 col-12"
               data-aos="fade-left"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
             >
               <form className="form career-form">
                 <div className="row">
