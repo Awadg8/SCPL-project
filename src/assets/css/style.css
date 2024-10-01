@@ -740,7 +740,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .contact-info p svg {
-  fill: #017d3f;
+  fill: #b88124;
   font-size: 22px;
   margin-right: 8px;
   /* margin-left: 8px; */
@@ -2373,8 +2373,8 @@ ul.team-social li a {
   height: 100%;
   top: 0;
   left: 0;
-  background: #017d3f;
-  /* background: #af916f; */
+  /* background: #017d3f; */
+  background: #af916f;
   opacity: 0.5;
   z-index: -1;
 }
@@ -2425,7 +2425,7 @@ ul.team-social li a {
   width: 60px;
   height: 60px;
   margin-left: 0;
-  background: #87c03d;
+  background: #b88124;
   fill: #fff;
   padding: 15px;
   border-radius: 40%;
@@ -2522,6 +2522,19 @@ ul.team-social li a {
 .button--green:hover {
   background-color: #b88124;
   color: white;
+}
+
+.send-btn {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  fill: #b88124;
+}
+
+.button--green:hover .send-btn {
+  transform: translateX(8px);
+  transition: all 0.5s;
+  fill: white;
 }
 
 /* Contact css */

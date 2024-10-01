@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 
 function Career() {
   const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const scrollToAnchor = (path, anchorId, navigateTo) => {
     navigateTo(`${path}#${anchorId}`);
@@ -12,6 +19,36 @@ function Career() {
         anchor.scrollIntoView({ behavior: "smooth" });
       }
     }, 0);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setIsLoading(true);
+
+    axios
+      .post("http://localhost:3000/send-resume", {
+        name,
+        email,
+        phoneNumber,
+        subject,
+        message,
+      })
+      .then((response) => {
+        console.log(response.data);
+
+        // Clear the form fields after successful submission
+        setName("");
+        setEmail("");
+        setPhoneNumber("");
+        setSubject("");
+        setMessage("");
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -79,7 +116,11 @@ function Career() {
       <div className="section-padding">
         <div className="container">
           <div className="row flex-column-reverse flex-md-row">
-            <div className="col-lg-6 col-md-6 col-12 mt-30">
+            <div
+              className="col-lg-6 col-md-6 col-12 mt-30"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
               <div className="heading mb-20">
                 <span className="heading__pre-title">CURRENT OPENINGS</span>
               </div>
@@ -103,7 +144,7 @@ function Career() {
               data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <form className="form career-form">
+              <form className="form career-form" onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-12">
                     <h5 className="contact-form__subtitle">
@@ -116,6 +157,8 @@ function Career() {
                     <input
                       className="form__field"
                       type="text"
+                      value={name}
+                      onChange={(event) => setName(event.target.value)}
                       placeholder="Your Full Name"
                     />
                   </div>
@@ -124,6 +167,8 @@ function Career() {
                     <input
                       className="form__field"
                       type="email"
+                      value={email}
+                      onChange={(event) => setEmail(event.target.value)}
                       placeholder="Your Email"
                     />
                   </div>
@@ -132,6 +177,8 @@ function Career() {
                     <input
                       className="form__field"
                       type="tel"
+                      value={phoneNumber}
+                      onChange={(event) => setPhoneNumber(event.target.value)}
                       placeholder="Your Phone"
                     />
                   </div>
@@ -140,6 +187,8 @@ function Career() {
                     <textarea
                       className="form__field form__message message--large"
                       placeholder="Message"
+                      value={message}
+                      onChange={(event) => setMessage(event.target.value)}
                     ></textarea>
                   </div>
 
@@ -148,12 +197,19 @@ function Career() {
                   </div>
 
                   <div className="col-12">
-                    <button className="button button--green">
+                    <button
+                      className="button button--green"
+                      type="submit"
+                      disabled={isLoading}
+                    >
                       <span>Send message</span>
-                      {/* <svg className="icon">
-									<use xlink:href="#arrow">
-									</use>
-								</svg> */}
+                      <svg
+                        className="send-btn"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                      </svg>
                     </button>
                   </div>
                 </div>

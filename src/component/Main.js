@@ -276,11 +276,7 @@ function Main() {
       {/* About us starts here */}
       <div className="about-area section-padding theme-2">
         <div className="container">
-          <div
-            className="section-title"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
+          <div className="section-title">
             <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
               A little Bit More
             </h6>
@@ -635,11 +631,7 @@ function Main() {
         <div className="container">
           <div className="row align-items-center">
             <div className="">
-              <div
-                className="section-title"
-                data-aos="zoom-in-down"
-                data-aos-duration="2000"
-              >
+              <div className="section-title">
                 <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
                   What we do
                 </h6>

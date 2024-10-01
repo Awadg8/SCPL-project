@@ -177,11 +177,7 @@ function About() {
       {/* About us starts here */}
       <div id="about-us" className="about-area section-padding theme-2">
         <div className="container">
-          <div
-            className="section-title"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
+          <div className="section-title">
             <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>About Us</h6>
 
             <h2>
@@ -472,11 +468,7 @@ function About() {
       {/* Facility area starts here */}
       <div id="facilities" className="facility-area section-padding theme-2">
         <div className="container">
-          <div
-            className="section-title"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
+          <div className="section-title">
             <h6
               style={{
                 fontSize: "22px",
@@ -641,11 +633,7 @@ function About() {
       {/* Corevalues starts here */}
       <div id="coreValues" className="coreValues-area section-padding theme-2">
         <div className="container">
-          <div
-            className="section-title"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
+          <div className="section-title">
             <h6
               style={{
                 fontSize: "22px",
@@ -826,11 +814,7 @@ function About() {
       {/* Team area starts here */}
       <div id="team" className="team-area gray-bg section-padding">
         <div className="container">
-          <div
-            className="row justify-content-center"
-            data-aos="zoom-out-down"
-            data-aos-duration="2000"
-          >
+          <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="section-title text-center">
                 <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
@@ -1024,11 +1008,7 @@ function About() {
       {/* Awards area starts here */}
       <div id="awards" className="awards-area gray-bg section-padding">
         <div className="container">
-          <div
-            className="row justify-content-center"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
+          <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="section-title text-center">
                 <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
@@ -1305,11 +1285,7 @@ function About() {
         className="certificates-area gray-bg section-padding"
       >
         <div className="container">
-          <div
-            className="row justify-content-center"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
+          <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="section-title text-center">
                 <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>

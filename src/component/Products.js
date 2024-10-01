@@ -58,29 +58,16 @@ function Products() {
       {/* Product area starts here */}
       <div id="product" className="product-area section-padding theme-2">
         <div className="container">
-          <div
-            className="section-title"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
+          <div className="section-title">
             <h6 style={{ fontSize: "22px", marginLeft: "10px" }}>
               Our Products
             </h6>
-
-            {/* <h2>
-              All these <b>processes</b> take place at our facilities in{" "}
-              <b>Guntur</b> and <b>Khammam </b>.
-            </h2> */}
           </div>
 
           {/* Product 1 start here */}
           <div id="red-chillies" className="section-padding">
             <div className="row align-items-center">
-              <p
-                style={{ fontSize: "15px", marginBottom: "25px" }}
-                data-aos="zoom-in-down"
-                data-aos-duration="2000"
-              >
+              <p style={{ fontSize: "15px", marginBottom: "25px" }}>
                 <b>SCPL</b> , an export-oriented organization mainly focusing on
                 quality supply of various food items like seeds, spices, herbs,
                 etc.
