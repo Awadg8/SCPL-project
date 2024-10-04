@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -7,9 +7,11 @@ function Career() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [resumeFile, setResumeFile] = useState(null);
+
+  const fileInputRef = useRef(null);
 
   const scrollToAnchor = (path, anchorId, navigateTo) => {
     navigateTo(`${path}#${anchorId}`);
@@ -21,18 +23,23 @@ function Career() {
     }, 0);
   };
 
-  const handleSubmit = (event) => {
+  const handleResumeSubmit = (event) => {
     event.preventDefault();
 
     setIsLoading(true);
 
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("phoneNumber", phoneNumber);
+    formData.append("message", message);
+    formData.append("resumeFile", resumeFile);
+
     axios
-      .post("http://localhost:3000/send-resume", {
-        name,
-        email,
-        phoneNumber,
-        subject,
-        message,
+      .post("http://localhost:3000/send-resume", formData, {
+        header: {
+          "Content-Type": "multipart/form-data",
+        },
       })
       .then((response) => {
         console.log(response.data);
@@ -41,8 +48,9 @@ function Career() {
         setName("");
         setEmail("");
         setPhoneNumber("");
-        setSubject("");
         setMessage("");
+        setResumeFile(null);
+        fileInputRef.current.value = "";
         setIsLoading(false);
       })
       .catch((error) => {
@@ -54,7 +62,12 @@ function Career() {
   return (
     <div id="career" className="">
       {/* Breadcrumb starts here */}
-      <div className="breadcroumb-area breadcroumb-area-career bread-bg">
+      <div
+        className="breadcroumb-area breadcroumb-area-career bread-bg"
+        style={{
+          backgroundPosition: window.innerWidth < 768 ? "right" : "center",
+        }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -86,11 +99,11 @@ function Career() {
                 </h3>
               </div>
 
-              <p>
-                At Navkar Corporation LImited, challenging situations are the
-                norm and not the exception. Our people rise to the occasion to
-                deliver innovative, relevant, and sustainable solutions for our
-                customers everytime. We hire ambitious and passionate
+              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                At Sidhhartha Corporation Pvt. Ltd. , challenging situations are
+                the norm and not the exception. Our people rise to the occasion
+                to deliver innovative, relevant, and sustainable solutions for
+                our customers everytime. We hire ambitious and passionate
                 professionals carry the capability to make it happen for our
                 customers. Our leadership position in the industry makes it the
                 obvious place to put knowledge and energy in action. Our
@@ -98,14 +111,14 @@ function Career() {
                 skills and expand their horizons.
               </p>
 
-              <p>
+              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                 We believe that employees are our most asset. We give utmost
                 importance to their training, development. Emphasis is laid on
                 creating a learning environment and a performance oriented
                 working culture.
               </p>
 
-              <p>
+              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                 <strong>COME JOIN US!</strong>
               </p>
             </div>
@@ -125,14 +138,14 @@ function Career() {
                 <span className="heading__pre-title">CURRENT OPENINGS</span>
               </div>
 
-              <p>
+              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                 Thanks for checking for opportunities with Sidhhartha
                 Corporation Pvt. Ltd. If you could not find a relevant position
                 please upload your Resume, we will include it in our talented
                 database.
               </p>
 
-              <p>
+              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                 We will consider your candidature for suitable positions as and
                 when they come up. I the meantime, please check back for
                 positions that might be available in the near future.
@@ -144,7 +157,7 @@ function Career() {
               data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <form className="form career-form" onSubmit={handleSubmit}>
+              <form className="form career-form" onSubmit={handleResumeSubmit}>
                 <div className="row">
                   <div className="col-12">
                     <h5 className="contact-form__subtitle">
@@ -160,6 +173,7 @@ function Career() {
                       value={name}
                       onChange={(event) => setName(event.target.value)}
                       placeholder="Your Full Name"
+                      required
                     />
                   </div>
 
@@ -170,6 +184,7 @@ function Career() {
                       value={email}
                       onChange={(event) => setEmail(event.target.value)}
                       placeholder="Your Email"
+                      required
                     />
                   </div>
 
@@ -180,6 +195,7 @@ function Career() {
                       value={phoneNumber}
                       onChange={(event) => setPhoneNumber(event.target.value)}
                       placeholder="Your Phone"
+                      required
                     />
                   </div>
 
@@ -189,11 +205,19 @@ function Career() {
                       placeholder="Message"
                       value={message}
                       onChange={(event) => setMessage(event.target.value)}
+                      required
                     ></textarea>
                   </div>
 
                   <div className="col-12">
-                    <input type="file" name="resume_file" id="resume_file" />
+                    <input
+                      type="file"
+                      name="resume_file"
+                      id="resume_file"
+                      ref={fileInputRef}
+                      onChange={(event) => setResumeFile(event.target.files[0])}
+                      required
+                    />
                   </div>
 
                   <div className="col-12">
@@ -202,14 +226,24 @@ function Career() {
                       type="submit"
                       disabled={isLoading}
                     >
-                      <span>Send message</span>
-                      <svg
-                        className="send-btn"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512"
-                      >
-                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                      </svg>
+                      {isLoading ? (
+                        <>
+                          <span style={{ marginRight: "8px" }}>Sending...</span>
+
+                          <span className="loader"></span>
+                        </>
+                      ) : (
+                        <>
+                          Send message
+                          <svg
+                            className="send-btn"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                          >
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                          </svg>
+                        </>
+                      )}
                     </button>
                   </div>
                 </div>

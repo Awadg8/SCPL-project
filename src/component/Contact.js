@@ -64,7 +64,12 @@ function Contact() {
   return (
     <div id="contact-us" className="">
       {/* Breadcrumb starts here */}
-      <div className="breadcroumb-area breadcroumb-area-contact bread-bg">
+      <div
+        className="breadcroumb-area breadcroumb-area-contact bread-bg"
+        style={{
+          backgroundPosition: window.innerWidth < 768 ? "right" : "center",
+        }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
