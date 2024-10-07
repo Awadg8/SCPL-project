@@ -1,6 +1,8 @@
 // api/send-resume.js
 import multer from "multer";
 import nodemailer from "nodemailer";
+const cors = require("cors");
+app.use(cors());
 
 const upload = multer({ dest: "/tmp/" });
 

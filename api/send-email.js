@@ -1,5 +1,7 @@
 // api/send-email.js
 const nodemailer = require("nodemailer");
+const cors = require("cors");
+app.use(cors());
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
