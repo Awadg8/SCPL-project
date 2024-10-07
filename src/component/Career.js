@@ -36,7 +36,7 @@ function Career() {
     formData.append("resumeFile", resumeFile);
 
     axios
-      .post("http://localhost:3000/send-resume", formData, {
+      .post("https://scpl-project.vercel.app/api/send-resume", formData, {
         header: {
           "Content-Type": "multipart/form-data",
         },

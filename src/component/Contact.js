@@ -37,7 +37,7 @@ function Contact() {
     setIsLoading(true);
 
     axios
-      .post("http://localhost:3000/send-email", {
+      .post("https://scpl-project.vercel.app/api/send-email", {
         name,
         email,
         phoneNumber,

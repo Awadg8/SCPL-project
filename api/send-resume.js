@@ -1,11 +1,11 @@
 // api/send-resume.js
-import multer from 'multer';
-import nodemailer from 'nodemailer';
+import multer from "multer";
+import nodemailer from "nodemailer";
 
-const upload = multer({ dest: '/tmp/' });
+const upload = multer({ dest: "/tmp/" });
 
 export default async function handler(req, res) {
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     const { name, email, phoneNumber, subject, message } = req.body;
     const resumeFile = req.file;
 
@@ -36,12 +36,12 @@ export default async function handler(req, res) {
 
     try {
       const info = await transporter.sendMail(mailOptions);
-      res.status(200).json({ message: 'Resume sent successfully', info });
+      res.status(200).json({ message: "Resume sent successfully", info });
     } catch (error) {
       console.error("Error sending resume:", error);
-      res.status(500).json({ error: 'Failed to send resume', details: error });
+      res.status(500).json({ error: "Failed to send resume", details: error });
     }
   } else {
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(405).json({ error: "Method not allowed" });
   }
 }
