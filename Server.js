@@ -25,13 +25,28 @@ app.get("/", (req, res) => {
 app.post("/send-email", (req, res) => {
   const { name, email, phoneNumber, subject, message } = req.body;
 
+  console.log(process.env.REACT_APP_GMAIL_USERNAME);
+  console.log(process.env.REACT_APP_GMAIL_PASSWORD);
+  console.log(
+    "Environment variables loaded:",
+    process.env.REACT_APP_GMAIL_USERNAME,
+    process.env.REACT_APP_GMAIL_PASSWORD
+  );
+
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
-      user: process.env.GMAIL_USERNAME,
-      pass: process.env.GMAIL_PASSWORD,
+      user: process.env.REACT_APP_GMAIL_USERNAME,
+      pass: process.env.REACT_APP_GMAIL_PASSWORD,
     },
   });
+  console.log(
+    "Environment variables loaded:",
+    process.env.REACT_APP_GMAIL_USERNAME,
+    process.env.REACT_APP_GMAIL_PASSWORD
+  );
 
   const mailOptions = {
     from: "devloperproactii@gmail.com",
@@ -68,8 +83,8 @@ app.post("/send-resume", upload.single("resumeFile"), (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.GMAIL_USERNAME,
-      pass: process.env.GMAIL_PASSWORD,
+      user: process.env.REACT_APP_GMAIL_USERNAME,
+      pass: process.env.REACT_APP_GMAIL_PASSWORD,
     },
   });
 

@@ -215,7 +215,21 @@ function Career() {
                       name="resume_file"
                       id="resume_file"
                       ref={fileInputRef}
-                      onChange={(event) => setResumeFile(event.target.files[0])}
+                      accept=".doc, .docx, .pdf"
+                      onChange={(event) => {
+                        const file = event.target.files[0];
+                        if (
+                          file.type !== "application/msword" &&
+                          file.type !== "application/pdf" &&
+                          file.type !==
+                            "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                        ) {
+                          alert("Please select a .doc or .pdf file");
+                          fileInputRef.current.value = "";
+                        } else {
+                          setResumeFile(file);
+                        }
+                      }}
                       required
                     />
                   </div>
