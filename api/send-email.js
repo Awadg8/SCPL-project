@@ -1,9 +1,17 @@
 // api/send-email.js
 const nodemailer = require("nodemailer");
-const cors = require("cors");
-app.use(cors());
 
 export default async function handler(req, res) {
+  // Allow CORS
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Adjust '*' to your frontend URL in production
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS"); // Allow specific methods
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow specific headers
+
+  if (req.method === "OPTIONS") {
+    // Handle preflight requests
+    return res.status(200).end();
+  }
+
   if (req.method === "POST") {
     const { name, email, phoneNumber, subject, message } = req.body;
 
