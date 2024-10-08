@@ -817,10 +817,6 @@ function About() {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="section-title text-center">
-                <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
-                  Our Team
-                </h6>
-
                 <h2>
                   Dedicated <b>Team</b>
                 </h2>
@@ -1011,10 +1007,6 @@ function About() {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="section-title text-center">
-                <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
-                  Our Awards
-                </h6>
-
                 <h2>
                   Recognition<b></b>
                 </h2>
@@ -1041,13 +1033,13 @@ function About() {
                 </svg> */}
 
                 <p className="mb-10">
-                  Highest Chilies Exporter -<b>Spices Board</b>.
+                  Highest Chilies Exporter - <b>Spices Board</b>.
                 </p>
               </div>
 
               <div className="heading">
                 <p className="mb-10">
-                  Certificate of Commendation -<b>AMC Guntur</b>.
+                  Certificate of Commendation - <b>AMC Guntur</b>.
                 </p>
               </div>
             </div>
@@ -1065,10 +1057,11 @@ function About() {
 
             <div className="elements">
               <h3>2010-11 </h3>
+
               <div className="heading mt-10">
                 <p className="mb-10">
                   Silver Trophy Outstanding Performance in Export of Groundnuts
-                  -<b>APEDA</b>
+                  - <b>APEDA</b>
                 </p>
               </div>
 
@@ -1098,7 +1091,8 @@ function About() {
 
               <div className="heading">
                 <p className="mb-10">
-                  2nd Place in Excellence in Export of Groundnuts -<b>IOPEPC</b>
+                  2nd Place in Excellence in Export of Groundnuts -{" "}
+                  <b>IOPEPC</b>
                 </p>
               </div>
 
@@ -1114,7 +1108,8 @@ function About() {
 
               <div className="heading mt-10">
                 <p className="mb-10">
-                  1st Place in Excellence in Export of Groundnuts -<b>IOPEPC</b>
+                  1st Place in Excellence in Export of Groundnuts -{" "}
+                  <b>IOPEPC</b>
                 </p>
               </div>
 
@@ -1138,7 +1133,8 @@ function About() {
 
               <div className="heading">
                 <p className="mb-10">
-                  2nd Place in Excellence in Export of Groundnuts -<b>IOPEPC</b>
+                  2nd Place in Excellence in Export of Groundnuts -{" "}
+                  <b>IOPEPC</b>
                 </p>
               </div>
 
@@ -1154,7 +1150,8 @@ function About() {
 
               <div className="heading mt-10">
                 <p className="mb-10">
-                  Golden Trophy Top Most Exporter of Spices-<b>Spices Board</b>
+                  Golden Trophy Top Most Exporter of Spices -{" "}
+                  <b>Spices Board</b>
                 </p>
               </div>
 
@@ -1171,7 +1168,8 @@ function About() {
 
               <div className="heading mt-10">
                 <p className="mb-10">
-                  Silver Trophy Top Most Exporter of Spices-<b>Spices Board</b>
+                  Silver Trophy Top Most Exporter of Spices -{" "}
+                  <b>Spices Board</b>
                 </p>
               </div>
 
@@ -1188,14 +1186,15 @@ function About() {
 
               <div className="heading mt-10">
                 <p className="mb-10">
-                  Western Region Export Excellence (Three Star Export House)-
-                  <b>FIEO</b>
+                  Western Region Export Excellence (Three Star Export House) -
+                  <b> FIEO</b>
                 </p>
               </div>
 
               <div className="heading">
                 <p className="mb-0">
-                  Silver Trophy Top Most Exporter of spices- <b>Spices Board</b>
+                  Silver Trophy Top Most Exporter of spices -{" "}
+                  <b>Spices Board</b>
                 </p>
               </div>
             </div>
@@ -1288,10 +1287,6 @@ function About() {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="section-title text-center">
-                <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
-                  Our Certificates
-                </h6>
-
                 <h2>Certificates</h2>
               </div>
             </div>

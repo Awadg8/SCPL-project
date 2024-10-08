@@ -45,7 +45,7 @@ function Contact() {
         message,
       })
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
 
         // Clear the form fields after successful submission
         setName("");
@@ -292,8 +292,8 @@ function Contact() {
                                   <h6>Address</h6>
 
                                   <p>
-                                    DOOR NO 4-5-104, MIRCHI MARKET
-                                    ROAD,BIJJALAVARI STREET, KHAMMAM, KHAMMAM,
+                                    DOOR NO 4-5-104, MIRCHI MARKET ROAD,
+                                    BIJJALAVARI STREET, KHAMMAM, KHAMMAM,
                                     TELANGANA
                                   </p>
                                 </div>
@@ -329,7 +329,7 @@ function Contact() {
 
                                   <p>
                                     SURVEY NO 216, RAMPARA -2, PIPAVAV PORT
-                                    ROAD, TAL. -RAJULA, DIST. AMRELI , 365560,
+                                    ROAD, TAL.- RAJULA, DIST.- AMRELI , 365560,
                                     GUJARAT
                                   </p>
                                 </div>
@@ -364,9 +364,8 @@ function Contact() {
                                   <h6>Address</h6>
 
                                   <p>
-                                    SURVEY NO 85/1 SOTHUPAKKAM
-                                    ROAD,THEERTHAKRIAMPET, REDHILLS, CHENNAI,
-                                    600052
+                                    SURVEY NO 85/1 SOTHUPAKKAM ROAD,
+                                    THEERTHAKRIAMPET, REDHILLS, CHENNAI, 600052
                                   </p>
                                 </div>
                               </div>

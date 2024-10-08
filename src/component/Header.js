@@ -67,7 +67,7 @@ function Header() {
         <div
           id="sticky-wrapper"
           className="sticky-wrapper"
-          style={{ height: "90px" }}
+          style={{ height: "75px" }}
         >
           <div
             // className={`sticky-area ${isSticky ? "is-sticky" : ""}`}
@@ -81,14 +81,9 @@ function Header() {
           >
             <div className="navigation">
               <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-center color-white">
                   <div className="col-lg-3">
-                    <div
-                      className="logo"
-                      style={{
-                        textAlign: window.innerWidth < 992 ? "left" : "center",
-                      }}
-                    >
+                    <div className="logo" style={{ textAlign: "left" }}>
                       <a
                         aria-current="page"
                         href="/"
@@ -97,10 +92,10 @@ function Header() {
                         <img
                           src={Logo}
                           style={{
-                            width: "130px",
-                            height: "90px",
+                            width: "85px",
+                            height: "70px",
                             backgroundColor: "white",
-                            padding: "8px",
+                            padding:"2px",
                             borderRadius: "6px",
                           }}
                           alt=""
@@ -127,10 +122,10 @@ function Header() {
                         </button>
 
                         <div
-                          className="collapse navbar-collapse justify-content-center"
+                          className="collapse navbar-collapse"
                           id="navbarSupportedContent"
                         >
-                          <ul className="navbar-nav m-auto">
+                          <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
                               <NavLink
                                 to="/"
@@ -201,7 +196,7 @@ function Header() {
                                   className="sub-menu"
                                   style={{ display: "block" }}
                                 >
-                                  <li>  
+                                  <li>
                                     <a
                                       href="/about/company-profile"
                                       className=""
@@ -621,7 +616,7 @@ function Header() {
                               </NavLink>
                             </li> */}
 
-                            <li className="nav-item">
+                            <li className="nav-item" style={{marginRight:"0px"}}>
                               <NavLink
                                 to="/contact"
                                 className={({ isActive }) =>

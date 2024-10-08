@@ -42,7 +42,7 @@ function Career() {
         },
       })
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
 
         // Clear the form fields after successful submission
         setName("");
@@ -126,7 +126,7 @@ function Career() {
         </div>
       </div>
 
-      <div className="section-padding">
+      <div className="form section-padding">
         <div className="container">
           <div className="row flex-column-reverse flex-md-row">
             <div
