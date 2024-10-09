@@ -1,4 +1,3 @@
-// api/send-resume.js
 import multer from "multer";
 import nodemailer from "nodemailer";
 

@@ -53,11 +53,13 @@ function Header() {
 
   const handleAccordionClick = () => {
     setShowAccordion(!showAccordion);
+    setShowAccordion2(false);
   };
 
   const handleAccordionClick2 = () => {
     if (windowWidth < 992) {
       setShowAccordion2(!showAccordion2);
+      setShowAccordion(false);
     }
   };
 
@@ -95,7 +97,7 @@ function Header() {
                             width: "85px",
                             height: "70px",
                             backgroundColor: "white",
-                            padding:"2px",
+                            padding: "2px",
                             borderRadius: "6px",
                           }}
                           alt=""
@@ -108,6 +110,7 @@ function Header() {
                     <div className="main-menu">
                       <nav className="navbar navbar-expand-lg">
                         <button
+                          id="menuToggle"
                           className="navbar-toggler"
                           type="button"
                           data-bs-toggle="collapse"
@@ -116,9 +119,12 @@ function Header() {
                           aria-expanded="false"
                           aria-label="Toggle navigation"
                         >
-                          <span className="navbar-toggler-icon"></span>
-                          <span className="navbar-toggler-icon"></span>
-                          <span className="navbar-toggler-icon"></span>
+                          <input id="checkbox" type="checkbox" />
+                          <label className="toggle" htmlFor="checkbox">
+                            <div className="bar bar--top"></div>
+                            <div className="bar bar--middle"></div>
+                            <div className="bar bar--bottom"></div>
+                          </label>
                         </button>
 
                         <div
@@ -178,6 +184,9 @@ function Header() {
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512"
+                                    className={`arrow-icon ${
+                                      showAccordion ? "rotate-icon" : ""
+                                    }`}
                                     style={{
                                       width: "16px",
                                       height: "16px",
@@ -189,9 +198,11 @@ function Header() {
                                 </button>
                               </NavLink>
 
-                              {(window.innerWidth < 992
-                                ? showAccordion
-                                : "show") && (
+                              <div
+                                className={`accordion-content ${
+                                  showAccordion ? "show" : ""
+                                }`}
+                              >
                                 <ul
                                   className="sub-menu"
                                   style={{ display: "block" }}
@@ -315,7 +326,7 @@ function Header() {
                                     </a>
                                   </li>
                                 </ul>
-                              )}
+                              </div>
                             </li>
 
                             <li
@@ -352,6 +363,9 @@ function Header() {
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512"
+                                    className={`arrow-icon ${
+                                      showAccordion2 ? "rotate-icon" : ""
+                                    }`}
                                     style={{
                                       width: "16px",
                                       height: "16px",
@@ -363,9 +377,11 @@ function Header() {
                                 </button>
                               </NavLink>
 
-                              {(window.innerWidth < 992
-                                ? showAccordion2
-                                : "show") && (
+                              <div
+                                className={`accordion-content ${
+                                  showAccordion2 ? "show" : ""
+                                }`}
+                              >
                                 <ul
                                   className="sub-menu"
                                   style={{
@@ -563,7 +579,7 @@ function Header() {
                                     </a>
                                   </li>
                                 </ul>
-                              )}
+                              </div>
                             </li>
 
                             <li className="nav-item">
@@ -589,34 +605,10 @@ function Header() {
                               </NavLink>
                             </li>
 
-                            {/* <li className="nav-item">
-                              <NavLink
-                                to="/presence"
-                                className={({ isActive }) =>
-                                  isActive ? "nav-link active" : "nav-link"
-                                }
-                                style={{
-                                  color:
-                                    window.innerWidth < 991
-                                      ? ""
-                                      : isSticky
-                                      ? ""
-                                      : "white",
-                                }}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  scrollToAnchor(
-                                    "/presence",
-                                    "our-presence",
-                                    navigate
-                                  );
-                                }}
-                              >
-                                Our Presence
-                              </NavLink>
-                            </li> */}
-
-                            <li className="nav-item" style={{marginRight:"0px"}}>
+                            <li
+                              className="nav-item"
+                              style={{ marginRight: "0px" }}
+                            >
                               <NavLink
                                 to="/contact"
                                 className={({ isActive }) =>
@@ -647,33 +639,6 @@ function Header() {
                       </nav>
                     </div>
                   </div>
-
-                  {/* <div className="col-lg-1 text-end">
-                    <div className="header-right-content">
-                      <div
-                        className="search-trigger"
-                        onClick={handleSearchIcon}
-                      >
-                        <svg
-                          className="search-icon"
-                          style={{
-                            width: "20px",
-                            height: "20px",
-                            fill: "black",
-                            marginRight: "40px",
-                          }}
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                        >
-                          <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                        </svg>
-                      </div>
-
-                      <a href="/contact" className="header-btn main-btn">
-                        Get a Quote
-                      </a>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>

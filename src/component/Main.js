@@ -4,17 +4,15 @@ import { useNavigate, NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Slider from "react-slick"; //For slider
+import Slider from "react-slick"; // For slider
 
-import "animate.css"; // For animations
+import "animate.css"; // For animation
 
 // slider animation
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import aboutImg3 from "../assets/img/IMG_7043.JPG";
-// import chooseImg from "../assets/img/IMG_7046.jpg";
-// import productImg from "../assets/img/portfolio/port-bg-1.jpg";
 import agricultural from "../assets/img/agriculture.png";
 
 function Main() {
@@ -96,7 +94,6 @@ function Main() {
                   className="col-lg-12"
                   data-aos="fade-up"
                   data-aos-duration="1500"
-                  // data-wow-delay=".2s"
                 >
                   <div className="section-title">
                     <h6
@@ -239,8 +236,15 @@ function Main() {
                         Chillies and Groundnuts in india
                       </h5>
 
-                      <NavLink to="/products" className="">
-                        View all services
+                      <NavLink
+                        to="/products"
+                        className=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollToAnchor("/products", "products", navigate);
+                        }}
+                      >
+                        View all products
                       </NavLink>
                     </div>
                   </div>
@@ -371,261 +375,6 @@ function Main() {
       </div>
       {/* About us ends here */}
 
-      {/* Portfolio area starts here  */}
-      {/* <div className="portfolio-area section-padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section-title">
-                <h6>Our Great Work</h6>
-
-                <h2>
-                  We do <b>best</b> work <br />
-                  for our customers
-                </h2>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="portfolio-list">
-                <div
-                  className="single-portfolio-item large agriculture"
-                  to="[object Object]"
-                >
-                  <img src={productImg} alt="" />
-
-                  <div className="details">
-                    <div className="info">
-                      <h5>
-                        <a href="/project-details" className="">
-                          Fresh Vegetables
-                        </a>
-                      </h5>
-
-                      <a href={productImg} data-fancybox="gallery">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                          className="product-img"
-                          style={{
-                            width: "35px",
-                            height: "35px",
-                            fill: "white",
-                          }}
-                        >
-                          <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className="single-portfolio-item large agriculture"
-                  to="[object Object]"
-                >
-                  <img src={productImg} alt="" />
-
-                  <div className="details">
-                    <div className="info">
-                      <h5>
-                        <a href="/project-details" className="">
-                          Fresh Vegetables
-                        </a>
-                      </h5>
-
-                      <a href={productImg} data-fancybox="gallery">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                          className="product-img"
-                          style={{
-                            width: "35px",
-                            height: "35px",
-                            fill: "white",
-                          }}
-                        >
-                          <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className="single-portfolio-item large agriculture"
-                  to="[object Object]"
-                >
-                  <img src={productImg} alt="" />
-
-                  <div className="details">
-                    <div className="info">
-                      <h5>
-                        <a href="/project-details" className="">
-                          Fresh Vegetables
-                        </a>
-                      </h5>
-
-                      <a href={productImg} data-fancybox="gallery">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 512 512"
-                          className="product-img"
-                          style={{
-                            width: "35px",
-                            height: "35px",
-                            fill: "white",
-                          }}
-                        >
-                          <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* Portfolio area ends here */}
-
-      {/* Why choose us starts here */}
-      {/* <div className="feature-area section-padding">
-        <div className="container">
-          <div className="row">
-            <div
-              className="col-xl-4 col-lg-5 col-md-12 col-sm-12"
-              data-aos-duration="2000"
-              data-aos="zoom-in-right"
-            >
-              <div className="feature-image">
-                <img
-                  src={chooseImg}
-                  alt=""
-                  style={{
-                    width: "85%",
-                    height: "100%",
-                    borderRadius: "8px",
-                  }}
-                />
-              </div>
-            </div>
-
-            <div
-              className="offset-xl-1 col-xl-7 col-lg-7 col-md-12 col-sm-12 mt-40"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
-              <div className="section-title">
-                <h6 style={{ fontSize: "22px" }}>Why Choose Us</h6>
-                <h2>
-                  We manage &amp; organized <br />
-                  Fresh<b> Products</b>
-                </h2>
-              </div>
-
-              <div
-                className="single-feature-item wow fadeInUp"
-                data-wow-delay=".3s"
-                // style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"
-              >
-                <div className="feature-content">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    width="25px"
-                    height="25px"
-                    style={{ marginRight: "15px" }}
-                  >
-                    <path
-                      fill="#017d3f"
-                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    />
-                  </svg>
-
-                  <p>Wide network of organic farmers and direct sourcing</p>
-                </div>
-              </div>
-
-              <div
-                className="single-feature-item wow fadeInUp"
-                data-wow-delay=".3s"
-                // style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"
-              >
-                <div className="feature-content">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    width="25px"
-                    height="25px"
-                    style={{ marginRight: "15px" }}
-                  >
-                    <path
-                      fill="#017d3f"
-                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    />
-                  </svg>
-
-                  <p>
-                    We provide the best quality products without any chemicals.
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className="single-feature-item wow fadeInUp"
-                data-wow-delay=".3s"
-                // style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"
-              >
-                <div className="feature-content">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    width="25px"
-                    height="25px"
-                    style={{ marginRight: "15px" }}
-                  >
-                    <path
-                      fill="#017d3f"
-                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    />
-                  </svg>
-
-                  <p>Robust Supply Chain Management</p>
-                </div>
-              </div>
-
-              <div
-                className="single-feature-item wow fadeInUp"
-                data-wow-delay=".3s"
-                // style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;"
-              >
-                <div className="feature-content">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    width="25px"
-                    height="25px"
-                    style={{ marginRight: "15px" }}
-                  >
-                    <path
-                      fill="#017d3f"
-                      d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                    />
-                  </svg>
-
-                  <p>Collaboration with Trusted Farmers and Suppliers</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* Why choose us ends here */}
-
       {/* Home video starts here */}
       <div className="service-area gray-bg theme-2 section-padding">
         <div className="container">
@@ -635,6 +384,7 @@ function Main() {
                 <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
                   What we do
                 </h6>
+
                 <h2>
                   We are Providing <b>Quality Products</b> for our customers
                 </h2>
@@ -685,22 +435,6 @@ function Main() {
           scrollToAnchor("/", "home", navigate);
         }}
       >
-        {/* <svg
-          className="progress-circle svg-content"
-          
-          style={{ width:"46px", height:"46px" }}
-          viewBox="-1 -1 102 102"
-        >
-          <path
-            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-            // style={{
-            //   transition: "stroke-dashoffset 10ms linear",
-            //   strokeDasharray: "307.919, 307.919",
-            //   strokeDashoffset: "307.919",
-            // }}
-          ></path>
-        </svg> */}
-
         <svg
           className="progress-circle svg-content"
           xmlns="http://www.w3.org/2000/svg"

@@ -108,7 +108,7 @@ function Contact() {
                   </h2>
                 </div>
 
-                <p>
+                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                   If you have a contact Lorem ipsum dolor sit amet cum maiores,
                   excepturi fuga, est doloremque praesentium!
                 </p>
@@ -226,7 +226,6 @@ function Contact() {
                                 </p>
                               </div>
                             </div>
-                            {/* </div> */}
                           </div>
 
                           <div
@@ -492,7 +491,6 @@ function Contact() {
           </div>
         </div>
       </div>
-
       {/* Contact us ends here */}
 
       {/* Progress wrap starts here */}

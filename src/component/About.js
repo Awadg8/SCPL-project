@@ -10,7 +10,6 @@ import "aos/dist/aos.css";
 import "animate.css"; // For animations
 import Slider from "react-slick"; //For slider
 
-// import aboutImg from "../assets/img/about/about.png";
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
 import facilityImg from "../assets/img/facility.jpg";
 
@@ -81,98 +80,6 @@ function About() {
         </div>
       </div>
       {/* Breadcrumb area ends here */}
-
-      {/* Company profile starts here */}
-      {/* <div id="company-profile" className="about-area section-padding">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 col-md-12 col-sm-12 animate__animated animate__fadeInLeft">
-              <div className="about-img-wrap">
-                <img src={aboutImg} alt="" />
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-12 col-sm-12 animate__animated animate__fadeInUp">
-              <div className="info-content-area">
-                <div className="section-title">
-                  <h6 style={{fontSize:"22px"}}>About Us</h6>
-
-                  <h2>
-                    We're leading
-                    <b> Agriculture Farm</b> in Downtown
-                  </h2>
-                </div>
-
-                <p>
-                  We are planty grow agriculture products Lorem ipsum dolor sit
-                  amet, consectetur adipisicing elit. Ea enim et, similique,
-                  minus soluta ducimus.
-                </p>
-
-                <div className="about-feature-list">
-                  <ul>
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        style={{
-                          width: "18px",
-                          height: "18px",
-                          fill: "#017D3F",
-                        }}
-                      >
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                      </svg>
-                      Since our launch in 2007, to deliver high value project.
-                    </li>
-
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        style={{
-                          width: "18px",
-                          height: "18px",
-                          fill: "#017D3F",
-                        }}
-                      >
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                      </svg>
-                      We always growth fresh &amp; quality vegetables.
-                    </li>
-
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 512 512"
-                        style={{
-                          width: "18px",
-                          height: "18px",
-                          fill: "#017D3F",
-                        }}
-                      >
-                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                      </svg>
-                      Uninque latest machinary used the product cultivate.
-                    </li>
-                  </ul>
-                </div>
-
-                <br />
-
-                <a
-                  aria-current="page"
-                  href="/about"
-                  className="router-link-active router-link-exact-active main-btn"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* Company profile ends here */}
 
       {/* About us starts here */}
       <div id="about-us" className="about-area section-padding theme-2">
@@ -253,134 +160,6 @@ function About() {
         </div>
       </div>
       {/* About us ends here */}
-
-      {/* Vision area starts here */}
-      {/* <div
-        id="vision"
-        className="vision-area section-padding pad-bot-50 theme-2"
-      >
-        <div className="container">
-          <div
-            className="section-title"
-            data-aos="zoom-in-down"
-            data-aos-duration="2000"
-          >
-            <h6
-              style={{
-                fontSize: "22px",
-                marginBottom: "25px",
-                marginLeft: "0px",
-              }}
-            >
-              Vision and Mission
-            </h6>
-          </div>
-
-          <div className="row align-items-center mb-30">
-            <div
-              className="col-lg-6"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
-            >
-              <div className="about-content-area">
-                <div className="single-popup-wrap">
-                  <img
-                    className="img-fluid"
-                    src={aboutImg3}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                      borderRadius: "8px",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-6 col-md-12"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
-              <div className="tab-content-inner">
-                <div className="text mb-30">
-                  <h1
-                    style={{
-                      color: "#b88124",
-                      fontSize: "50px",
-                      marginBottom: "25px",
-                    }}
-                  >
-                    Vision -
-                  </h1>
-
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                    Our vision is to be a pioneering force in the global
-                    agricultural export industry, delivering exceptionally
-                    produced agro-products. By harnessing cutting-edge
-                    technology and fostering collaborative partnerships, we aim
-                    to set new standards in quality and responsibility.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row align-items-center">
-            <div
-              className="col-lg-6 col-md-12"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
-            >
-              <div className="tab-content-inner">
-                <div className="text mb-30">
-                  <h1
-                    style={{
-                      color: "#b88124",
-                      fontSize: "50px",
-                      marginBottom: "25px",
-                    }}
-                  >
-                    Mission -
-                  </h1>
-
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                    Our mission is to bridge global trade by delivering
-                    high-quality products and services with integrity and
-                    efficiency. We are committed to fostering international
-                    trade relationships through innovative solutions, by
-                    leveraging our expertise and strategic partnerships, we
-                    strive to create value for our clients and contribute to
-                    their success on a global scale.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="col-lg-6"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
-              <div className="about-content-area">
-                <div className="single-popup-wrap">
-                  <img
-                    className="img-fluid"
-                    src={aboutImg3}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                      borderRadius: "8px",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       <div id="vision" className="vision-area section-padding theme-2 parallax">
         <div className="container">
@@ -643,11 +422,6 @@ function About() {
             >
               Core Values
             </h6>
-
-            {/* <h2>
-              All these <b>processes</b> take place at our facilities in{" "}
-              <b>Guntur</b> and <b>Khammam </b>.
-            </h2> */}
           </div>
 
           <div className="row">
@@ -1019,19 +793,6 @@ function About() {
               <h3>2006-07</h3>
 
               <div className="heading mt-10">
-                {/* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  width="25px"
-                  height="25px"
-                  style={{ marginRight: "15px" }}
-                >
-                  <path
-                    fill="#017d3f"
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-                  />
-                </svg> */}
-
                 <p className="mb-10">
                   Highest Chilies Exporter - <b>Spices Board</b>.
                 </p>
@@ -1240,40 +1001,9 @@ function About() {
             </p>
 
             <p>
-              &nbsp;&nbsp; 3. FIEO Federation of Indian Export Organizations.
+              &nbsp;&nbsp; 3. FIEO - Federation of Indian Export Organizations.
             </p>
           </div>
-          {/* 
-          <div>
-            <p>
-              The Company is consistently leading the industry in Red Chilles
-              and Groundnuts in the last two decades. We bagged lots of awards
-              for top positions by APEDA, Spices Board, FIEO, and IOPEPC.
-              Further, the Company has filed nominations: -
-            </p>
-            <p>
-              FIEO Awards for Year 2020-21 & 2021-22 For mentioned below
-              Category -
-            </p>{" "}
-            <p>
-              1) Highest Foreign Exchange Earner-Western Region from Non MSME
-            </p>{" "}
-            <p>2) Three Star Export House Category from Non MSME</p> 3){" "}
-            <p>
-              Highest Foreign Exchange Earner- Maharashtra State from Non MSME.
-            </p>
-            <p>
-              {" "}
-              "Spice Board has been Short listed us for following of Export
-              Trophy/Award categories for the year 2020-21
-            </p>{" "}
-            <p>
-              "Outstanding Performance in Export of Groundnuts" for the year
-              2019-20 & 2020-21 with the APEDA.
-            </p>
-            <p> 1) Trophy for TOP MOST EXPORTER of Spices & Spice Products.</p>
-            <p> 2) Award for TOP MOST EXPORTER of chilies.</p>
-          </div> */}
         </div>
       </div>
       {/* Awards areas ends here */}

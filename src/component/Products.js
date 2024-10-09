@@ -4,8 +4,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import facilityImg from "../assets/img/facility.jpg";
-// import aboutImg3 from "../assets/img/IMG_7219.jpg";
 import productChilli from "../assets/img/product/red-chillies.jpg";
 import productGroundnut from "../assets/img/product/Groundnut.webp";
 import productSesame from "../assets/img/product/sesame.jpg";
@@ -56,7 +54,7 @@ function Products() {
       {/* Breadcrumb ends here */}
 
       {/* Product area starts here */}
-      <div id="product" className="product-area section-padding theme-2">
+      <div id="products" className="product-area section-padding theme-2">
         <div className="container">
           <div className="section-title">
             <h6 style={{ fontSize: "22px", marginLeft: "10px" }}>
