@@ -86,6 +86,7 @@ function Career() {
       </div>
       {/* Breadcrumb ends here */}
 
+      {/* Career area starts here */}
       <div className="career-area section-padding">
         <div className="container">
           <div className="row flex-column-reverse flex-xl-row">
@@ -125,7 +126,9 @@ function Career() {
           </div>
         </div>
       </div>
+      {/* Career area ends here */}
 
+      {/* Career Form starts here */}
       <div className="form section-padding">
         <div className="container">
           <div className="row flex-column-reverse flex-md-row">
@@ -266,6 +269,7 @@ function Career() {
           </div>
         </div>
       </div>
+      {/* Career Form ends here */}
 
       {/* Progress wrap ends here */}
       <div

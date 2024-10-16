@@ -161,6 +161,7 @@ function About() {
       </div>
       {/* About us ends here */}
 
+      {/* Vision area starts here */}
       <div id="vision" className="vision-area section-padding theme-2 parallax">
         <div className="container">
           <div className="row parallax-content">

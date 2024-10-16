@@ -708,7 +708,6 @@ function Products() {
           {/* Product 11 ends here */}
         </div>
       </div>
-
       {/* Product area ends here */}
 
       {/* Progress wrap starts here */}

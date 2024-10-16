@@ -372,7 +372,7 @@ hr {
 }
 
 .main-btn:hover {
-  background-color: #017d3f;
+  background-color: #b88124;
   color: #fff;
 }
 
@@ -1131,40 +1131,41 @@ textarea:focus::-webkit-input-placeholder {
   height: 20px;
 }
 
-.footer-area ul li a {
+.footer-area .links a {
   display: block;
   color: #cfd9d3;
   padding: 7px 0;
-}
-
-.footer-area ul li a:hover {
-  color: #fcdb5a;
-}
-
-.subscribe-form button {
-  padding: 18px 50px;
-  font-size: 18px;
-  line-height: 13px;
-  background: rgb(252, 219, 90);
-  color: rgb(255, 255, 255);
-  transition: all 0.3s ease-out 0s;
-  border: 0px;
-  cursor: pointer;
-  letter-spacing: 1px;
-}
-
-.subscribe-form {
   position: relative;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-.subscribe-form input {
-  border: 0;
-  background: #fff;
+.footer-area .links a:hover {
+  color: #fcdb5a;
+  display: inline-flex;
+  align-items: center;
 }
 
-.subscribe-form input::placeholder {
-  color: #797a7e;
-  font-size: 14px;
+.footer-area .links a:focus:after,
+.footer-area .links a:hover:after {
+  width: 100%;
+  left: auto;
+}
+
+.footer-area .links a:after {
+  content: "";
+  pointer-events: none;
+  bottom: 2px;
+  right: auto;
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #fcdb5a;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 500ms;
+  transition-property: width, right;
 }
 
 .footer-up {
@@ -1481,124 +1482,7 @@ ul {
   border-bottom: 4px solid #fcdb5a;
 }
 
-/* Skill Section  
-============== */
 
-.skill-bg {
-  width: 50%;
-  position: relative;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .skill-bg {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .skill-bg {
-    display: none;
-  }
-}
-
-.skill-content {
-  width: 50%;
-  padding: 75px;
-  background: #017d3f;
-}
-
-.skill-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap !important;
-  flex-wrap: wrap !important;
-}
-
-.skill-area .section-title h2 {
-  color: #fff;
-}
-
-.single-bar-item h4 {
-  color: #fff;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.progress-bar-area {
-  margin-top: 40px;
-}
-
-.barfiller .fill {
-  background: #fcdb5a !important;
-}
-
-.skill-area .section-title h2 b {
-  color: #fcdb5a;
-}
-
-.skill-area p {
-  color: #fff;
-}
-
-/* Process Section
-============== */
-
-.process-item-wrap {
-  margin-top: 50px;
-}
-
-.single-process-item {
-  text-align: center;
-  position: relative;
-}
-
-.process-num {
-  position: absolute;
-  right: 70px;
-  top: 0;
-  z-index: 9;
-  background: #fcdb5a;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  padding: 7px;
-}
-
-.process-num p {
-  font-size: 16px;
-  color: #fff;
-}
-
-.process-icon {
-  border: 7px solid #f6f6f6;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 35px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  transition: 0.3s;
-}
-
-.process-icon img {
-  width: 55px;
-  height: auto;
-}
-
-.single-process-item h5 {
-  font-size: 22px;
-  margin: 25px 25px;
-  line-height: 30px;
-}
-
-.single-process-item:hover .process-icon {
-  border-color: #87c03d;
-}
 
 /* Team Section 
 ============== */
