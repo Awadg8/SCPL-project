@@ -150,7 +150,7 @@ function Career() {
 
               <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                 We will consider your candidature for suitable positions as and
-                when they come up. I the meantime, please check back for
+                when they come up. In the meantime, please check back for
                 positions that might be available in the near future.
               </p>
             </div>

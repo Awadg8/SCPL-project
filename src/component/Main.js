@@ -106,7 +106,7 @@ function Main() {
                     </h6>
 
                     <h1
-                      className=""
+                      className="text-left"
                       data-aos="fade-up"
                       data-aos-duration="1500"
                       style={{ maxWidth: window.innerWidth > 991 ? "75%" : "" }}
@@ -150,7 +150,7 @@ function Main() {
                     </h6>
 
                     <h1
-                      className="animate__animated animate__fadeInUp"
+                      className="text-left"
                       style={{ maxWidth: window.innerWidth > 991 ? "75%" : "" }}
                     >
                       We maintain high standards for product flawlessness at all
@@ -192,7 +192,7 @@ function Main() {
                     </h6>
 
                     <h1
-                      className="animate__animated animate__fadeInUp"
+                      className="text-left"
                       style={{ maxWidth: window.innerWidth > 991 ? "75%" : "" }}
                     >
                       The best of infrastructure, processes, planning and people
