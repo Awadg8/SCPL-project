@@ -99,7 +99,7 @@ function Main() {
                       className=""
                       data-aos="fade-up"
                       data-aos-duration="1500"
-                      style={{ color: "#ff6700", marginLeft: "0px" }}
+                      style={{ color: "#fff", marginLeft: "0px" }}
                     >
                       Leading in Agricultural Products and Spices
                     </h6>
@@ -143,7 +143,7 @@ function Main() {
                   <div className="section-title">
                     <h6
                       className="animate__animated animate__fadeInDown"
-                      style={{ color: "#ff6700", marginLeft: "0px" }}
+                      style={{ color: "#fff", marginLeft: "0px" }}
                     >
                       A comprehensive range of Seed Products
                     </h6>
@@ -185,7 +185,7 @@ function Main() {
                   <div className="section-title">
                     <h6
                       className="animate__animated animate__fadeInDown"
-                      style={{ color: "#ff6700", marginLeft: "0px" }}
+                      style={{ color: "#fff", marginLeft: "0px" }}
                     >
                       Robust infrastructure facilities
                     </h6>
