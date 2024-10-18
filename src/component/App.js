@@ -8,6 +8,7 @@ import About from "./About";
 import Products from "./Products";
 import Career from "./Career";
 import Contact from "./Contact";
+import Nopage from "./Nopage";
 
 // CSS import
 import "../App.css";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/*" element={<Nopage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

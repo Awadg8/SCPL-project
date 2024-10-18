@@ -78,7 +78,7 @@ h6 {
   font-size: 22px;
   font-weight: 500;
   font-family: "Barlow", sans-serif;
-  color: #dc4628;
+  color: #ff6700;
   letter-spacing: 1px;
 }
 
@@ -333,9 +333,9 @@ hr {
 }
 
 .section-title h2 {
-  font-size: 45px;
+  font-size: 43px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 55px;
   letter-spacing: -1px;
   margin-bottom: 20px;
 }
@@ -349,7 +349,7 @@ hr {
 
 .main-btn {
   display: inline-block;
-  background: #fcdb5a;
+  background: #fcb65a;
   color: #333e38;
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
@@ -622,7 +622,7 @@ textarea:focus::-webkit-input-placeholder {
 ============== */
 
 .header-area .main-menu .navbar-nav .nav-link:hover {
-  color: #fcdb5a;
+  color: #fcb65a;
   transition: all 0.3s ease-in-out;
 }
 
@@ -686,7 +686,7 @@ textarea:focus::-webkit-input-placeholder {
   height: 4px;
   top: 0;
   left: 0;
-  background: #fcdb5a;
+  background: #fcb65a;
   visibility: hidden;
   opacity: 0;
 }
@@ -729,7 +729,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .main-menu .sub-menu li:hover>a {
-  background: #fcdb5a;
+  background: #fcb65a;
   color: #333e38;
 }
 
@@ -876,7 +876,7 @@ textarea:focus::-webkit-input-placeholder {
 
 .info-content {
   padding: 35px;
-  border-left: 10px solid #fcdb5a;
+  border-left: 10px solid #fcb65a;
   height: 100%;
 }
 
@@ -902,7 +902,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .info-founder {
-  background: #fcdb5a;
+  background: #fcb65a;
   height: 100%;
   text-align: center;
   padding: 33px 50px;
@@ -970,7 +970,7 @@ textarea:focus::-webkit-input-placeholder {
 .pop-up-video a.video-play-btn {
   font-size: 20px;
   color: #fff;
-  border: 2px solid #10cc75;
+  border: 2px solid #fcb65a;
   border-radius: 50%;
   padding: 15px;
   width: 70px;
@@ -982,7 +982,7 @@ textarea:focus::-webkit-input-placeholder {
   left: 50%;
   margin-left: -35px;
   margin-top: -35px;
-  background: #10cc75;
+  background: #fcb65a;
   cursor: pointer;
   z-index: 9;
 }
@@ -1014,7 +1014,7 @@ textarea:focus::-webkit-input-placeholder {
   bottom: -2px;
   right: -2px;
   border-radius: inherit;
-  border: 1px solid #fcdb5a;
+  border: 1px solid #ff6700;
   -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
   animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
 }
@@ -1104,12 +1104,12 @@ textarea:focus::-webkit-input-placeholder {
 ============== */
 
 .footer-area {
-  background: #262e2a;
+  background: #2e2822;
   color: #fff;
 }
 
 .footer-area h6 {
-  color: #dc4628;
+  color: #d35b29;
   margin: 20px 0;
 }
 
@@ -1142,7 +1142,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .footer-area .links a:hover {
-  color: #fcdb5a;
+  color: #fcb65a;
   display: inline-flex;
   align-items: center;
 }
@@ -1162,7 +1162,7 @@ textarea:focus::-webkit-input-placeholder {
   position: absolute;
   width: 0%;
   height: 1px;
-  background-color: #fcdb5a;
+  background-color: #fcb65a;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 500ms;
   transition-property: width, right;
@@ -1181,7 +1181,7 @@ textarea:focus::-webkit-input-placeholder {
 
 .footer-bottom {
   padding: 15px 0;
-  background: #28332d;
+  background: #332e28;
 }
 
 .footer-bottom p {
@@ -1654,7 +1654,7 @@ ul.team-social li a {
 }
 
 .breadcroumb-area h5 {
-  color: #dc4628;
+  color: #ff6700;
   font-size: 16px;
   margin-top: 25px;
 }
@@ -1689,7 +1689,7 @@ ul.team-social li a {
 
 .heading__pre-title {
   display: inline-block;
-  color: #dc4628;
+  color: #ff6700;
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -1825,7 +1825,7 @@ ul.team-social li a {
   display: block;
   height: 2px;
   width: 100%;
-  background: #dc4628;
+  background: #ff6700;
   position: absolute;
   top: 0;
   left: 0;
@@ -1975,3 +1975,108 @@ a {
   color: #b88124;
   margin-top: 10px;
 }
+
+
+/* NoPage Style Start Here */
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.page-logo {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 0.75rem;
+  background-color: #eff6ff;
+  border-radius: 9999px;
+}
+
+.page-logo svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  margin-top: 500px;
+}
+
+.page-heading {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: #1f2937;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.page-para {
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.page-btn {
+  width: auto;
+  column-gap: 0.75rem;
+  align-items: center;
+  flex-shrink: 0;
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.page-btn button {
+  color: #18181b;
+  font-weight: 550;
+  font-size: 0.938rem;
+  line-height: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 2.25rem;
+  display: inline-flex;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.page-btn button svg {
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+}
+
+.page-btn button:hover svg {
+  transform: translateX(-10px);
+  transition: all 0.3s ease-in;
+}
+
+.page-btn a {
+  color: white;
+  font-weight: 550;
+  font-size: 0.938rem;
+  line-height: 1.25rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: #18181b;
+  border-radius: 0.75rem;
+  justify-items: center;
+  align-items: center;
+  height: 2.25rem;
+  display: inline-flex;
+}
+
+.page-btn a:hover {
+  background-color: #18181be6;
+}
+
+
+/* NoPage Style End Here */

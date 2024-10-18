@@ -103,9 +103,7 @@ function Contact() {
                     Contact Us
                   </h6>
 
-                  <h2>
-                    Get in <b>Touch</b>
-                  </h2>
+                  <h2>Get in Touch</h2>
                 </div>
 
                 <p style={{ fontSize: "15px", lineHeight: "1.6" }}>

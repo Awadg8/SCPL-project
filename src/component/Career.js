@@ -95,8 +95,7 @@ function Career() {
                 <span className="heading__pre-title">CAREERS</span>
 
                 <h3 className="heading__title">
-                  Looking for tomorrow’s AGRO leaders,
-                  <span style={{ color: "#b88124" }}>Today.</span>
+                  Looking for tomorrow’s AGRO leaders, Today.
                 </h3>
               </div>
 

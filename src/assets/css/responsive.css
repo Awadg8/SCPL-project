@@ -5,8 +5,8 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .section-title h2 {
-    font-size: 45px;
-    line-height: 60px;
+    font-size: 37px;
+    line-height: 50px;
   }
 
   .single-service-area h5 {
@@ -29,8 +29,8 @@
   }
 
   .section-title h2 {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 28px;
+    line-height: 40px;
   }
 
   .header-right-content {
@@ -57,7 +57,7 @@
   }
 
   .navbar-toggler {
-    padding: 5px 15px;
+    /* padding: 5px 15px; */
     font-size: 20px;
     line-height: 1;
     background-color: transparent;
@@ -319,8 +319,8 @@
   }
 
   .section-title h2 {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 25px;
+    line-height: 30px;
   }
 
   .header-top {
@@ -349,7 +349,7 @@
   }
 
   .navbar-toggler {
-    padding: 5px 15px;
+    /* padding: 5px 15px; */
     font-size: 20px;
     line-height: 1;
     background-color: transparent;
@@ -404,6 +404,7 @@
     -webkit-box-shadow: 0 26px 48px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 26px 48px 0 rgba(0, 0, 0, 0.15);
     margin-top: 15px;
+    border-radius: 15px;
   }
 
   .navigation .navbar .navbar-nav .nav-item .sub-nav-toggler {
@@ -773,8 +774,8 @@
   }
 
   .section-title h2 {
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 28px;
+    line-height: 35px;
   }
 
   .header-top {
@@ -865,6 +866,7 @@
     -webkit-box-shadow: 0 26px 48px 0 rgba(0, 0, 0, 0.15);
     box-shadow: 0 26px 48px 0 rgba(0, 0, 0, 0.15);
     margin-top: 15px;
+    border-radius: 15px;
   }
 
   .navigation .navbar .navbar-nav .nav-item .sub-nav-toggler {

@@ -88,8 +88,8 @@ function About() {
             <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>About Us</h6>
 
             <h2>
-              Leading Exporter of<b> Agricultural Products</b> like Red Chillies
-              and Groundnuts in <b> India</b>
+              Leading Exporter of Agricultural Products like Red Chillies and
+              Groundnuts in India
             </h2>
           </div>
 
@@ -260,9 +260,8 @@ function About() {
             </h6>
 
             <h2>
-              All these <b>processes</b> take place at our facilities in
-              <b> Guntur </b>,<b> Khammam </b>,<b> Chennai </b> and
-              <b> Pipavav</b>.
+              All these processes take place at our facilities in , Guntur ,
+              Khammam, Chennai and Pipavav.
             </h2>
           </div>
 
@@ -592,9 +591,7 @@ function About() {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="section-title text-center">
-                <h2>
-                  Dedicated <b>Team</b>
-                </h2>
+                <h2>Dedicated Team</h2>
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #017d3f;
+  stroke: rgb(255, 103, 0);
   stroke-width: 4;
   box-sizing: border-box;
   -webkit-transition: all 200ms linear;

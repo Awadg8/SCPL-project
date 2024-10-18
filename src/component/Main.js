@@ -17,7 +17,6 @@ import agricultural from "../assets/img/agriculture.png";
 
 function Main() {
   AOS.init();
-
   const navigate = useNavigate();
 
   // Slider next btn
@@ -100,7 +99,7 @@ function Main() {
                       className=""
                       data-aos="fade-up"
                       data-aos-duration="1500"
-                      style={{ color: "#fcdb5a", marginLeft: "0px" }}
+                      style={{ color: "#ff6700", marginLeft: "0px" }}
                     >
                       Leading in Agricultural Products and Spices
                     </h6>
@@ -144,7 +143,7 @@ function Main() {
                   <div className="section-title">
                     <h6
                       className="animate__animated animate__fadeInDown"
-                      style={{ color: "#fcdb5a", marginLeft: "0px" }}
+                      style={{ color: "#ff6700", marginLeft: "0px" }}
                     >
                       A comprehensive range of Seed Products
                     </h6>
@@ -186,7 +185,7 @@ function Main() {
                   <div className="section-title">
                     <h6
                       className="animate__animated animate__fadeInDown"
-                      style={{ color: "#fcdb5a", marginLeft: "0px" }}
+                      style={{ color: "#ff6700", marginLeft: "0px" }}
                     >
                       Robust infrastructure facilities
                     </h6>
@@ -286,8 +285,7 @@ function Main() {
             </h6>
 
             <h2>
-              <b> Sidhhartha Corporation Pvt. Ltd</b> - Taking <b>India</b> to
-              The World!
+              Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
             </h2>
           </div>
 
@@ -385,9 +383,7 @@ function Main() {
                   What we do
                 </h6>
 
-                <h2>
-                  We are Providing <b>Quality Products</b> for our customers
-                </h2>
+                <h2>We are Providing Quality Products for our customers</h2>
               </div>
 
               <div
