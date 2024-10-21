@@ -98,8 +98,8 @@ function Header() {
                             width: "120px",
                             // height: "70px",
                             height: "90px",
-                            // backgroundColor: "white",
-                            backgroundColor: "#2e2822",
+                            backgroundColor: "white",
+                            // backgroundColor: "#2e2822",
                             padding: "5px",
                             borderRadius: "6px",
                           }}

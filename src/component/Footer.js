@@ -32,10 +32,7 @@ function Footer() {
                   />
                 </a>
 
-                <p>
-                  More over 30 years of experience in agriculture, we cultivate
-                  professionals farmer to firm high quality products.
-                </p>
+                <p>More than over 30 years of experience in agriculture.</p>
 
                 {/* <ul className="social-area">
                   <li className="icon-content">
