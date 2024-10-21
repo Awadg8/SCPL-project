@@ -20,7 +20,7 @@
 /* Google Font Import 
 ======================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=Barlow:wght@300;400;500;600;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=Barlow:wght@300;400;500;600;700;900&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -41,7 +41,8 @@ body {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Open Sans;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -59,7 +60,8 @@ h4,
 h5,
 h6 {
   position: relative;
-  font-family: "Barlow", sans-serif;
+  font-family: Open Sans;
+  /* font-family: "Barlow", sans-serif; */
   font-weight: 500;
   margin: 0;
   color: #333e38;
@@ -77,7 +79,8 @@ h6 {
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 500;
-  font-family: "Barlow", sans-serif;
+  font-family: Open Sans;
+  /* font-family: "Barlow", sans-serif; */
   color: #ff6700;
   letter-spacing: 1px;
 }
@@ -85,7 +88,8 @@ h6 {
 a {
   text-decoration: none;
   cursor: pointer;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: Open Sans;
+  /* font-family: "Barlow Condensed", sans-serif; */
   color: #333e36;
   font-size: 18px;
   -webkit-transition: 0.5s;
@@ -129,7 +133,7 @@ a {
 }
 
 .color-white {
-  background-color: white;
+  /* background-color: white; */
   border-radius: 5px;
 }
 
@@ -333,9 +337,10 @@ hr {
 }
 
 .section-title h2 {
-  font-size: 43px;
+  /* font-size: 43px; */
+  font-size: 39px;
   font-weight: 700;
-  line-height: 55px;
+  line-height: 45px;
   letter-spacing: -1px;
   margin-bottom: 20px;
 }
@@ -352,7 +357,8 @@ hr {
   background: #fcb65a;
   color: #333e38;
   text-transform: uppercase;
-  font-family: "Barlow Condensed", sans-serif;
+  /* font-family: "Barlow Condensed", sans-serif; */
+  font-family: Open Sans;
   font-size: 18px;
   font-weight: 500;
   line-height: 23px;
@@ -486,15 +492,15 @@ textarea:focus::-webkit-input-placeholder {
 ============== */
 
 .hero-area-bg-1 {
-  background-image: url(../img/slider/slide1.jpg);
+  background-image: url(../img/slider/slider-3.jpg);
 }
 
 .hero-area-bg-2 {
-  background-image: url(../img/slider/slide-2.jpg);
+  background-image: url(../img/slider/IMG_7675.JPG);
 }
 
 .hero-area-bg-3 {
-  background-image: url(../img/slider/slider-3.jpg);
+  background-image: url(../img/slider/slide-2.jpg);
 }
 
 /* Scroll Top 
@@ -600,7 +606,8 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .header-area.absolute-header .main-menu .navbar-nav .nav-link {
-  color: #333b3e;
+  /* color: #333b3e; */
+  color: #fff;
   font-weight: 600;
 }
 
@@ -694,7 +701,8 @@ textarea:focus::-webkit-input-placeholder {
 .main-menu li:hover .sub-menu {
   opacity: 1;
   visibility: visible;
-  top: 70px;
+  /* top: 70px; */
+  top: 55px;
 }
 
 .main-menu li:hover .sub-menu::after {
@@ -865,7 +873,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .info-bg {
-  background-image: url(../img/title.jpg);
+  background-image: url(../img/IMG_7803.JPG);
 }
 
 .info-bg.bg-cover {
@@ -887,7 +895,9 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .info-content a {
-  font-family: "Barlow Condensed", sans-serif;
+  /* font-family: "Barlow Condensed", sans-serif; */
+  font-family: Open Sans;
+
   font-size: 20px;
   letter-spacing: 1px;
   color: #b88124;
@@ -916,7 +926,8 @@ textarea:focus::-webkit-input-placeholder {
 .info-founder p.highlight {
   font-size: 60px;
   font-weight: 600;
-  font-family: "Barlow Condensed", sans-serif;
+  /* font-family: "Barlow Condensed", sans-serif; */
+  font-family: Open Sans;
   color: #333e38;
   margin: 30px 0;
 }
@@ -1174,7 +1185,8 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .footer-up p {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: Open Sans;
+  /* font-family: "Barlow Condensed", sans-serif; */
   font-size: 18px;
   color: #cfd9d3;
 }
@@ -1639,7 +1651,8 @@ ul.team-social li a {
 }
 
 .breadcroumb-area .breadcroumb-title h1 {
-  font-family: "Roboto Condensed", sans-serif;
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-family: Open Sans;
   font-size: 70px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -1933,7 +1946,7 @@ a {
   overflow: hidden;
 }
 
-.certificate-img-1 {
+/* .certificate-img-1 {
   background-image: url("../img/certificates/certificates1.jpeg");
 }
 
@@ -1947,6 +1960,20 @@ a {
 
 .certificate-img-4 {
   background-image: url("../img/certificates/certificates4.jpeg");
+} */
+
+.single-certificate-member {
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-img {
+  background-image: url("../img/certificates/certificate.png");
+  width: 120px;
+  height: 120px;
 }
 
 /* Loader in Contact Form */

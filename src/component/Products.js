@@ -92,11 +92,7 @@ function Products() {
                 </div>
               </div>
 
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text">
                     <h1
@@ -136,11 +132,7 @@ function Products() {
           {/* Product 2 starts here */}
           <div id="groundnuts" className="section-padding">
             <div className="row align-items-center">
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text">
                     <h1
@@ -226,11 +218,7 @@ function Products() {
                 </div>
               </div>
 
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text mb-30">
                     <h1
@@ -262,11 +250,7 @@ function Products() {
           {/* Product 4 starts here */}
           <div id="cumin-seeds" className="section-padding">
             <div className="row align-items-center">
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text">
                     <h1
@@ -341,11 +325,7 @@ function Products() {
                 </div>
               </div>
 
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text mb-30">
                     <h1
@@ -374,11 +354,7 @@ function Products() {
           {/* Product 6 starts here */}
           <div id="chickpeas" className="section-padding">
             <div className="row align-items-center">
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text">
                     <h1
@@ -452,11 +428,7 @@ function Products() {
                 </div>
               </div>
 
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text mb-30">
                     <h1
@@ -488,11 +460,7 @@ function Products() {
           {/* Product 8 starts here */}
           <div id="fenugreek-seeds" className="section-padding">
             <div className="row align-items-center">
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text">
                     <h1
@@ -565,11 +533,7 @@ function Products() {
                 </div>
               </div>
 
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text mb-30">
                     <h1
@@ -598,11 +562,7 @@ function Products() {
           {/* Product 10 start here */}
           <div id="raisin" className="section-padding">
             <div className="row align-items-center">
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text">
                     <h1
@@ -676,11 +636,7 @@ function Products() {
                 </div>
               </div>
 
-              <div
-                className="col-lg-6 col-md-12"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
                   <div className="text mb-30">
                     <h1

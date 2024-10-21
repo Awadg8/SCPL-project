@@ -12,7 +12,7 @@ import "animate.css"; // For animation
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import aboutImg3 from "../assets/img/IMG_7043.JPG";
+import aboutImg3 from "../assets/img/IMG_6976.JPG";
 import agricultural from "../assets/img/agriculture.png";
 
 function Main() {
@@ -280,9 +280,9 @@ function Main() {
       <div className="about-area section-padding theme-2">
         <div className="container">
           <div className="section-title">
-            <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
+            {/* <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
               A little Bit More
-            </h6>
+            </h6> */}
 
             <h2>
               Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
@@ -374,7 +374,7 @@ function Main() {
       {/* About us ends here */}
 
       {/* Home video starts here */}
-      <div className="service-area gray-bg theme-2 section-padding">
+      {/* <div className="service-area gray-bg theme-2 section-padding">
         <div className="container">
           <div className="row align-items-center">
             <div className="">
@@ -419,7 +419,7 @@ function Main() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Home video ends here */}
 
       {/* Progress wrap starts here */}

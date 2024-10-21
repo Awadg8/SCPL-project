@@ -11,7 +11,10 @@ import "animate.css"; // For animations
 import Slider from "react-slick"; //For slider
 
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
-import facilityImg from "../assets/img/facility.jpg";
+import facilityImg from "../assets/img/facility/facility.jpg";
+import facilityImg2 from "../assets/img/facility/IMG_7509.JPG";
+import facilityImg3 from "../assets/img/facility/IMG_7754.JPG";
+import facilityImg4 from "../assets/img/facility/IMG_6847.JPG";
 
 function About() {
   AOS.init();
@@ -266,11 +269,7 @@ function About() {
           </div>
 
           <div className="row align-items-center">
-            <div
-              className="col-lg-6"
-              data-aos="fade-right"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6">
               <article className="card">
                 <div className="temporary_text">
                   <img
@@ -301,16 +300,12 @@ function About() {
               </article>
             </div>
 
-            <div
-              className="col-lg-6"
-              data-aos="fade-left"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6">
               <article className="card">
                 <div className="temporary_text">
                   <img
                     className="img-fluid"
-                    src={facilityImg}
+                    src={facilityImg2}
                     alt=""
                     style={{
                       width: "100%",
@@ -337,16 +332,12 @@ function About() {
           </div>
 
           <div className="row align-items-center">
-            <div
-              className="col-lg-6 col-md-12"
-              data-aos="fade-right"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6 col-md-12">
               <article className="card">
                 <div className="temporary_text">
                   <img
                     className="img-fluid"
-                    src={facilityImg}
+                    src={facilityImg3}
                     alt=""
                     style={{
                       width: "100%",
@@ -371,16 +362,12 @@ function About() {
               </article>
             </div>
 
-            <div
-              className="col-lg-6"
-              data-aos="fade-left"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6">
               <article className="card">
                 <div className="temporary_text">
                   <img
                     className="img-fluid"
-                    src={facilityImg}
+                    src={facilityImg4}
                     alt=""
                     style={{
                       width: "100%",
@@ -1026,8 +1013,17 @@ function About() {
               data-aos="zoom-in-right"
               data-aos-duration="2000"
             >
-              <div className="single-team-member">
-                <div className="team-member-bg certificate-img-1"></div>
+              <div className="single-certificate-member">
+                <div className="team-member-bg certificate-img"></div>
+              </div>
+
+              <div
+                className="heading text-center"
+                style={{ justifyContent: "center" }}
+              >
+                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  2nd Topmost Exporter Of Spices And Spice Products
+                </h3>
               </div>
             </div>
 
@@ -1036,8 +1032,17 @@ function About() {
               data-aos="zoom-in-up"
               data-aos-duration="2000"
             >
-              <div className="single-team-member">
-                <div className="team-member-bg certificate-img-2"></div>
+              <div className="single-certificate-member">
+                <div className="team-member-bg certificate-img"></div>
+              </div>
+
+              <div
+                className="heading text-center"
+                style={{ justifyContent: "center" }}
+              >
+                <h3 style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                  Topmost Exporter Of Chillies
+                </h3>
               </div>
             </div>
 
@@ -1046,8 +1051,17 @@ function About() {
               data-aos="zoom-in-down"
               data-aos-duration="2000"
             >
-              <div className="single-team-member">
-                <div className="team-member-bg certificate-img-3"></div>
+              <div className="single-certificate-member">
+                <div className="team-member-bg certificate-img"></div>
+              </div>
+
+              <div
+                className="heading text-center"
+                style={{ justifyContent: "center" }}
+              >
+                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  3rd Topmost Exporter Of Spices And Spice Products
+                </h3>
               </div>
             </div>
 
@@ -1056,8 +1070,17 @@ function About() {
               data-aos="zoom-in-left"
               data-aos-duration="2000"
             >
-              <div className="single-team-member">
-                <div className="team-member-bg certificate-img-4"></div>
+              <div className="single-certificate-member">
+                <div className="team-member-bg certificate-img"></div>
+              </div>
+
+              <div
+                className="heading text-center"
+                style={{ justifyContent: "center" }}
+              >
+                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  State Export Excellence Award 2006-07
+                </h3>
               </div>
             </div>
           </div>

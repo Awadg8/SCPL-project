@@ -37,7 +37,7 @@ function Footer() {
                   professionals farmer to firm high quality products.
                 </p>
 
-                <ul className="social-area">
+                {/* <ul className="social-area">
                   <li className="icon-content">
                     <a data-social="spotify" aria-label="Spotify" href="/">
                       <div className="filled"></div>
@@ -97,7 +97,7 @@ function Footer() {
 
                     <div className="tooltip">Telegram</div>
                   </li>
-                </ul>
+                </ul> */}
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
