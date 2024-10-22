@@ -15,7 +15,6 @@ import "../App.css";
 import "../assets/css/style.css";
 import "../assets/css/responsive.css";
 import "../assets/css/backToTop.css";
-import "../assets/css/barfiller.css";
 
 function App() {
   return (

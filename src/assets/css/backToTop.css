@@ -23,7 +23,6 @@
 .progress-wrap::after {
   position: absolute;
   content: "";
-  font-family: "Font Awesome 5 Pro";
   text-align: center;
   line-height: 46px;
   font-size: 20px;

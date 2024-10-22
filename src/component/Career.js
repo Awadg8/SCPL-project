@@ -92,7 +92,7 @@ function Career() {
           <div className="row flex-column-reverse flex-xl-row">
             <div className="col-xl-12">
               <div className="mb-20">
-                <span className="heading__pre-title">CAREERS</span>
+                <span className="heading__pre-title">Careers</span>
 
                 <h3 className="heading__title">
                   Looking for tomorrow’s AGRO leaders, Today.
@@ -137,7 +137,7 @@ function Career() {
               data-aos-duration="2000"
             >
               <div className="heading mb-20">
-                <span className="heading__pre-title">CURRENT OPENINGS</span>
+                <span className="heading__pre-title">Current Openings</span>
               </div>
 
               <p style={{ fontSize: "15px", lineHeight: "1.6" }}>

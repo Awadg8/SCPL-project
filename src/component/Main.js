@@ -12,7 +12,7 @@ import "animate.css"; // For animation
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import aboutImg3 from "../assets/img/IMG_6976.JPG";
+import aboutImg3 from "../assets/img/IMG_6976.JPG.jpg";
 import agricultural from "../assets/img/agriculture.png";
 
 function Main() {
@@ -217,11 +217,7 @@ function Main() {
       <div className="info-area">
         <div className="container">
           <div className="row">
-            <div
-              className="col-lg-9 col-12"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-9 col-12">
               <div className="info-inner">
                 <div className="row gx-0">
                   <div className="col-lg-4 col-md-4 col-12">
@@ -251,11 +247,7 @@ function Main() {
               </div>
             </div>
 
-            <div
-              className="col-lg-3 col-md-4 col-12"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-3 col-md-4 col-12">
               <div className="info-founder">
                 <div className="info-img">
                   <img
@@ -280,10 +272,6 @@ function Main() {
       <div className="about-area section-padding theme-2">
         <div className="container">
           <div className="section-title">
-            {/* <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
-              A little Bit More
-            </h6> */}
-
             <h2>
               Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
             </h2>
@@ -311,11 +299,7 @@ function Main() {
               </div>
             </div>
 
-            <div
-              className="col-lg-6 col-md-12"
-              data-aos="fade-left"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6 col-md-12">
               <div className="tab-content-inner mt-20">
                 <div className="text">
                   <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
@@ -346,11 +330,7 @@ function Main() {
           </div>
 
           <div className="row align-items-center">
-            <div
-              className="col-lg-12"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-12">
               <div className="tab-content-inner">
                 <div className="text mt-20">
                   <p

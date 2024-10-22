@@ -4,8 +4,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import productChilli from "../assets/img/product/red-chillies.jpg";
-import productGroundnut from "../assets/img/product/Groundnut.webp";
+import productChilli from "../assets/img/product/IMG_7082.jpg";
+import productGroundnut from "../assets/img/IMG_7803.jpg";
 import productSesame from "../assets/img/product/sesame.jpg";
 import productCumin from "../assets/img/product/Cumin-Spice.webp";
 import productCoriander from "../assets/img/product/coriander.jpg";
@@ -57,7 +57,13 @@ function Products() {
       <div id="products" className="product-area section-padding theme-2">
         <div className="container">
           <div className="section-title">
-            <h6 style={{ fontSize: "22px", marginLeft: "10px" }}>
+            <h6
+              style={{
+                fontSize: "22px",
+                marginLeft: "10px",
+                textTransform: "Capitalize",
+              }}
+            >
               Our Products
             </h6>
           </div>

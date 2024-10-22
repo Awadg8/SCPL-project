@@ -11,10 +11,10 @@ import "animate.css"; // For animations
 import Slider from "react-slick"; //For slider
 
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
-import facilityImg from "../assets/img/facility/facility.jpg";
-import facilityImg2 from "../assets/img/facility/IMG_7509.JPG";
-import facilityImg3 from "../assets/img/facility/IMG_7754.JPG";
-import facilityImg4 from "../assets/img/facility/IMG_6847.JPG";
+import facilityImg from "../assets/img/facility/facility1.jpg";
+import facilityImg2 from "../assets/img/facility/facility2.jpg";
+import facilityImg3 from "../assets/img/facility/facility3.jpg";
+import facilityImg4 from "../assets/img/facility/facility4.jpg";
 
 function About() {
   AOS.init();
@@ -88,8 +88,16 @@ function About() {
       <div id="about-us" className="about-area section-padding theme-2">
         <div className="container">
           <div className="section-title">
-            <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>About Us</h6>
-
+            <h6
+              style={{
+                fontSize: "22px",
+                marginLeft: "0px",
+                marginBottom: "20px",
+                textTransform: "Capitalize",
+              }}
+            >
+              About Us
+            </h6>
             <h2>
               Leading Exporter of Agricultural Products like Red Chillies and
               Groundnuts in India
@@ -118,11 +126,7 @@ function About() {
               </div>
             </div>
 
-            <div
-              className="col-lg-6 col-md-12"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6 col-md-12">
               <div className="tab-content-inner mt-30">
                 <div className="text mb-30">
                   <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
@@ -255,38 +259,29 @@ function About() {
             <h6
               style={{
                 fontSize: "22px",
-                marginBottom: "25px",
+                marginBottom: "20px",
                 marginLeft: "0px",
+                textTransform: "Capitalize",
               }}
             >
               Our Facilities
             </h6>
 
             <h2>
-              All these processes take place at our facilities in , Guntur ,
+              All these processes take place at our facilities in Guntur,
               Khammam, Chennai and Pipavav.
             </h2>
           </div>
 
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg">
               <article className="card">
                 <div className="temporary_text">
-                  <img
-                    className="img-fluid"
-                    src={facilityImg}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                    }}
-                  />
+                  <img className="img-fluid" src={facilityImg} alt="" />
                 </div>
 
-                <div className="card_content card1">
-                  <h2 className="card_title" style={{ fontSize: "27px" }}>
-                    Guntur
-                  </h2>
+                <div className="card_content">
+                  <h2 className="card_title">Guntur</h2>
 
                   <p className="card_description">
                     Our facility at <b>Guntur (Andhra Pradesh)</b> is developed
@@ -300,24 +295,14 @@ function About() {
               </article>
             </div>
 
-            <div className="col-lg-6">
+            <div className="col-lg">
               <article className="card">
                 <div className="temporary_text">
-                  <img
-                    className="img-fluid"
-                    src={facilityImg2}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                    }}
-                  />
+                  <img className="img-fluid" src={facilityImg2} alt="" />
                 </div>
 
-                <div className="card_content card2">
-                  <h2 className="card_title" style={{ fontSize: "27px" }}>
-                    Khammam
-                  </h2>
+                <div className="card_content">
+                  <h2 className="card_title">Khammam</h2>
 
                   <p className="card_description">
                     Similarly we have another facility at
@@ -332,24 +317,14 @@ function About() {
           </div>
 
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-12">
+            <div className="col-lg col-md-12">
               <article className="card">
                 <div className="temporary_text">
-                  <img
-                    className="img-fluid"
-                    src={facilityImg3}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                    }}
-                  />
+                  <img className="img-fluid" src={facilityImg3} alt="" />
                 </div>
 
-                <div className="card_content card3">
-                  <span className="card_title" style={{ fontSize: "27px" }}>
-                    Chennai
-                  </span>
+                <div className="card_content">
+                  <span className="card_title">Chennai</span>
 
                   <p className="card_description">
                     Our facility at <b>Chennai (Tamil Nadu)</b> Godown premises
@@ -362,24 +337,14 @@ function About() {
               </article>
             </div>
 
-            <div className="col-lg-6">
+            <div className="col-lg">
               <article className="card">
                 <div className="temporary_text">
-                  <img
-                    className="img-fluid"
-                    src={facilityImg4}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                    }}
-                  />
+                  <img className="img-fluid" src={facilityImg4} alt="" />
                 </div>
 
-                <div className="card_content card4">
-                  <span className="card_title" style={{ fontSize: "27px" }}>
-                    Pipavav
-                  </span>
+                <div className="card_content">
+                  <span className="card_title">Pipavav</span>
 
                   <p className="card_description">
                     Our facility at
@@ -405,6 +370,7 @@ function About() {
                 fontSize: "22px",
                 marginBottom: "60px",
                 marginLeft: "0px",
+                textTransform: "Capitalize",
               }}
             >
               Core Values

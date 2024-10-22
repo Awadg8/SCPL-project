@@ -99,7 +99,14 @@ function Contact() {
             >
               <div className="contact-info">
                 <div className="section-title">
-                  <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
+                  <h6
+                    style={{
+                      fontSize: "22px",
+                      marginLeft: "0px",
+                      marginBottom: "20px",
+                      textTransform: "Capitalize",
+                    }}
+                  >
                     Contact Us
                   </h6>
 
@@ -107,16 +114,14 @@ function Contact() {
                 </div>
 
                 <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  If you have a contact Lorem ipsum dolor sit amet cum maiores,
-                  excepturi fuga, est doloremque praesentium!
+                  Contact us for premium-quality spices, groundnuts and other
+                  agricultural products.
                 </p>
 
                 <div className="contact-content">
                   <div className="contact-inner">
                     <div>
-                      <h3 className="mb-30">
-                        Visit <b style={{ color: "#b88124" }}>Us</b>
-                      </h3>
+                      <h3 className="mb-30">Visit Us</h3>
                     </div>
 
                     <div>
@@ -131,7 +136,7 @@ function Contact() {
                             onClick={() => handleTabClick("yard-1")}
                           >
                             <a href="#yard-1v" className="r-tabs-anchor">
-                              <span>MUMBAI</span>
+                              <span>Mumbai</span>
                             </a>
                           </li>
 
@@ -144,7 +149,7 @@ function Contact() {
                             onClick={() => handleTabClick("yard-2")}
                           >
                             <a href="#yard-2v" className="r-tabs-anchor">
-                              <span>ANDHRA PRADESH</span>
+                              <span>Andhra Pradesh</span>
                             </a>
                           </li>
 
@@ -157,7 +162,7 @@ function Contact() {
                             onClick={() => handleTabClick("yard-3")}
                           >
                             <a href="#yard-3v" className="r-tabs-anchor">
-                              <span>TELANGANA</span>
+                              <span>Telangana</span>
                             </a>
                           </li>
 
@@ -170,7 +175,7 @@ function Contact() {
                             onClick={() => handleTabClick("yard-4")}
                           >
                             <a href="#yard-4v" className="r-tabs-anchor">
-                              <span>GUJARAT</span>
+                              <span>Gujarat</span>
                             </a>
                           </li>
 
@@ -183,7 +188,7 @@ function Contact() {
                             onClick={() => handleTabClick("yard-5")}
                           >
                             <a href="#yard-5v" className="r-tabs-anchor">
-                              <span>CHENNAI</span>
+                              <span>Chennai</span>
                             </a>
                           </li>
                         </ul>
@@ -219,8 +224,8 @@ function Contact() {
                                 <h6>Address</h6>
 
                                 <p>
-                                  2ND FLOOR, 205-206, J.K. CHAMBER, SECTOR-17,
-                                  VASHI, NAVI MUMBAI, THANE, MAHARASHTRA, 400703
+                                  2nd Floor, 205-206, J.K. Chamber, Sector-17,
+                                  Vashi, Navi Mumbai, Thane, Maharashtra, 400703
                                 </p>
                               </div>
                             </div>
@@ -253,9 +258,9 @@ function Contact() {
                                   <h6>Address</h6>
 
                                   <p>
-                                    D.NO.113-131, NEAR SAKSHI NEWS PAPER OFFICE,
-                                    NH.16, ANKIREDDIPALEM VILLAGE, GUNTUR,
-                                    GUNTUR, ANDHRA PRADESH - 522005
+                                    D.No.113-131, Near Sakshi News Paper Office,
+                                    Nh.16, Ankireddipalem Village, Guntur,
+                                    Andhra Pradesh - 522005
                                   </p>
                                 </div>
                               </div>
@@ -289,9 +294,8 @@ function Contact() {
                                   <h6>Address</h6>
 
                                   <p>
-                                    DOOR NO 4-5-104, MIRCHI MARKET ROAD,
-                                    BIJJALAVARI STREET, KHAMMAM, KHAMMAM,
-                                    TELANGANA
+                                    Door No. 4-5 - 104, Mirchi Market Road,
+                                    Bijjalavari Street, Khammam, Telangana
                                   </p>
                                 </div>
                               </div>
@@ -325,9 +329,9 @@ function Contact() {
                                   <h6>Address</h6>
 
                                   <p>
-                                    SURVEY NO 216, RAMPARA -2, PIPAVAV PORT
-                                    ROAD, TAL.- RAJULA, DIST.- AMRELI , 365560,
-                                    GUJARAT
+                                    Survey No. 216, Rampara -2, Pipavav Port
+                                    Road, Tal.- Rajula, Dist.- Amreli , 365560,
+                                    Gujarat
                                   </p>
                                 </div>
                               </div>
@@ -361,8 +365,8 @@ function Contact() {
                                   <h6>Address</h6>
 
                                   <p>
-                                    SURVEY NO 85/1 SOTHUPAKKAM ROAD,
-                                    THEERTHAKRIAMPET, REDHILLS, CHENNAI, 600052
+                                    Survey No. 85/1 Sothupakkam Road,
+                                    Theerthakriampet, Redhills, Chennai, 600052
                                   </p>
                                 </div>
                               </div>
