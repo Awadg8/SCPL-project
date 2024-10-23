@@ -660,7 +660,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .main-menu .navbar-nav .nav-item .nav-link.active {
-  color: #d35b29;
+  color: #fcb65a;
 }
 
 .main-menu li.nav-item:hover>NavLink {
@@ -1163,7 +1163,6 @@ textarea:focus::-webkit-input-placeholder {
 .footer-area .links a:focus:after,
 .footer-area .links a:hover:after {
   width: 100%;
-  left: auto;
 }
 
 .footer-area .links a:after {
@@ -2002,6 +2001,7 @@ a {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }

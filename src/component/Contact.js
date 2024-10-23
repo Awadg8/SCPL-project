@@ -387,7 +387,7 @@ function Contact() {
 
                     <h6>Email Address</h6>
 
-                    <p>info@agoora.com</p>
+                    <p>info@sidhharthacorporation.com</p>
                   </div>
 
                   <div className="contact-inner">

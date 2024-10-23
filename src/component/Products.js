@@ -8,7 +8,7 @@ import productChilli from "../assets/img/product/IMG_7082.jpg";
 import productGroundnut from "../assets/img/groundnut.jpg";
 import productSesame from "../assets/img/product/sesame.jpg";
 import productCumin from "../assets/img/product/Cumin-Spice.webp";
-import productCoriander from "../assets/img/product/coriander.jpg";
+import productCoriander from "../assets/img/product/coriander-seed.webp";
 import productChickpea from "../assets/img/product/chickpea.jpg";
 import productFennel from "../assets/img/product/fennel-seeds.jpg";
 import productFenugreek from "../assets/img/product/fenugreek.webp";

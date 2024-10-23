@@ -121,7 +121,7 @@ function Header() {
                           aria-controls="navbarSupportedContent"
                           aria-expanded="false"
                           aria-label="Toggle navigation"
-                          style={{padding:"0"}}
+                          style={{ padding: "0" }}
                         >
                           <input id="checkbox" type="checkbox" />
                           <label className="toggle" htmlFor="checkbox">
