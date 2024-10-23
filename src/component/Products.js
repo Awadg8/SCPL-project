@@ -60,7 +60,8 @@ function Products() {
             <h6
               style={{
                 fontSize: "22px",
-                marginLeft: "10px",
+                marginBottom: "20px",
+                marginLeft: "0",
                 textTransform: "Capitalize",
               }}
             >
@@ -69,7 +70,7 @@ function Products() {
           </div>
 
           {/* Product 1 start here */}
-          <div id="red-chillies" className="section-padding">
+          <div id="red-chillies" className="prod-margin">
             <div className="row align-items-center">
               <p style={{ fontSize: "15px", marginBottom: "25px" }}>
                 <b>SCPL</b> , an export-oriented organization mainly focusing on
@@ -100,16 +101,8 @@ function Products() {
 
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Red Chillies
-                    </h1>
+                  <div className="text product-info">
+                    <h1 className="">Red Chillies</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Indian Red Chilli or Dry Red Chilli is a popular spice
@@ -136,20 +129,12 @@ function Products() {
           {/* Product 1 ends here */}
 
           {/* Product 2 starts here */}
-          <div id="groundnuts" className="section-padding">
+          <div id="groundnuts" className="prod-margin">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Groundnuts
-                    </h1>
+                  <div className="text product-info">
+                    <h1>Groundnuts</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Ground peanuts are finely processed peanuts with a rich,
@@ -201,7 +186,7 @@ function Products() {
           {/* Product 2 ends here */}
 
           {/* Product 3 start here */}
-          <div id="sesame-seeds" className="section-padding">
+          <div id="sesame-seeds" className="prod-margin">
             <div className="row align-items-center">
               <div
                 className="col-lg-6"
@@ -226,16 +211,8 @@ function Products() {
 
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text mb-30">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Sesame seeds
-                    </h1>
+                  <div className="text product-info">
+                    <h1 className="">Sesame seeds</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Sesame seeds are tiny, nutrient-rich seeds known for their
@@ -254,20 +231,12 @@ function Products() {
           {/* Product 3 ends here */}
 
           {/* Product 4 starts here */}
-          <div id="cumin-seeds" className="section-padding">
+          <div id="cumin-seeds" className="prod-margin">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Cumin seeds
-                    </h1>
+                  <div className="text product-info">
+                    <h1>Cumin seeds</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       We are dedicated to our objective of delivering
@@ -307,7 +276,7 @@ function Products() {
           {/* Product 4 ends here */}
 
           {/* Product 5 start here */}
-          <div id="coriander-seeds" className="section-padding">
+          <div id="coriander-seeds" className="prod-margin">
             <div className="row align-items-center">
               <div
                 className="col-lg-6"
@@ -333,16 +302,8 @@ function Products() {
 
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text mb-30">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Coriander seeds
-                    </h1>
+                  <div className="text product-info">
+                    <h1 className="">Coriander seeds</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Coriander seeds are one of the oldest and common spices
@@ -358,20 +319,12 @@ function Products() {
           {/* Product 5 ends here */}
 
           {/* Product 6 starts here */}
-          <div id="chickpeas" className="section-padding">
+          <div id="chickpeas" className="prod-margin">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Chickpeas
-                    </h1>
+                  <div className="text product-info">
+                    <h1>Chickpeas</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Chickpeas are available in two main varieties: Desi and
@@ -410,7 +363,7 @@ function Products() {
           {/* Product 6 ends here */}
 
           {/* Product 7 start here */}
-          <div id="fennel-seeds" className="section-padding">
+          <div id="fennel-seeds" className="prod-margin">
             <div className="row align-items-center">
               <div
                 className="col-lg-6"
@@ -436,16 +389,8 @@ function Products() {
 
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text mb-30">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Fennel seeds
-                    </h1>
+                  <div className="text product-info">
+                    <h1 className="">Fennel seeds</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Fennel seeds are the small, oval-shaped seeds of the
@@ -464,20 +409,12 @@ function Products() {
           {/* Product 7 ends here */}
 
           {/* Product 8 starts here */}
-          <div id="fenugreek-seeds" className="section-padding">
+          <div id="fenugreek-seeds" className="prod-margin">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Fenugreek seeds
-                    </h1>
+                  <div className="text product-info">
+                    <h1>Fenugreek seeds</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Fenugreek seeds are a popular spice commonly used in
@@ -515,7 +452,7 @@ function Products() {
           {/* Product 8 ends here */}
 
           {/* Product 9 start here */}
-          <div id="basil-seeds" className="section-padding">
+          <div id="basil-seeds" className="prod-margin">
             <div className="row align-items-center ">
               <div
                 className="col-lg-6"
@@ -541,16 +478,8 @@ function Products() {
 
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text mb-30">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Basil seeds
-                    </h1>
+                  <div className="text product-info">
+                    <h1 className="">Basil seeds</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Basil seeds are a popular ingredient in many Indian drinks
@@ -566,20 +495,12 @@ function Products() {
           {/* Product 9 ends here */}
 
           {/* Product 10 start here */}
-          <div id="raisin" className="section-padding">
+          <div id="raisin" className="prod-margin">
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Raisin
-                    </h1>
+                  <div className="text product-info">
+                    <h1>Raisin</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       A raisin is a dried grape, known for its sweet flavor and
@@ -618,7 +539,7 @@ function Products() {
           {/* Product 10 ends here */}
 
           {/* Product 11 start here */}
-          <div id="turmeric" className="section-padding">
+          <div id="turmeric" className="">
             <div className="row align-items-center">
               <div
                 className="col-lg-6"
@@ -644,16 +565,8 @@ function Products() {
 
               <div className="col-lg-6 col-md-12">
                 <div className="tab-content-inner">
-                  <div className="text mb-30">
-                    <h1
-                      style={{
-                        color: "#b88124",
-                        fontSize: "50px",
-                        marginBottom: "25px",
-                      }}
-                    >
-                      Turmeric
-                    </h1>
+                  <div className="text product-info">
+                    <h1 className="">Turmeric</h1>
 
                     <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
                       Indian Turmeric is one of the most well known, widely

@@ -5,9 +5,16 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .section-title h2 {
-    /* font-size: 37px; */
     font-size: 33px;
     line-height: 40px;
+  }
+
+  .prod-margin {
+    margin-bottom: 30px;
+  }
+
+  .product-info h1 {
+    font-size: 45px;
   }
 
   .heading__title {
@@ -36,10 +43,17 @@
     display: none;
   }
 
+  .about-content-area {
+    margin-bottom: 25px;
+  }
+
   .section-title h2 {
-    /* font-size: 28px; */
     font-size: 25px;
     line-height: 35px;
+  }
+
+  .product-info h1 {
+    font-size: 40px;
   }
 
   .header-right-content {
@@ -330,6 +344,15 @@
   .section-title h2 {
     font-size: 23px;
     line-height: 30px;
+  }
+
+  .about-content-area {
+    margin-bottom: 20px;
+  }
+
+  .product-info h1 {
+    font-size: 30px;
+    margin-bottom: 0px;
   }
 
   .header-top {
@@ -782,10 +805,17 @@
     text-align: center;
   }
 
+  .about-content-area {
+    margin-bottom: 25px;
+  }
+
   .section-title h2 {
-    /* font-size: 28px; */
     font-size: 23px;
     line-height: 30px;
+  }
+
+  .product-info h1 {
+    font-size: 35px;
   }
 
   .header-top {
@@ -1057,6 +1087,10 @@
     line-height: 45px;
     letter-spacing: -1px;
     font-weight: 700;
+  }
+
+  .prod-margin {
+    margin-bottom: 30px;
   }
 }
 

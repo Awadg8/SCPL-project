@@ -180,6 +180,7 @@ hr {
   .section-padding {
     padding: 40px 40px;
   }
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -2112,5 +2113,12 @@ a {
   background-color: #18181be6;
 }
 
-
 /* NoPage Style End Here */
+
+/* Product page style here */
+
+.product-info h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #b88124;
+}
