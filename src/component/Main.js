@@ -4,7 +4,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Slider from "react-slick"; // For slider
+import Slider from "react-slick"; // For Awards slider
 
 import "animate.css"; // For animation
 

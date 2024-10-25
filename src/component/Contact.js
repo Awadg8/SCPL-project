@@ -17,9 +17,9 @@ function Contact() {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId);
-  };
+  // const handleTabClick = (tabId) => {
+  //   setActiveTab(tabId);
+  // };
 
   const scrollToAnchor = (path, anchorId, navigateTo) => {
     navigateTo(`${path}#${anchorId}`);
@@ -126,7 +126,7 @@ function Contact() {
 
                     <div>
                       <div className="tabs horizontal-tabs r-tabs">
-                        <ul className="horizontal-tabs__header r-tabs-nav mb-30">
+                        {/* <ul className="horizontal-tabs__header r-tabs-nav mb-30">
                           <li
                             className={`r-tabs-tab ${
                               activeTab === "yard-1"
@@ -191,7 +191,7 @@ function Contact() {
                               <span>Chennai</span>
                             </a>
                           </li>
-                        </ul>
+                        </ul> */}
 
                         <div className="horizontal-tabs__content">
                           <div

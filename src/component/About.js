@@ -11,9 +11,9 @@ import "animate.css"; // For animations
 import Slider from "react-slick"; //For slider
 
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
-import facilityImg from "../assets/img/facility/facility1.jpg";
+import facilityImg from "../assets/img/slider/slider-1.jpg";
 import facilityImg2 from "../assets/img/facility/facility2.jpg";
-import facilityImg3 from "../assets/img/facility/facility3.jpg";
+import facilityImg3 from "../assets/img/facility/IMG_7664.JPG";
 import facilityImg4 from "../assets/img/facility/facility4.jpg";
 
 function About() {
@@ -539,7 +539,7 @@ function About() {
       {/* Corevalues ends here */}
 
       {/* Team area starts here */}
-      <div id="team" className="team-area gray-bg section-padding">
+      {/* <div id="team" className="team-area gray-bg section-padding">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-12">
@@ -723,7 +723,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Team area ends here */}
 
       {/* Awards area starts here */}
@@ -957,6 +957,7 @@ function About() {
           </div>
         </div>
       </div>
+
       {/* Awards areas ends here */}
 
       {/* Certificates area starts here */}
@@ -975,6 +976,52 @@ function About() {
 
           <div className="row">
             <div
+              className="col-lg-6 col-md-6"
+              data-aos="zoom-in-left"
+              data-aos-duration="2000"
+            >
+              <div className="single-certificate-member">
+                <div className="team-member-bg certificate-img"></div>
+              </div>
+
+              <div
+                className="heading text-center"
+                style={{ justifyContent: "center" }}
+              >
+                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  State Export Excellence Award <br /> <b>2006-07</b>
+                </h3>
+
+                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  Govt. Of Karnataka
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="col-lg-6 col-md-6"
+              data-aos="zoom-in-up"
+              data-aos-duration="2000"
+            >
+              <div className="single-certificate-member">
+                <div className="team-member-bg certificate-img"></div>
+              </div>
+
+              <div
+                className="heading text-center"
+                style={{ justifyContent: "center" }}
+              >
+                <h3 style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                  Topmost Exporter Of Chillies <br /> <b>2018-19</b>
+                </h3>
+
+                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  Spices Board India
+                </p>
+              </div>
+            </div>
+
+            {/* <div
               className="col-lg-3 col-md-6"
               data-aos="zoom-in-right"
               data-aos-duration="2000"
@@ -988,31 +1035,16 @@ function About() {
                 style={{ justifyContent: "center" }}
               >
                 <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  2nd Topmost Exporter Of Spices And Spice Products
+                  2nd Topmost Exporter Of Spices And Spice Products <b>2018-19</b>
                 </h3>
-              </div>
-            </div>
 
-            <div
-              className="col-lg-3 col-md-6"
-              data-aos="zoom-in-up"
-              data-aos-duration="2000"
-            >
-              <div className="single-certificate-member">
-                <div className="team-member-bg certificate-img"></div>
+                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  Spices Board India
+                </p>
               </div>
+            </div> */}
 
-              <div
-                className="heading text-center"
-                style={{ justifyContent: "center" }}
-              >
-                <h3 style={{ fontSize: "16px", lineHeight: "1.6" }}>
-                  Topmost Exporter Of Chillies
-                </h3>
-              </div>
-            </div>
-
-            <div
+            {/* <div
               className="col-lg-3 col-md-6"
               data-aos="zoom-in-down"
               data-aos-duration="2000"
@@ -1026,29 +1058,14 @@ function About() {
                 style={{ justifyContent: "center" }}
               >
                 <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  3rd Topmost Exporter Of Spices And Spice Products
+                  3rd Topmost Exporter Of Spices And Spice Products <b>2019-20</b>
                 </h3>
-              </div>
-            </div>
 
-            <div
-              className="col-lg-3 col-md-6"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
-              <div className="single-certificate-member">
-                <div className="team-member-bg certificate-img"></div>
+                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+                  Spices Board India
+                </p>
               </div>
-
-              <div
-                className="heading text-center"
-                style={{ justifyContent: "center" }}
-              >
-                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  State Export Excellence Award 2006-07
-                </h3>
-              </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
