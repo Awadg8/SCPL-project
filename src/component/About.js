@@ -13,8 +13,8 @@ import Slider from "react-slick"; //For slider
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
 import facilityImg from "../assets/img/slider/slider-1.jpg";
 import facilityImg2 from "../assets/img/facility/facility2.jpg";
-import facilityImg3 from "../assets/img/facility/IMG_7664.JPG";
-import facilityImg4 from "../assets/img/facility/facility4.jpg";
+import facilityImg3 from "../assets/img/facility/IMG_7772.JPG";
+import facilityImg4 from "../assets/img/slider/slider-2.jpg";
 
 function About() {
   AOS.init();
@@ -770,7 +770,7 @@ function About() {
             <div className="elements">
               <h3>2010-11 </h3>
 
-              <div className="heading mt-10">
+              <div className="mt-10">
                 <p className="mb-10">
                   Silver Trophy Outstanding Performance in Export of Groundnuts
                   - <b>APEDA</b>
@@ -954,6 +954,8 @@ function About() {
             <p>
               &nbsp;&nbsp; 3. FIEO - Federation of Indian Export Organizations.
             </p>
+
+            <p>&nbsp;&nbsp; 4. Spices Board Of India.</p>
           </div>
         </div>
       </div>

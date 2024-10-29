@@ -12,7 +12,7 @@ import "animate.css"; // For animation
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import aboutImg3 from "../assets/img/IMG_6976.JPG.jpg";
+import aboutImg3 from "../assets/img/IMG_6762.JPG";
 import agricultural from "../assets/img/agriculture.png";
 
 function Main() {
