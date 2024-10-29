@@ -4,8 +4,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import productChilli from "../assets/img/product/IMG_6850.JPG";
-import productGroundnut from "../assets/img/product/IMG_7675.JPG";
+import productChilli from "../assets/img/product/IMG_6850.jpg";
+import productGroundnut from "../assets/img/product/IMG_7675.jpg";
 import productSesame from "../assets/img/product/sesame.jpg";
 import productCumin from "../assets/img/product/Cumin-Spice.webp";
 import productCoriander from "../assets/img/product/coriander-seed.webp";

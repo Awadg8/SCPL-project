@@ -13,7 +13,7 @@ import Slider from "react-slick"; //For slider
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
 import facilityImg from "../assets/img/slider/slider-1.jpg";
 import facilityImg2 from "../assets/img/facility/facility2.jpg";
-import facilityImg3 from "../assets/img/facility/IMG_7772.JPG";
+import facilityImg3 from "../assets/img/facility/IMG_7772.jpg";
 import facilityImg4 from "../assets/img/slider/slider-2.jpg";
 
 function About() {
