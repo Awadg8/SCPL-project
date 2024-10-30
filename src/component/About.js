@@ -31,7 +31,8 @@ function About() {
   };
 
   const settings = {
-    dots: true,
+    // dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -741,6 +742,89 @@ function About() {
 
           <Slider {...settings}>
             <div className="elements">
+              <h3>APEDA Awards</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  <b>
+                    Awards for “Outstanding Export Performance and Contribution
+                    in the Groundnut Sector”
+                  </b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">For the year 2011-12 – Golden Trophy</p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>SPICES BOARD Awards</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  <b>
+                    Award for “outstanding Performance in Export of Chillies.”
+                  </b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  For the year 2006-07- Highest Chilies Exporter
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  For the year 2014-15- 1st Top most exporter of spices & spice
+                  product.
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  For the year 2018-19 – TOP Most exporter of Chillies.
+                </p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>IOPEPC Awards </h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  <b>Award for “Excellence in Export of Groundnuts.”</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">For the year 2009-10 -1st Place</p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-0">For the year 2012-13 -1st place</p>
+              </div>
+            </div>
+
+            <div className="elements">
+              <h3>FIEO Awards</h3>
+
+              <div className="heading mt-10">
+                <p className="mb-10">
+                  <b>Award for Excellence in Export</b>
+                </p>
+              </div>
+
+              <div className="heading">
+                <p className="mb-10">
+                  For the year 2016-17 - Western Region Export Excellence (Three
+                  Star Export House)
+                </p>
+              </div>
+            </div>
+
+            {/* <div className="elements">
               <h3>2006-07</h3>
 
               <div className="heading mt-10">
@@ -813,9 +897,9 @@ function About() {
                   Certificate of Merit - <b>Spices Board</b>
                 </p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="elements">
+            {/* <div className="elements">
               <h3>2012-13</h3>
 
               <div className="heading mt-10">
@@ -831,9 +915,9 @@ function About() {
                   - <b>APEDA</b>
                 </p>
               </div>
-            </div>
+            </div> */}
 
-            <div className="elements">
+            {/* <div className="elements">
               <h3>2013-14 </h3>
 
               <div className="heading mt-10">
@@ -937,7 +1021,7 @@ function About() {
                   <b> 2019-20</b>
                 </p>
               </div>
-            </div>
+            </div> */}
           </Slider>
 
           <div className="full-form mt-40">
