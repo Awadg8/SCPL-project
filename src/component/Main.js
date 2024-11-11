@@ -5,7 +5,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Slider from "react-slick"; // For Awards slider
-
 import "animate.css"; // For animation
 
 // slider animation
@@ -61,7 +60,7 @@ function Main() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3500,
     fade: true,
     pauseOnHover: false,

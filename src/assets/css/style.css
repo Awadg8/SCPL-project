@@ -2123,3 +2123,7 @@ a {
   margin-bottom: 10px;
   color: #b88124;
 }
+
+.product {
+  overflow: hidden;
+}

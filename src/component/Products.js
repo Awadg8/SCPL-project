@@ -32,7 +32,7 @@ function Products() {
   };
 
   return (
-    <div id="product" className="">
+    <div id="product" className="product">
       {/* Breadcrumb starts here */}
       <div className="breadcroumb-area breadcroumb-area-product bread-bg">
         <div className="container">
