@@ -383,7 +383,7 @@ function Contact() {
 
                     <h6>Email Address</h6>
 
-                    <p>info@sidhharthacorporation.com</p>
+                    <p>marketing@sidhhartha.com</p>
                   </div>
 
                   <div className="contact-inner">
@@ -396,7 +396,7 @@ function Contact() {
 
                     <h6>Call Now</h6>
 
-                    <p>+88 120 2468</p>
+                    <p>+91 9944620471</p>
                   </div>
                 </div>
               </div>
