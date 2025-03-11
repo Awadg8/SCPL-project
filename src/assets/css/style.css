@@ -40,9 +40,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* 
 body {
   font-family: Open Sans;
-  /* font-family: "Poppins", sans-serif; */
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -51,9 +51,9 @@ body {
   background: #fff;
   color: #030e2c;
   overflow-x: hidden;
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -61,11 +61,10 @@ h5,
 h6 {
   position: relative;
   font-family: Open Sans;
-  /* font-family: "Barlow", sans-serif; */
   font-weight: 500;
   margin: 0;
   color: #333e38;
-}
+} */
 
 h1 {
   font-size: 70px;
@@ -75,35 +74,33 @@ h2 {
   font-size: 40px;
 }
 
-h6 {
+/* h6 {
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 500;
   font-family: Open Sans;
-  /* font-family: "Barlow", sans-serif; */
   color: #ff6700;
   letter-spacing: 1px;
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
   cursor: pointer;
   font-family: Open Sans;
-  /* font-family: "Barlow Condensed", sans-serif; */
   color: #333e36;
   font-size: 18px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
+} */
 
-p {
+/* p {
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   position: relative;
   color: #4c4747;
-}
+} */
 
 button,
 input,
@@ -166,7 +163,7 @@ hr {
 
 /*Section Padding CSS*/
 
-.section-padding {
+/* .section-padding {
   padding: 40px 0;
 }
 
@@ -193,11 +190,11 @@ hr {
   .section-padding {
     padding: 25px 20px;
   }
-}
+} */
 
 /*Margin & Padding */
 
-.pad-top-0 {
+/* .pad-top-0 {
   padding-top: 0;
 }
 
@@ -323,11 +320,11 @@ hr {
 
 .ml-0 {
   margin-left: 0px;
-}
+} */
 
 /*Section Title */
 
-.section-title {
+/* .section-title {
   position: relative;
 }
 
@@ -335,16 +332,15 @@ hr {
   text-align: left;
   margin-left: 15px;
   font-size: 42px;
-}
+} */
 
-.section-title h2 {
-  /* font-size: 43px; */
+/* .section-title h2 {
   font-size: 39px;
   font-weight: 700;
   line-height: 45px;
   letter-spacing: -1px;
   margin-bottom: 20px;
-}
+} */
 
 .section-title h2 b {
   font-weight: 700;
@@ -867,11 +863,11 @@ textarea:focus::-webkit-input-placeholder {
 
 /*Info Section */
 
-.info-area {
+/* .info-area {
   position: relative;
   margin-top: -100px;
   z-index: 9;
-}
+} */
 
 .info-bg {
   background-image: url(../img/title.jpg);
@@ -883,7 +879,7 @@ textarea:focus::-webkit-input-placeholder {
   border-radius: 5px 0 0 5px;
 }
 
-.info-content {
+/* .info-content {
   padding: 35px;
   border-left: 10px solid #fcb65a;
   height: 100%;
@@ -896,7 +892,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .info-content a {
-  /* font-family: "Barlow Condensed", sans-serif; */
+
   font-family: Open Sans;
 
   font-size: 20px;
@@ -927,7 +923,7 @@ textarea:focus::-webkit-input-placeholder {
 .info-founder p.highlight {
   font-size: 60px;
   font-weight: 600;
-  /* font-family: "Barlow Condensed", sans-serif; */
+
   font-family: Open Sans;
   color: #333e38;
   margin: 30px 0;
@@ -939,7 +935,7 @@ textarea:focus::-webkit-input-placeholder {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #333e38;
-}
+} */
 
 /* About Section
 ============== */
@@ -1116,7 +1112,7 @@ textarea:focus::-webkit-input-placeholder {
 /* Footer Area
 ============== */
 
-.footer-area {
+/* .footer-area {
   background: #2e2822;
   color: #fff;
 }
@@ -1128,13 +1124,13 @@ textarea:focus::-webkit-input-placeholder {
 
 .footer-area p {
   margin-top: 16px;
-}
+} */
 
 .contact-info p {
   margin-bottom: 10px;
 }
 
-.contact-info p svg {
+/* .contact-info p svg {
   fill: #b88124;
   font-size: 22px;
   margin-right: 8px;
@@ -1142,12 +1138,12 @@ textarea:focus::-webkit-input-placeholder {
   top: -2px;
   width: 20px;
   height: 20px;
-}
+} */
 
 .footer-area .links a {
   display: block;
   color: #cfd9d3;
-  padding: 7px 0;
+  /* padding: 7px 0; */
   position: relative;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
@@ -1181,14 +1177,13 @@ textarea:focus::-webkit-input-placeholder {
   transition-property: width, right;
 }
 
-.footer-up {
+/* .footer-up {
   padding: 60px 0;
   padding-top: 120px;
 }
 
 .footer-up p {
   font-family: Open Sans;
-  /* font-family: "Barlow Condensed", sans-serif; */
   font-size: 16px;
   color: #cfd9d3;
 }
@@ -1202,7 +1197,7 @@ textarea:focus::-webkit-input-placeholder {
   color: #cfd9d3;
   font-size: 14px;
   margin: 0;
-}
+} */
 
 p.privacy {
   text-align: right;
@@ -1897,16 +1892,16 @@ ul.team-social li a {
   padding: 10px 20px;
 }
 
-a {
+/* a {
   color: #ff6700;
   text-decoration: underline;
-}
+} */
 
-a {
+/* a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
-}
+} */
 
 .tabs .r-tabs-accordion-title {
   text-align: center;

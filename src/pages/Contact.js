@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 function Contact() {
-  AOS.init();
+  // AOS.init();
 
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("yard-1");
@@ -92,11 +92,7 @@ function Contact() {
       <div id="contact" className="contact-area section-padding">
         <div className="container">
           <div className="row">
-            <div
-              className="col-lg-6 col-md-6 col-12"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6 col-md-6 col-12">
               <div className="contact-info">
                 <div className="section-title">
                   <h6
@@ -406,11 +402,7 @@ function Contact() {
               </div>
             </div>
 
-            <div
-              className="col-lg-6 col-md-6 col-12"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
+            <div className="col-lg-6 col-md-6 col-12">
               <div className="contact-form">
                 <form onSubmit={handleSubmit}>
                   <div className="row">

@@ -1,19 +1,24 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// Component import
-import Header from "./Header";
-import Main from "./Main";
-import Footer from "./Footer";
-import About from "./About";
-import Products from "./Products";
-import Career from "./Career";
-import Contact from "./Contact";
+import "./index.css";
+
+
+// Component Import
+import Header from "./component/Header";
+import Footer from "./component/Footer";
+
+// Pages Import
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Career from "./pages/Career";
+import Contact from "./pages/Contact";
+import Main from "./pages/Main";
 
 // CSS import
-import "../App.css";
-import "../assets/css/style.css";
-import "../assets/css/responsive.css";
-import "../assets/css/backToTop.css";
+import "./App.css";
+import "./assets/css/style.css";
+// import "./assets/css/responsive.css";
+import "./assets/css/backToTop.css";
 
 function App() {
   return (

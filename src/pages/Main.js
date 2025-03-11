@@ -60,7 +60,7 @@ function Main() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3500,
     fade: true,
     pauseOnHover: false,
@@ -213,54 +213,44 @@ function Main() {
       {/* Slidere code ends here */}
 
       {/* Info area starts here */}
-      <div className="info-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-9 col-12">
-              <div className="info-inner">
-                <div className="row gx-0">
-                  <div className="col-lg-4 col-md-4 col-12">
-                    <div className="info-bg bg-cover"></div>
-                  </div>
+      <div className="info-area relative mt-[-100px] z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            <div className="info-inner md:col-span-2 border rounded-lg  bg-white shadow-md">
+              <div className="grid md:grid-cols-3">
+                <div className="info-bg bg-cover"></div>
 
-                  <div className="col-lg-8 col-md-8 col-12">
-                    <div className="info-content">
-                      <h5 style={{ fontSize: "30px" }}>
-                        Leading Exporter of Agricultural Products like Red
-                        Chillies and Groundnuts in india
-                      </h5>
+                <div className=" col-span-2">
+                  <div className="info-content border-l-[10px] border-[#fcb65a] h-full p-9">
+                    <h5 className=" text-3xl mb-5">
+                      Leading Exporter of Agricultural Products like Red
+                      Chillies and Groundnuts in india
+                    </h5>
 
-                      <NavLink
-                        to="/products"
-                        className=""
-                        onClick={(e) => {
-                          e.preventDefault();
-                          scrollToAnchor("/products", "products", navigate);
-                        }}
-                      >
-                        View all products
-                      </NavLink>
-                    </div>
+                    <NavLink
+                      to="/products"
+                      className=" text-[#b88124] text-xl font-medium tracking-[1px] my-4"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToAnchor("/products", "products", navigate);
+                      }}
+                    >
+                      View all products
+                    </NavLink>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3 col-md-4 col-12">
-              <div className="info-founder">
-                <div className="info-img">
-                  <img
-                    src={agricultural}
-                    alt=""
-                    style={{ width: "64px", height: "64px" }}
-                  />
-                </div>
-                <p className="highlight">30+</p>
-                <p>
-                  Years <br />
-                  Experience
-                </p>
+            <div className="info-founder bg-[#fcb65a] rounded-md h-full text-center py-8 px-12">
+              <div className="info-img">
+                <img src={agricultural} alt="" className=" w-16 h-16" />
               </div>
+              <p className=" text-[#333e38] font-semibold text-6xl my-7">30+</p>
+              <p className=" text-[#333e38] text-base font-semibold tracking-[4px] text-center uppercase">
+                Years <br />
+                Experience
+              </p>
             </div>
           </div>
         </div>
@@ -268,138 +258,56 @@ function Main() {
       {/* Info area ends here */}
 
       {/* About us starts here */}
-      <div className="about-area section-padding theme-2">
-        <div className="container">
-          <div className="section-title">
-            <h2>
-              Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
-            </h2>
+      <div className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14">
+        <div className="section-title">
+          <h2 className=" text-3xl font-bold mb-5">
+            Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 gap-6">
+          <div className="main-img">
+            <img
+              src={aboutImg3}
+              alt=""
+              className=" w-full h-[350px] rounded-lg"
+            />
           </div>
 
-          <div className="row align-items-center">
-            <div
-              className="col-lg-6"
-              data-aos="fade-right"
-              data-aos-duration="2000"
-            >
-              <div className="about-content-area">
-                <div className="single-popup-wrap">
-                  <img
-                    className="img-fluid"
-                    src={aboutImg3}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "350px",
-                      borderRadius: "8px",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="">
+            <p className="text-base mb-5">
+              With over 3 decades of relentless commitment to excellence,
+              <b> Sidhhartha Corporation Pvt. Ltd.</b> where we pride ourselves
+              on delivering an exceptional array of premium quality agricultural
+              products like Spices and Seeds. At <b>SCPL</b>, we're dedicated to
+              providing our customers with nothing less than the finest
+              ingredients, handpicked and curated for their unadulterated
+              purity. Our commitment to excellence is evident in every product
+              we offer.
+            </p>
 
-            <div className="col-lg-6 col-md-12">
-              <div className="tab-content-inner mt-20">
-                <div className="text">
-                  <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                    With over 3 decades of relentless commitment to excellence,
-                    <b> Sidhhartha Corporation Pvt. Ltd.</b> where we pride
-                    ourselves on delivering an exceptional array of premium
-                    quality agricultural products like Spices and Seeds. At{" "}
-                    <b>SCPL</b>, we're dedicated to providing our customers with
-                    nothing less than the finest ingredients, handpicked and
-                    curated for their unadulterated purity. Our commitment to
-                    excellence is evident in every product we offer.
-                  </p>
-
-                  <p
-                    className="mb-0"
-                    style={{ fontSize: "15px", lineHeight: "1.6" }}
-                  >
-                    Our endeavor is to establish ourselves as one of the key
-                    players in this Agro Industry Domain, leveraging our own
-                    resources as well as the strength of India as a sourcing
-                    destination for the world for various agriculture-based
-                    items like Red Chillies, Groundnuts, Sesame Seeds, Basil
-                    Seeds, Rice, etc.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p className="mb-0 text-base">
+              Our endeavor is to establish ourselves as one of the key players
+              in this Agro Industry Domain, leveraging our own resources as well
+              as the strength of India as a sourcing destination for the world
+              for various agriculture-based items like Red Chillies, Groundnuts,
+              Sesame Seeds, Basil Seeds, Rice, etc.
+            </p>
           </div>
+        </div>
 
-          <div className="row align-items-center">
-            <div className="col-lg-12">
-              <div className="tab-content-inner">
-                <div className="text mt-20">
-                  <p
-                    className="mb-0"
-                    style={{ fontSize: "15px", lineHeight: "1.6" }}
-                  >
-                    By harnessing the latest technology and employing an
-                    experienced team of professionals, we ensure the purity,
-                    safety, and efficacy of every product. Our dedicated and
-                    experienced team is committed to satisfying the needs of
-                    clients worldwide, whether it’s by sourcing the highest
-                    quality ingredients, ensuring timely delivery, or offering
-                    unparalleled customer service.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="text mt-5">
+          <p className="text-base">
+            By harnessing the latest technology and employing an experienced
+            team of professionals, we ensure the purity, safety, and efficacy of
+            every product. Our dedicated and experienced team is committed to
+            satisfying the needs of clients worldwide, whether it’s by sourcing
+            the highest quality ingredients, ensuring timely delivery, or
+            offering unparalleled customer service.
+          </p>
         </div>
       </div>
       {/* About us ends here */}
-
-      {/* Home video starts here */}
-      {/* <div className="service-area gray-bg theme-2 section-padding">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="">
-              <div className="section-title">
-                <h6 style={{ fontSize: "22px", marginLeft: "0px" }}>
-                  What we do
-                </h6>
-
-                <h2>We are Providing Quality Products for our customers</h2>
-              </div>
-
-              <div
-                className="service-bg"
-                data-aos="zoom-in-up"
-                data-aos-duration="2000"
-              >
-                <div className="overlay"></div>
-
-                <div className="pop-up-video">
-                  <a
-                    href="https://www.youtube.com/watch?v=Qfozqrom7Bk"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="video-play-btn"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 384 512"
-                      style={{
-                        fill: "white",
-                        width: "25px",
-                        height: "25px",
-                        marginBottom: "7px",
-                        marginLeft: "5px",
-                      }}
-                    >
-                      <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* Home video ends here */}
 
       {/* Progress wrap starts here */}
       <div

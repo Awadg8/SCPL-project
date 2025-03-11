@@ -1,650 +1,353 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
+// FontAwesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faBars } from "@fortawesome/free-solid-svg-icons";
+
+// Images Import Here
 import Logo from "../assets/img/logo.png";
 
 function Header() {
-  const navigate = useNavigate();
+  const [isSticky, setIsSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutSubmenuOpen, setAboutSubmenuOpen] = useState(false);
+  const [productSubmenuOpen, setProductSubmenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  // const [isSticky, setIsSticky] = useState(false);
-  const [showAccordion, setShowAccordion] = useState(false);
-  const [showAccordion2, setShowAccordion2] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const navigate = useNavigate();
 
-  // check header nav to be scroll or sticky
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const header = document.querySelector(".header-area");
-  //     const headerHeight = header.offsetHeight;
-  //     const scrollPosition = window.scrollY;
-
-  //     if (scrollPosition > headerHeight) {
-  //       setIsSticky(true);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Cleanup the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // For handeling the screen width based on screen size
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth - 17);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 50);
+    };
+
+    const handleClickOutside = (event) => {
+      // Close the Mobile menu if click is outside
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+
+      // Close the popup if clicked outside in Search Btn
+      // if (
+      //   searchPopupRef.current &&
+      //   !searchPopupRef.current.contains(event.target)
+      // ) {
+      //   setIsSearchOpen(false);
+      // }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
-  // For handeling the nav click to content section
-  const scrollToAnchor = (path, anchorId, navigateTo) => {
-    navigateTo(`${path}#${anchorId}`);
-    setTimeout(() => {
-      const anchor = document.getElementById(anchorId);
-      if (anchor) {
-        anchor.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 0);
+  // Function for toggling Menu, AboutMenu, ProductMenu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
-  const handleAccordionClick = () => {
-    setShowAccordion(!showAccordion);
-    setShowAccordion2(false);
+  const toggleAboutSubmenu = () => {
+    setAboutSubmenuOpen(!aboutSubmenuOpen);
+    setProductSubmenuOpen(false);
   };
 
-  const handleAccordionClick2 = () => {
-    if (windowWidth < 992) {
-      setShowAccordion2(!showAccordion2);
-      setShowAccordion(false);
-    }
+  const toggleProductSubmenu = () => {
+    setProductSubmenuOpen(!productSubmenuOpen);
+    setAboutSubmenuOpen(false);
   };
 
   return (
     <div>
-      <div className="header-area absolute-header">
-        <div
-          id="sticky-wrapper"
-          className="sticky-wrapper"
-          style={{ height: "75px" }}
-        >
-          <div
-            // className={`sticky-area ${isSticky ? "is-sticky" : ""}`}
-            className="sticky-area"
-            // style={{
-            //   width: windowWidth,
-            //   position: isSticky ? "fixed" : "",
-            //   top: isSticky ? "0px" : "",
-            //   backgroundColor: isSticky ? "#333e38" : "",
-            // }}
-          >
-            <div className="navigation">
-              <div className="container">
-                <div className="row align-items-center color-white">
-                  <div className="col-lg-3">
-                    <div className="logo" style={{ textAlign: "left" }}>
-                      <a
-                        aria-current="page"
-                        href="/"
-                        className="router-link-active router-link-exact-active navbar-brand"
-                      >
-                        <img
-                          src={Logo}
-                          style={{
-                            width: "120px",
-                            height: "90px",
-                            backgroundColor: "#2e2822",
-                            padding: "5px",
-                            borderRadius: "6px",
-                          }}
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-9">
-                    <div className="main-menu">
-                      <nav className="navbar navbar-expand-lg">
-                        <button
-                          id="menuToggle"
-                          className="navbar-toggler"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#navbarSupportedContent"
-                          aria-controls="navbarSupportedContent"
-                          aria-expanded="false"
-                          aria-label="Toggle navigation"
-                          style={{ padding: "0" }}
-                        >
-                          <input id="checkbox" type="checkbox" />
-                          <label className="toggle" htmlFor="checkbox">
-                            <div className="bar bar--top"></div>
-                            <div className="bar bar--middle"></div>
-                            <div className="bar bar--bottom"></div>
-                          </label>
-                        </button>
-
-                        <div
-                          className="collapse navbar-collapse"
-                          id="navbarSupportedContent"
-                        >
-                          <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                              <NavLink
-                                to="/"
-                                className={({ isActive }) =>
-                                  isActive ? "nav-link active" : "nav-link"
-                                }
-                                // style={{
-                                //   color:
-                                //     window.innerWidth < 991
-                                //       ? ""
-                                //       : isSticky
-                                //       ? ""
-                                //       : "white",
-                                // }}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  scrollToAnchor("/", "home", navigate);
-                                }}
-                              >
-                                Home
-                              </NavLink>
-                            </li>
-
-                            <li
-                              className="nav-item"
-                              onClick={
-                                windowWidth < 992 ? handleAccordionClick : null
-                              }
-                            >
-                              <NavLink
-                                to="/about"
-                                className={({ isActive }) =>
-                                  isActive ? "nav-link active" : "nav-link"
-                                }
-                                // style={{
-                                //   color:
-                                //     window.innerWidth < 991
-                                //       ? ""
-                                //       : isSticky
-                                //       ? ""
-                                //       : "white",
-                                // }}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  scrollToAnchor("/about", "about", navigate);
-                                }}
-                              >
-                                About<span className="sub-nav-toggler"></span>
-                                <button className="sub-nav-toggler">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"
-                                    className={`arrow-icon ${
-                                      showAccordion ? "rotate-icon" : ""
-                                    }`}
-                                    style={{
-                                      width: "16px",
-                                      height: "16px",
-                                      fill: "#fcb65a",
-                                    }}
-                                  >
-                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                                  </svg>
-                                </button>
-                              </NavLink>
-
-                              <div
-                                className={`accordion-content ${
-                                  showAccordion ? "show" : ""
-                                }`}
-                              >
-                                <ul
-                                  className="sub-menu"
-                                  style={{ display: "block" }}
-                                >
-                                  <li>
-                                    <a
-                                      href="/about/company-profile"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/about",
-                                          "about-us",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Company Profile
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/about/vision&mission"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/about",
-                                          "vision",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Vision & Mission
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/about/ourfacilities"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/about",
-                                          "facilities",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Our Facilities
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/about/corevalues"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/about",
-                                          "coreValues",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Core Values
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/about/team"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/about",
-                                          "team",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Our Team
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/about/awards"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/about",
-                                          "awards",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Awards
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/about/certificates"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/about",
-                                          "certificates",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Certificates
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </li>
-
-                            <li
-                              className="nav-item"
-                              onClick={
-                                windowWidth < 992 ? handleAccordionClick2 : null
-                              }
-                            >
-                              <NavLink
-                                to="/products"
-                                className={({ isActive }) =>
-                                  isActive ? "nav-link active" : "nav-link"
-                                }
-                                // style={{
-                                //   color:
-                                //     window.innerWidth < 991
-                                //       ? ""
-                                //       : isSticky
-                                //       ? ""
-                                //       : "white",
-                                // }}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  scrollToAnchor(
-                                    "/products",
-                                    "product",
-                                    navigate
-                                  );
-                                }}
-                              >
-                                Products
-                                <span className="sub-nav-toggler"></span>
-                                <button className="sub-nav-toggler">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"
-                                    className={`arrow-icon ${
-                                      showAccordion2 ? "rotate-icon" : ""
-                                    }`}
-                                    style={{
-                                      width: "16px",
-                                      height: "16px",
-                                      fill: "#fcb65a",
-                                    }}
-                                  >
-                                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                                  </svg>
-                                </button>
-                              </NavLink>
-
-                              <div
-                                className={`accordion-content ${
-                                  showAccordion2 ? "show" : ""
-                                }`}
-                              >
-                                <ul
-                                  className="sub-menu"
-                                  style={{
-                                    display: "block",
-                                    maxHeight:
-                                      window.innerWidth < 992 ? "280px" : "",
-                                    overflowY:
-                                      window.innerWidth < 992 ? "auto" : "",
-                                  }}
-                                >
-                                  <li>
-                                    <a
-                                      href="/products/red-chillies"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "red-chillies",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Red Chillies
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/groundnuts"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "groundnuts",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Groundnuts
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/sesame-seeds"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "sesame-seeds",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Sesame Seeds
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/cumin-seeds"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "cumin-seeds",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Cumin Seeds
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/coriander-seeds"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "coriander-seeds",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Coriander Seeds
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/chickpeas"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "chickpeas",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Chickpeas
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/fennel-seeds"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "fennel-seeds",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Fennel Seeds
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/fenugreek-seeds"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "fenugreek-seeds",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Fenugreek Seeds
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/basil-seeds"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "basil-seeds",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Basil Seeds
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/raisin"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "raisin",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Raisin
-                                    </a>
-                                  </li>
-
-                                  <li>
-                                    <a
-                                      href="/products/turmeric"
-                                      className=""
-                                      onClick={(e) => {
-                                        e.preventDefault();
-                                        scrollToAnchor(
-                                          "/products",
-                                          "turmeric",
-                                          navigate
-                                        );
-                                      }}
-                                    >
-                                      Turmeric
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </li>
-
-                            <li className="nav-item">
-                              <NavLink
-                                to="/career"
-                                className={({ isActive }) =>
-                                  isActive ? "nav-link active" : "nav-link"
-                                }
-                                // style={{
-                                //   color:
-                                //     window.innerWidth < 991
-                                //       ? ""
-                                //       : isSticky
-                                //       ? ""
-                                //       : "white",
-                                // }}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  scrollToAnchor("/career", "career", navigate);
-                                }}
-                              >
-                                Career
-                              </NavLink>
-                            </li>
-
-                            <li
-                              className="nav-item"
-                              style={{ marginRight: "0px" }}
-                            >
-                              <NavLink
-                                to="/contact"
-                                className={({ isActive }) =>
-                                  isActive ? "nav-link active" : "nav-link"
-                                }
-                                // style={{
-                                //   color:
-                                //     window.innerWidth < 991
-                                //       ? ""
-                                //       : isSticky
-                                //       ? ""
-                                //       : "white",
-                                // }}
-                                onClick={(e) => {
-                                  e.preventDefault();
-                                  scrollToAnchor(
-                                    "/contact",
-                                    "contact-us",
-                                    navigate
-                                  );
-                                }}
-                              >
-                                Contact Us
-                              </NavLink>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      {/* Header Section Here */}
+      <header
+        className={` bg-[#d5e4f1] lg:bg-white/85 z-[60] top-0 w-full shadow-lg transition-transform duration-300 ${
+          isSticky ? "fixed w-full top-0" : "relative"
+        }`}
+      >
+        <nav className=" px-3 md:px-8 py-3 lg:pt-2 lg:pb-0 relative flex items-center justify-between w-full">
+          <div className="relative">
+            <div className="">
+              <NavLink className="" to="/">
+                <img src={Logo} alt="Logo-img" className=" w-32 h-24 p-2" />
+              </NavLink>
             </div>
           </div>
-        </div>
+
+          <div className=" flex items-center flex-row">
+            {/* Desktop Menu */}
+            <div className="pr-5 pl-[105px] hidden lg:block">
+              <div className="inline-block align-top">
+                <ul className="text-left flex text-[#1e7dd8] text-base font-medium">
+                  <li className="pr-4 pt-5 pb-7">
+                    <NavLink
+                      to="/"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
+                      Home
+                    </NavLink>
+                  </li>
+
+                  <div className=" group">
+                    <li className="pr-4 pt-5 pb-7 about-header">
+                      <NavLink
+                        to="#"
+                        className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      >
+                        About Us
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className="ml-1 group-hover:rotate-180 transition-all duration-500"
+                        />
+                      </NavLink>
+
+                      <ul className="sub-menu about-header-menu">
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/about">Company Profile</NavLink>
+                        </li>
+
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/groupOfCompany">
+                            Group Of Company
+                          </NavLink>
+                        </li>
+
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/achievements">
+                            Achievements / Milestones
+                          </NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/qualityPolicy">Quality Policy</NavLink>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
+
+                  <div className=" group">
+                    <li className="pr-4 pt-5 pb-7 product-header">
+                      <NavLink
+                        to="#"
+                        className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      >
+                        Products
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className="ml-1 group-hover:rotate-180 transition-all duration-500"
+                        />
+                      </NavLink>
+
+                      <ul className="sub-menu product-header-menu">
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/products/pharma">
+                            Pharma & Api Intermediate
+                          </NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/products/pigment">
+                            Pigment Intermediate
+                          </NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
+                          <NavLink to="/products/dye">Dye Intermediate</NavLink>
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
+
+                  <li className=" pr-4 pt-5 pb-7">
+                    <NavLink
+                      to="/weExport"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
+                      We Export
+                    </NavLink>
+                  </li>
+
+                  <li className="pr-4 pt-5 pb-7">
+                    <NavLink
+                      to="/blog"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
+                      Blog
+                    </NavLink>
+                  </li>
+
+                  <li className=" pt-5 pb-7">
+                    <NavLink
+                      to="/contactUs"
+                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                    >
+                      Contact Us
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Mobile Menu Toggle */}
+            <div className="navbar-header ml-2 md:ml-6 lg:hidden">
+              <button
+                type="button"
+                className="navbar-toggle p-3 relative"
+                onClick={toggleMenu}
+              >
+                <FontAwesomeIcon
+                  icon={faBars}
+                  className="w-6 h-6 align-middle"
+                />
+              </button>
+
+              {/* <div className="quote-btn">
+                <a className="btn" href="https://www.gyangroup.in/enquiry">
+                  Enquiry
+                </a>
+              </div> */}
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Menu here*/}
+      <div
+        ref={menuRef}
+        className={`fixed top-0 right-0 h-full w-[300px] bg-white shadow-lg z-[70] transform transition-transform duration-300 ease-in-out ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <button
+          type="button"
+          className="absolute top-5 right-5 p-3 text-3xl"
+          onClick={toggleMenu}
+        >
+          ✕
+        </button>
+
+        <ul className="mt-16 text-[#1e7dd8] text-base font-medium">
+          <li className="py-4 px-6 ">
+            <NavLink to="/" onClick={toggleMenu}>
+              Home
+            </NavLink>
+          </li>
+
+          <li className="py-4 px-6">
+            <button
+              className="flex items-center justify-between w-full"
+              onClick={toggleAboutSubmenu}
+            >
+              <span>About Us</span>
+
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className={`ml-2 transform transition-transform duration-300 ${
+                  aboutSubmenuOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+
+            {/* Submenu */}
+            <ul
+              className={`ml-4 text-sm overflow-hidden transition-all duration-500 ${
+                aboutSubmenuOpen
+                  ? "max-h-[180px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <li className="py-3">
+                <NavLink to="/about" onClick={toggleMenu}>
+                  Company Profile
+                </NavLink>
+              </li>
+
+              <li className="py-3">
+                <NavLink to="/groupOfCompany" onClick={toggleMenu}>
+                  Group Of Company
+                </NavLink>
+              </li>
+
+              <li className="py-3">
+                <NavLink to="/achievements" onClick={toggleMenu}>
+                  Achievements / Milestones
+                </NavLink>
+              </li>
+
+              <li className="py-3 ">
+                <NavLink to="/qualityPolicy" onClick={toggleMenu}>
+                  Quality Policy
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+
+          <li className="py-4 px-6">
+            <button
+              className="flex items-center justify-between w-full"
+              onClick={toggleProductSubmenu}
+            >
+              <span>Products</span>
+
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className={`ml-2 transform transition-transform duration-300 ${
+                  productSubmenuOpen ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+
+            {/* Submenu */}
+            <ul
+              className={`ml-4 text-sm overflow-hidden transition-all duration-500 ${
+                productSubmenuOpen
+                  ? "max-h-[135px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <li className="py-3">
+                <NavLink to="/products/pharma" onClick={toggleMenu}>
+                  Pharma & Api Intermediate
+                </NavLink>
+              </li>
+
+              <li className="py-3 ">
+                <NavLink to="/products/pigment" onClick={toggleMenu}>
+                  Pigment Intermediate
+                </NavLink>
+              </li>
+
+              <li className="py-3">
+                <NavLink to="/products/dye" onClick={toggleMenu}>
+                  Dye Intermediate
+                </NavLink>
+              </li>
+            </ul>
+          </li>
+
+          <li className="py-4 px-6 ">
+            <NavLink to="/weExport" onClick={toggleMenu}>
+              We Export
+            </NavLink>
+          </li>
+
+          <li className="py-4 px-6">
+            <NavLink to="/blog" onClick={toggleMenu}>
+              Blog
+            </NavLink>
+          </li>
+
+          <li className="py-4 px-6">
+            <NavLink to="/contactUs" onClick={toggleMenu}>
+              Contact Us
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </div>
   );
