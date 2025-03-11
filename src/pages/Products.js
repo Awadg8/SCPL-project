@@ -31,6 +31,86 @@ function Products() {
     }, 0);
   };
 
+  interface ProductData {
+    icon: JSX.Element;
+    text: string;
+  }
+
+  const productData: ProductData[] = [
+    {
+      img: productChilli,
+      heading: "Red Chillies",
+      para1:
+        "Indian Red Chilli or Dry Red Chilli is a popular spice used in many cuisines around the world. It is known for its pungent flavor and bright red color, which comes from the compound capsaicin. Sidhhartha Corporation Pvt. Ltd is one of the leading Dry Red Chilli suppliers and exporters from India. We offer the highest quality Red Chilli sourced from different parts of India.",
+      para2:
+        "We Source different types of Chillies like : S17 Teja, S18 Armour, S4 Sannam, Wonder hot, Super-hot, Byadagi, S15 Mahi, Mundu from Andhra Pradesh, Telangana, MP and Karnataka.",
+    },
+    {
+      img: productGroundnut,
+      heading: "Groundnuts",
+      para1:
+        "Ground peanuts are finely processed peanuts with a rich, nutty flavor and smooth texture. They are a versatile ingredient used in various dishes and snacks, including sauces, spreads, and baked goods.",
+      para2:
+        "Being the Industry leader for more than 3 decades, SCPL has become synonymous with Quality in the seed industry. Our market is growing not only in India but also globally. As trusted exporters of Groundnuts, we make sure to provide only top-quality products.",
+      para3:
+        "We procure a variety of grounds such as : Karnataka Java, AP JL, TN JL, Gujrat Java, Gujrat TJ, Gujrat BOLD from Gujarat, Tamil Nadu, Andhra Pradesh and Karnataka.",
+    },
+    {
+      img: productSesame,
+      heading: "Sesame seeds",
+      para1:
+        "Sesame seeds are tiny, nutrient-rich seeds known for their nutty flavor and crunchy texture. As prominent exporters of sesame seeds in India, SCPL is committed to offering natural sesame seed products of the highest quality at competitive prices. We offer different qualities of Sesame seeds like black sesame seeds, hulled sesame seeds, natural sesame seeds, etc.",
+    },
+    {
+      img: productCumin,
+      heading: "Cumin seeds",
+      para1:
+        "We are dedicated to our objective of delivering high-quality cumin seeds to our clients at the most competitive prices. Our commitment to maintaining stringent quality standards has positioned us as the leading exporters, manufacturers, and suppliers of cumin seeds in India.",
+    },
+    {
+      img: productCoriander,
+      heading: "Coriander seeds",
+      para1:
+        "Coriander seeds are one of the oldest and common spices used in various cuisines worldwide. These seeds have a sweet, citrusy flavor and are used in many dishes, from curries to pickles.",
+    },
+    {
+      img: productChickpea,
+      heading: "Chickpeas",
+      para1:
+        "Chickpeas are available in two main varieties: Desi and Kabuli. They can be classified based on factors such as shape, thickness, size and its color ranging from light tan to dark black. Kabuli Chickpeas, on the other hand, are lighter in color than the ‘Desi’ chickpeas.",
+    },
+    {
+      img: productFennel,
+      heading: "Fennel seeds",
+      para1:
+        "Fennel seeds are the small, oval-shaped seeds of the fennel plant. They are a common ingredient in many cuisines and are often used as a flavoring agent in dishes such as soups, stews, curries, and baked goods. These seeds have a distinct, sweet licorice flavor and a strong aroma, which makes them a popular addition to many foods and beverages.",
+    },
+    {
+      img: productFenugreek,
+      heading: "Fenugreek seeds",
+      para1:
+        "Fenugreek seeds are a popular spice commonly used in Indian, Middle Eastern, and North African cuisines. It is used as an herb (dried or fresh leaves), spice (seeds), and vegetable (fresh leaves, sprouts , and micro greens ).",
+    },
+    {
+      img: productBasil,
+      heading: "Basil seeds",
+      para1:
+        "Basil seeds are a popular ingredient in many Indian drinks and desserts. These tiny black seeds are derived from the basil plant and have a unique texture that makes them a favorite among foodies.",
+    },
+    {
+      img: productRaisin,
+      heading: "Raisin",
+      para1:
+        "A raisin is a dried grape, known for its sweet flavor and chewy texture. Raisins are commonly used as a snack or ingredient in various recipes. Raisins can range in color from light golden to dark brown or black, depending on the type of grape used and the drying process.",
+    },
+    {
+      img: productTurmeric,
+      heading: "Turmeric",
+      para1:
+        "Indian Turmeric is one of the most well known, widely researched Ayurvedic Spice which is used across the Globe.Turmeric has a warm, bitter taste and is frequently used to flavor or color curry powders, mustards, butters, and cheeses.",
+    },
+  ];
+
   return (
     <div id="product" className="product">
       {/* Breadcrumb starts here */}
@@ -54,534 +134,35 @@ function Products() {
       {/* Breadcrumb ends here */}
 
       {/* Product area starts here */}
-      <div id="products" className="product-area section-padding theme-2">
-        <div className="container">
-          <div className="section-title">
-            <h6
-              style={{
-                fontSize: "22px",
-                marginBottom: "20px",
-                marginLeft: "0",
-                textTransform: "Capitalize",
-              }}
-            >
-              Our Products
-            </h6>
-          </div>
+      <div
+        id="products"
+        className="product-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14"
+      >
+        <h6 className=" text-3xl font-bold mb-5 text-gray-800 text-center ">
+          Our Products
+        </h6>
 
-          {/* Product 1 start here */}
-          <div id="red-chillies" className="prod-margin">
-            <div className="row align-items-center">
-              <p style={{ fontSize: "15px", marginBottom: "25px" }}>
-                <b>SCPL</b> , an export-oriented organization mainly focusing on
-                quality supply of various food items like seeds, spices, herbs,
-                etc.
-              </p>
+        {productData.map((point, index) => (
+          <div
+            key={index}
+            className={`grid grid-cols-2 gap-6 py-4 items-center`}
+          >
+            <div className={`${index % 2 !== 0 ? "order-last" : ""}`}>
+              <img
+                src={point.img}
+                alt={point.heading}
+                className=" w-full h-[350px] rounded-lg"
+              />
+            </div>
 
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productChilli}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1 className="">Red Chillies</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Indian Red Chilli or Dry Red Chilli is a popular spice
-                      used in many cuisines around the world. It is known for
-                      its pungent flavor and bright red color, which comes from
-                      the compound capsaicin.
-                      <b> Sidhhartha Corporation Pvt. Ltd</b> is one of the
-                      leading Dry Red Chilli suppliers and exporters from India.
-                      We offer the highest quality Red Chilli sourced from
-                      different parts of India.
-                    </p>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      We Source different types of Chillies like : S17 Teja, S18
-                      Armour, S4 Sannam, Wonder hot, Super-hot, Byadagi, S15
-                      Mahi, Mundu from Andhra Pradesh, Telangana, MP and
-                      Karnataka.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div>
+              <h1 className=" text-[#b88124] text-5xl mb-5">{point.heading}</h1>
+              <p>{point.para1}</p>
+              {point.para2 && <p>{point.para2}</p>}
+              {point.para3 && <p>{point.para3}</p>}
             </div>
           </div>
-          {/* Product 1 ends here */}
-
-          {/* Product 2 starts here */}
-          <div id="groundnuts" className="prod-margin">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1>Groundnuts</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Ground peanuts are finely processed peanuts with a rich,
-                      nutty flavor and smooth texture. They are a versatile
-                      ingredient used in various dishes and snacks, including
-                      sauces, spreads, and baked goods.
-                    </p>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Being the Industry leader for more than 3 decades,{" "}
-                      <b>SCPL </b>
-                      has become synonymous with Quality in the seed industry.
-                      Our market is growing not only in India but also globally.
-                      As trusted exporters of Groundnuts, we make sure to
-                      provide only top-quality products.
-                    </p>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      We procure a variety of grounds such as : Karnataka Java,
-                      AP JL, TN JL, Gujrat Java, Gujrat TJ, Gujrat BOLD from
-                      Gujarat, Tamil Nadu, Andhra Pradesh and Karnataka.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productGroundnut}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 2 ends here */}
-
-          {/* Product 3 start here */}
-          <div id="sesame-seeds" className="prod-margin">
-            <div className="row align-items-center">
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productSesame}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1 className="">Sesame seeds</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Sesame seeds are tiny, nutrient-rich seeds known for their
-                      nutty flavor and crunchy texture. As prominent exporters
-                      of sesame seeds in India, SCPL is committed to offering
-                      natural sesame seed products of the highest quality at
-                      competitive prices. We offer different qualities of Sesame
-                      seeds like black sesame seeds, hulled sesame seeds,
-                      natural sesame seeds, etc.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 3 ends here */}
-
-          {/* Product 4 starts here */}
-          <div id="cumin-seeds" className="prod-margin">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1>Cumin seeds</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      We are dedicated to our objective of delivering
-                      high-quality cumin seeds to our clients at the most
-                      competitive prices. Our commitment to maintaining
-                      stringent quality standards has positioned us as the
-                      leading exporters, manufacturers, and suppliers of cumin
-                      seeds in India.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productCumin}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 4 ends here */}
-
-          {/* Product 5 start here */}
-          <div id="coriander-seeds" className="prod-margin">
-            <div className="row align-items-center">
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productCoriander}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1 className="">Coriander seeds</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Coriander seeds are one of the oldest and common spices
-                      used in various cuisines worldwide. These seeds have a
-                      sweet, citrusy flavor and are used in many dishes, from
-                      curries to pickles.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 5 ends here */}
-
-          {/* Product 6 starts here */}
-          <div id="chickpeas" className="prod-margin">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1>Chickpeas</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Chickpeas are available in two main varieties: Desi and
-                      Kabuli. They can be classified based on factors such as
-                      shape, thickness, size and its color ranging from light
-                      tan to dark black. Kabuli Chickpeas, on the other hand,
-                      are lighter in color than the ‘Desi’ chickpeas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productChickpea}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 6 ends here */}
-
-          {/* Product 7 start here */}
-          <div id="fennel-seeds" className="prod-margin">
-            <div className="row align-items-center">
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productFennel}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1 className="">Fennel seeds</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Fennel seeds are the small, oval-shaped seeds of the
-                      fennel plant. They are a common ingredient in many
-                      cuisines and are often used as a flavoring agent in dishes
-                      such as soups, stews, curries, and baked goods. These
-                      seeds have a distinct, sweet licorice flavor and a strong
-                      aroma, which makes them a popular addition to many foods
-                      and beverages.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 7 ends here */}
-
-          {/* Product 8 starts here */}
-          <div id="fenugreek-seeds" className="prod-margin">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1>Fenugreek seeds</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Fenugreek seeds are a popular spice commonly used in
-                      Indian, Middle Eastern, and North African cuisines. It is
-                      used as an herb (dried or fresh leaves), spice (seeds),
-                      and vegetable (fresh leaves, sprouts , and micro greens ).
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productFenugreek}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 8 ends here */}
-
-          {/* Product 9 start here */}
-          <div id="basil-seeds" className="prod-margin">
-            <div className="row align-items-center ">
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productBasil}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1 className="">Basil seeds</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Basil seeds are a popular ingredient in many Indian drinks
-                      and desserts. These tiny black seeds are derived from the
-                      basil plant and have a unique texture that makes them a
-                      favorite among foodies.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 9 ends here */}
-
-          {/* Product 10 start here */}
-          <div id="raisin" className="prod-margin">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1>Raisin</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      A raisin is a dried grape, known for its sweet flavor and
-                      chewy texture. Raisins are commonly used as a snack or
-                      ingredient in various recipes. Raisins can range in color
-                      from light golden to dark brown or black, depending on the
-                      type of grape used and the drying process.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-left"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productRaisin}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 10 ends here */}
-
-          {/* Product 11 start here */}
-          <div id="turmeric" className="">
-            <div className="row align-items-center">
-              <div
-                className="col-lg-6"
-                data-aos="zoom-in-right"
-                data-aos-duration="2000"
-              >
-                <div className="about-content-area">
-                  <div className="single-popup-wrap">
-                    <img
-                      className="img-fluid"
-                      src={productTurmeric}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: window.innerWidth < 576 ? "270px" : "350px",
-
-                        borderRadius: "8px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-6 col-md-12">
-                <div className="tab-content-inner">
-                  <div className="text product-info">
-                    <h1 className="">Turmeric</h1>
-
-                    <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                      Indian Turmeric is one of the most well known, widely
-                      researched Ayurvedic Spice which is used across the
-                      Globe.Turmeric has a warm, bitter taste and is frequently
-                      used to flavor or color curry powders, mustards, butters,
-                      and cheeses.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Product 11 ends here */}
-        </div>
+        ))}
       </div>
       {/* Product area ends here */}
 

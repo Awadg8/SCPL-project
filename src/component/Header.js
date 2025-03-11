@@ -98,7 +98,7 @@ function Header() {
                         to="#"
                         className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                       >
-                        About Us
+                        About
                         <FontAwesomeIcon
                           icon={faChevronDown}
                           className="ml-1 group-hover:rotate-180 transition-all duration-500"
@@ -106,24 +106,28 @@ function Header() {
                       </NavLink>
 
                       <ul className="sub-menu about-header-menu">
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                          <NavLink to="/about">Company Profile</NavLink>
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/about">About</NavLink>
                         </li>
 
-                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                          <NavLink to="/groupOfCompany">
-                            Group Of Company
-                          </NavLink>
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/about">Vision & Mission</NavLink>
                         </li>
 
-                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                          <NavLink to="/achievements">
-                            Achievements / Milestones
-                          </NavLink>
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/about">Our Facilities</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                          <NavLink to="/qualityPolicy">Quality Policy</NavLink>
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/about">Core Values</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/about">Our Awards</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/about">Our Certificates</NavLink>
                         </li>
                       </ul>
                     </li>
@@ -143,46 +147,65 @@ function Header() {
                       </NavLink>
 
                       <ul className="sub-menu product-header-menu">
-                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                          <NavLink to="/products/pharma">
-                            Pharma & Api Intermediate
-                          </NavLink>
+                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Red Chillies</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                          <NavLink to="/products/pigment">
-                            Pigment Intermediate
-                          </NavLink>
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Groundnuts</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300">
-                          <NavLink to="/products/dye">Dye Intermediate</NavLink>
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Sesame seeds</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Cumin seeds</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Coriander seeds</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Chickpeas</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Fennel seeds</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Fenugreek seeds</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Basil seeds</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Raisin</NavLink>
+                        </li>
+
+                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                          <NavLink to="/products">Turmeric</NavLink>
                         </li>
                       </ul>
                     </li>
                   </div>
 
-                  <li className=" pr-4 pt-5 pb-7">
-                    <NavLink
-                      to="/weExport"
-                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
-                    >
-                      We Export
-                    </NavLink>
-                  </li>
-
                   <li className="pr-4 pt-5 pb-7">
                     <NavLink
-                      to="/blog"
+                      to="/career"
                       className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                     >
-                      Blog
+                      Career
                     </NavLink>
                   </li>
 
                   <li className=" pt-5 pb-7">
                     <NavLink
-                      to="/contactUs"
+                      to="/contact"
                       className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                     >
                       Contact Us
@@ -204,12 +227,6 @@ function Header() {
                   className="w-6 h-6 align-middle"
                 />
               </button>
-
-              {/* <div className="quote-btn">
-                <a className="btn" href="https://www.gyangroup.in/enquiry">
-                  Enquiry
-                </a>
-              </div> */}
             </div>
           </div>
         </nav>
@@ -218,7 +235,7 @@ function Header() {
       {/* Mobile Menu here*/}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 h-full w-[300px] bg-white shadow-lg z-[70] transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[330px] bg-white shadow-lg z-[70] transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -232,18 +249,18 @@ function Header() {
         </button>
 
         <ul className="mt-16 text-[#1e7dd8] text-base font-medium">
-          <li className="py-4 px-6 ">
+          <li className="py-4 px-6 block">
             <NavLink to="/" onClick={toggleMenu}>
               Home
             </NavLink>
           </li>
 
-          <li className="py-4 px-6">
+          <li className="py-4 px-6 block">
             <button
               className="flex items-center justify-between w-full"
               onClick={toggleAboutSubmenu}
             >
-              <span>About Us</span>
+              <span>About</span>
 
               <FontAwesomeIcon
                 icon={faChevronDown}
@@ -257,37 +274,49 @@ function Header() {
             <ul
               className={`ml-4 text-sm overflow-hidden transition-all duration-500 ${
                 aboutSubmenuOpen
-                  ? "max-h-[180px] opacity-100"
+                  ? "max-h-[300px] opacity-100"
                   : "max-h-0 opacity-0"
               }`}
             >
-              <li className="py-3">
+              <li className="py-3 block">
                 <NavLink to="/about" onClick={toggleMenu}>
-                  Company Profile
+                  About Us
                 </NavLink>
               </li>
 
-              <li className="py-3">
-                <NavLink to="/groupOfCompany" onClick={toggleMenu}>
-                  Group Of Company
+              <li className="py-3 block">
+                <NavLink to="/about" onClick={toggleMenu}>
+                  Vision & Mission
                 </NavLink>
               </li>
 
-              <li className="py-3">
-                <NavLink to="/achievements" onClick={toggleMenu}>
-                  Achievements / Milestones
+              <li className="py-3 block">
+                <NavLink to="/about" onClick={toggleMenu}>
+                  Our Facilities
                 </NavLink>
               </li>
 
-              <li className="py-3 ">
-                <NavLink to="/qualityPolicy" onClick={toggleMenu}>
-                  Quality Policy
+              <li className="py-3 block">
+                <NavLink to="/about" onClick={toggleMenu}>
+                  Core Values
+                </NavLink>
+              </li>
+
+              <li className="py-3 block">
+                <NavLink to="/about" onClick={toggleMenu}>
+                  Our Awards
+                </NavLink>
+              </li>
+
+              <li className="py-3 block">
+                <NavLink to="/about" onClick={toggleMenu}>
+                  Our Certificates
                 </NavLink>
               </li>
             </ul>
           </li>
 
-          <li className="py-4 px-6">
+          <li className="py-4 px-6 block">
             <button
               className="flex items-center justify-between w-full"
               onClick={toggleProductSubmenu}
@@ -304,46 +333,92 @@ function Header() {
 
             {/* Submenu */}
             <ul
-              className={`ml-4 text-sm overflow-hidden transition-all duration-500 ${
+              className={`ml-4 text-sm grid grid-cols-2 overflow-hidden transition-all duration-500 ${
                 productSubmenuOpen
-                  ? "max-h-[135px] opacity-100"
+                  ? "max-h-[260px] opacity-100"
                   : "max-h-0 opacity-0"
               }`}
             >
-              <li className="py-3">
-                <NavLink to="/products/pharma" onClick={toggleMenu}>
-                  Pharma & Api Intermediate
-                </NavLink>
-              </li>
+              <div>
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Red Chillies
+                  </NavLink>
+                </li>
 
-              <li className="py-3 ">
-                <NavLink to="/products/pigment" onClick={toggleMenu}>
-                  Pigment Intermediate
-                </NavLink>
-              </li>
+                <li className="py-3  block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Groundnuts
+                  </NavLink>
+                </li>
 
-              <li className="py-3">
-                <NavLink to="/products/dye" onClick={toggleMenu}>
-                  Dye Intermediate
-                </NavLink>
-              </li>
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Sesame seeds
+                  </NavLink>
+                </li>
+
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Cumin seeds
+                  </NavLink>
+                </li>
+
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Coriander seeds
+                  </NavLink>
+                </li>
+
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Chickpeas
+                  </NavLink>
+                </li>
+              </div>
+
+              <div>
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Fennel seeds
+                  </NavLink>
+                </li>
+
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Fenugreek seeds
+                  </NavLink>
+                </li>
+
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Basil seeds
+                  </NavLink>
+                </li>
+
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Raisin
+                  </NavLink>
+                </li>
+
+                <li className="py-3 block">
+                  <NavLink to="/products" onClick={toggleMenu}>
+                    Turmeric
+                  </NavLink>
+                </li>
+              </div>
             </ul>
           </li>
 
-          <li className="py-4 px-6 ">
-            <NavLink to="/weExport" onClick={toggleMenu}>
-              We Export
+          <li className="py-4 px-6 block">
+            <NavLink to="/career" onClick={toggleMenu}>
+              Career
             </NavLink>
           </li>
 
-          <li className="py-4 px-6">
-            <NavLink to="/blog" onClick={toggleMenu}>
-              Blog
-            </NavLink>
-          </li>
-
-          <li className="py-4 px-6">
-            <NavLink to="/contactUs" onClick={toggleMenu}>
+          <li className="py-4 px-6 block">
+            <NavLink to="/contact" onClick={toggleMenu}>
               Contact Us
             </NavLink>
           </li>

@@ -382,7 +382,7 @@ hr {
 
 /*Form Style CSS */
 
-input,
+/* input,
 textarea,
 select {
   width: 100%;
@@ -401,9 +401,9 @@ select {
 textarea {
   height: 150px;
   resize: none;
-}
+} */
 
-input[type="submit"],
+/* input[type="submit"],
 button[type="submit"] {
   border: none;
   border-radius: 5px;
@@ -418,14 +418,14 @@ button[type="submit"] {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-}
+} */
 
-input::placeholder,
+/* input::placeholder,
 textarea::placeholder {
   font-size: 14px;
   font-weight: 500;
   color: #333;
-}
+} */
 
 .contact-section input::placeholder,
 .contact-section textarea::placeholder {
@@ -666,7 +666,7 @@ textarea:focus::-webkit-input-placeholder {
 
 /*Dropdown Menu */
 
-.sub-menu {
+/* .sub-menu {
   position: absolute;
   left: 0px;
   top: 120px;
@@ -681,9 +681,9 @@ textarea:focus::-webkit-input-placeholder {
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
     -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-}
+} */
 
-.sub-menu::after {
+/* .sub-menu::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -693,12 +693,11 @@ textarea:focus::-webkit-input-placeholder {
   background: #fcb65a;
   visibility: hidden;
   opacity: 0;
-}
+} */
 
-.main-menu li:hover .sub-menu {
+/* .main-menu li:hover .sub-menu {
   opacity: 1;
   visibility: visible;
-  /* top: 70px; */
   top: 55px;
 }
 
@@ -711,18 +710,18 @@ textarea:focus::-webkit-input-placeholder {
   list-style: none;
   margin: 0;
   padding: 0;
-}
+} */
 
-.main-menu .sub-menu li {
+/* .main-menu .sub-menu li {
   display: block;
   border-bottom: 1px solid #eee;
 }
 
 .main-menu .sub-menu li:last-child {
   border-bottom: none;
-}
+} */
 
-.main-menu .sub-menu li a {
+/* .main-menu .sub-menu li a {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -731,12 +730,12 @@ textarea:focus::-webkit-input-placeholder {
   color: #777;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
+} */
 
-.main-menu .sub-menu li:hover>a {
+/* .main-menu .sub-menu li:hover>a {
   background: #fcb65a;
   color: #333e38;
-}
+} */
 
 .navigation .navbar .navbar-nav .nav-item .sub-nav-toggler {
   background: none;
@@ -1705,7 +1704,7 @@ ul.team-social li a {
   overflow: hidden;
 }
 
-.heading__pre-title {
+/* .heading__pre-title {
   display: inline-block;
   color: #ff6700;
   font-size: 22px;
@@ -1716,27 +1715,27 @@ ul.team-social li a {
   z-index: 1;
   position: relative;
   line-height: 1.6;
-}
+} */
 
-.heading__title {
+/* .heading__title {
   font-size: 25px;
   line-height: 35px;
   margin-bottom: 0;
   z-index: 1;
   position: relative;
   font-weight: 700;
-}
+} */
 
-.contact-form__subtitle {
+/* .contact-form__subtitle {
   margin-bottom: 17px;
   font-size: 20px;
   letter-spacing: 0;
   font-weight: 700;
   color: #414a53;
   line-height: 1.6;
-}
+} */
 
-.form__field {
+/* .form__field {
   display: inline-block;
   width: 100%;
   height: 50px;
@@ -1751,8 +1750,8 @@ ul.team-social li a {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-}
-
+} */
+/* 
 .button--green {
   display: inline-flex;
   align-items: center;
@@ -1766,9 +1765,9 @@ ul.team-social li a {
   padding: 0 20px;
   cursor: pointer;
   font-weight: 500;
-}
+} */
 
-.form__message {
+/* .form__message {
   padding: 13px 20px 13px 20px;
   height: 195px;
   resize: none;
@@ -1777,9 +1776,9 @@ ul.team-social li a {
 .button--green:hover {
   background-color: #b88124;
   color: white;
-}
+} */
 
-.send-btn {
+/* .send-btn {
   width: 20px;
   height: 20px;
   margin-left: 5px;
@@ -1790,7 +1789,7 @@ ul.team-social li a {
   transform: translateX(8px);
   transition: all 0.5s;
   fill: white;
-}
+} */
 
 /* Contact css */
 
@@ -1936,21 +1935,21 @@ ul.team-social li a {
   flex-direction: column;
 }
 
-.heading p {
+/* .heading p {
   font-size: 13.5px;
   line-height: 1.4;
-}
+} */
 
-.full-form p {
+/* .full-form p {
   font-size: 15px;
   margin: 0;
-}
+} */
 
 /* Certificates css */
 
-.certificates-area {
+/* .certificates-area {
   overflow: hidden;
-}
+} */
 
 /* .certificate-img-1 {
   background-image: url("../img/certificates/certificates1.jpeg");
@@ -1968,19 +1967,19 @@ ul.team-social li a {
   background-image: url("../img/certificates/certificates4.jpeg");
 } */
 
-.single-certificate-member {
+/* .single-certificate-member {
   position: relative;
   margin-top: 25px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-}
+} */
 
-.certificate-img {
+/* .certificate-img {
   background-image: url("../img/certificates/certificate.png");
   width: 120px;
   height: 120px;
-}
+} */
 
 /* Loader in Contact Form */
 

@@ -17,6 +17,7 @@ import facilityImg from "../assets/img/slider/slider-1.jpg";
 import facilityImg2 from "../assets/img/facility/facility2.jpg";
 import facilityImg3 from "../assets/img/facility/IMG_7772.JPG";
 import facilityImg4 from "../assets/img/slider/slider-2.jpg";
+import CertificateImg from "../assets/img/certificates/certificate.png";
 
 import qualityImg from "../assets/img/quality.png";
 import innovationImg from "../assets/img/innovation.png";
@@ -376,11 +377,9 @@ function About() {
         className="awards-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14"
       >
         <div>
-          <div className="">
-            <h2 className="text-3xl font-bold mb-5 text-gray-800 text-center">
-              Recognition<b></b>
-            </h2>
-          </div>
+          <h2 className="text-3xl font-bold mb-5 text-gray-800 text-center">
+            Recognition
+          </h2>
 
           <Slider {...settings}>
             <div className="elements">
@@ -455,7 +454,7 @@ function About() {
             </div>
           </Slider>
 
-          <div className="full-form mt-40">
+          <div className="full-form mt-10 text-gray-700">
             <p>
               * 1. IOPEPC - Indian Oilseeds and Produce Export Promotion
               Council.
@@ -479,109 +478,39 @@ function About() {
       {/* Certificates area starts here */}
       <div
         id="certificates"
-        className="certificates-area gray-bg section-padding"
+        className="certificates-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14 text-black"
       >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-12">
-              <div className="section-title text-center">
-                <h2>Certificates</h2>
-              </div>
+        <h2 className="text-3xl font-bold mb-5 text-gray-800 text-center">
+          Certificates
+        </h2>
+
+        <div className="grid grid-cols-2">
+          <div>
+            <div className=" flex justify-center">
+              <img src={CertificateImg} alt="" className=" w-28 h-28" />
+            </div>
+
+            <div className="heading text-center">
+              <h3 className="text-base">
+                State Export Excellence Award <br /> <b>2006-07</b>
+              </h3>
+
+              <p className=" text-sm">Govt. Of Karnataka</p>
             </div>
           </div>
 
-          <div className="row">
-            <div
-              className="col-lg-6 col-md-6"
-              data-aos="zoom-in-left"
-              data-aos-duration="2000"
-            >
-              <div className="single-certificate-member">
-                <div className="team-member-bg certificate-img"></div>
-              </div>
-
-              <div
-                className="heading text-center"
-                style={{ justifyContent: "center" }}
-              >
-                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  State Export Excellence Award <br /> <b>2006-07</b>
-                </h3>
-
-                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  Govt. Of Karnataka
-                </p>
-              </div>
+          <div>
+            <div className=" flex justify-center">
+              <img src={CertificateImg} alt="" className=" w-28 h-28" />
             </div>
 
-            <div
-              className="col-lg-6 col-md-6"
-              data-aos="zoom-in-up"
-              data-aos-duration="2000"
-            >
-              <div className="single-certificate-member">
-                <div className="team-member-bg certificate-img"></div>
-              </div>
+            <div className="heading text-center">
+              <h3 className=" text-base">
+                Topmost Exporter Of Chillies <br /> <b>2018-19</b>
+              </h3>
 
-              <div
-                className="heading text-center"
-                style={{ justifyContent: "center" }}
-              >
-                <h3 style={{ fontSize: "16px", lineHeight: "1.6" }}>
-                  Topmost Exporter Of Chillies <br /> <b>2018-19</b>
-                </h3>
-
-                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  Spices Board India
-                </p>
-              </div>
+              <p className="text-sm">Spices Board India</p>
             </div>
-
-            {/* <div
-              className="col-lg-3 col-md-6"
-              data-aos="zoom-in-right"
-              data-aos-duration="2000"
-            >
-              <div className="single-certificate-member">
-                <div className="team-member-bg certificate-img"></div>
-              </div>
-
-              <div
-                className="heading text-center"
-                style={{ justifyContent: "center" }}
-              >
-                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  2nd Topmost Exporter Of Spices And Spice Products <b>2018-19</b>
-                </h3>
-
-                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  Spices Board India
-                </p>
-              </div>
-            </div> */}
-
-            {/* <div
-              className="col-lg-3 col-md-6"
-              data-aos="zoom-in-down"
-              data-aos-duration="2000"
-            >
-              <div className="single-certificate-member">
-                <div className="team-member-bg certificate-img"></div>
-              </div>
-
-              <div
-                className="heading text-center"
-                style={{ justifyContent: "center" }}
-              >
-                <h3 style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  3rd Topmost Exporter Of Spices And Spice Products <b>2019-20</b>
-                </h3>
-
-                <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                  Spices Board India
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

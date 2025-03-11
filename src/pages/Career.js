@@ -87,90 +87,68 @@ function Career() {
       {/* Breadcrumb ends here */}
 
       {/* Career area starts here */}
-      <div className="career-area section-padding">
-        <div className="container">
-          <div className="row flex-column-reverse flex-xl-row">
-            <div className="col-xl-12">
-              <div className="mb-20">
-                <span className="heading__pre-title">Careers</span>
+      <div className="career-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14">
+        <div className=" pb-10">
+          <h6 className="text-[#ff6700] mb-5 font-medium text-2xl">Careers</h6>
 
-                <h3 className="heading__title">
-                  Looking for tomorrow’s AGRO leaders, Today.
-                </h3>
-              </div>
+          <h3 className="heading__title mb-3">
+            Looking for tomorrow’s AGRO leaders, Today.
+          </h3>
 
-              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                At Sidhhartha Corporation Pvt. Ltd. , challenging situations are
-                the norm and not the exception. Our people rise to the occasion
-                to deliver innovative, relevant, and sustainable solutions for
-                our customers everytime. We hire ambitious and passionate
-                professionals carry the capability to make it happen for our
-                customers. Our leadership position in the industry makes it the
-                obvious place to put knowledge and energy in action. Our
-                employees are encouraged to think about innovation, develop new
-                skills and expand their horizons.
-              </p>
+          <p className=" text-base mb-2">
+            At Sidhhartha Corporation Pvt. Ltd. , challenging situations are the
+            norm and not the exception. Our people rise to the occasion to
+            deliver innovative, relevant, and sustainable solutions for our
+            customers everytime. We hire ambitious and passionate professionals
+            carry the capability to make it happen for our customers. Our
+            leadership position in the industry makes it the obvious place to
+            put knowledge and energy in action. Our employees are encouraged to
+            think about innovation, develop new skills and expand their
+            horizons.
+          </p>
 
-              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                We believe that employees are our most asset. We give utmost
-                importance to their training, development. Emphasis is laid on
-                creating a learning environment and a performance oriented
-                working culture.
-              </p>
+          <p className=" text-base mb-2">
+            We believe that employees are our most asset. We give utmost
+            importance to their training, development. Emphasis is laid on
+            creating a learning environment and a performance oriented working
+            culture.
+          </p>
 
-              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
-                <strong>COME JOIN US!</strong>
-              </p>
-            </div>
-          </div>
+          <p className=" text-base font-bold">COME JOIN US!</p>
         </div>
-      </div>
-      {/* Career area ends here */}
 
-      {/* Career Form starts here */}
-      <div className="form section-padding">
-        <div className="container">
-          <div className="row flex-column-reverse flex-md-row">
-            <div
-              className="col-lg-6 col-md-6 col-12 mt-30"
-              data-aos="fade-right"
-              data-aos-duration="2000"
-            >
-              <div className="heading mb-20">
-                <span className="heading__pre-title">Current Openings</span>
-              </div>
+        <div className="form p-2">
+          <div className="grid grid-cols-2 gap-6">
+            <div>
+              <h6 className="text-[#ff6700] mb-5 font-medium text-2xl">
+                Current Openings
+              </h6>
 
-              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+              <p className=" text-base mb-2">
                 Thanks for checking for opportunities with Sidhhartha
                 Corporation Pvt. Ltd. If you could not find a relevant position
                 please upload your Resume, we will include it in our talented
                 database.
               </p>
 
-              <p style={{ fontSize: "15px", lineHeight: "1.6" }}>
+              <p className=" text-base">
                 We will consider your candidature for suitable positions as and
                 when they come up. In the meantime, please check back for
                 positions that might be available in the near future.
               </p>
             </div>
 
-            <div
-              className="col-lg-6 col-md-6 col-12"
-              data-aos="fade-left"
-              data-aos-duration="2000"
-            >
-              <form className="form career-form" onSubmit={handleResumeSubmit}>
-                <div className="row">
-                  <div className="col-12">
-                    <h5 className="contact-form__subtitle">
-                      Fields for resume uploading to be below the text Come Join
-                      Us!
-                    </h5>
-                  </div>
+            <div>
+              <form className="career-form" onSubmit={handleResumeSubmit}>
+                <div>
+                  <h5>
+                    Fields for resume uploading to be below the text Come Join
+                    Us!
+                  </h5>
 
-                  <div className="col-md-12">
+                  <div>
                     <input
-                      className="form__field"
+                      className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none"
                       type="text"
                       value={name}
                       onChange={(event) => setName(event.target.value)}
@@ -179,39 +157,42 @@ function Career() {
                     />
                   </div>
 
-                  <div className="col-md-6">
-                    <input
-                      className="form__field"
-                      type="email"
-                      value={email}
-                      onChange={(event) => setEmail(event.target.value)}
-                      placeholder="Your Email"
-                      required
-                    />
+                  <div className=" grid grid-cols-2 gap-3">
+                    <div>
+                      <input
+                        className=" w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none"
+                        type="email"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <input
+                        className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none"
+                        type="tel"
+                        value={phoneNumber}
+                        onChange={(event) => setPhoneNumber(event.target.value)}
+                        placeholder="Your Phone"
+                        required
+                      />
+                    </div>
                   </div>
 
-                  <div className="col-md-6">
-                    <input
-                      className="form__field"
-                      type="tel"
-                      value={phoneNumber}
-                      onChange={(event) => setPhoneNumber(event.target.value)}
-                      placeholder="Your Phone"
-                      required
-                    />
-                  </div>
-
-                  <div className="col-12">
+                  <div>
                     <textarea
-                      className="form__field form__message message--large"
+                      className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none resize-none"
                       placeholder="Message"
                       value={message}
                       onChange={(event) => setMessage(event.target.value)}
+                      rows="4"
                       required
                     ></textarea>
                   </div>
 
-                  <div className="col-12">
+                  <div>
                     <input
                       type="file"
                       name="resume_file"
@@ -236,9 +217,9 @@ function Career() {
                     />
                   </div>
 
-                  <div className="col-12">
+                  <div>
                     <button
-                      className="button button--green"
+                      className="flex justify-center bg-gray-500 mt-5 p-3 rounded-md text-white"
                       type="submit"
                       disabled={isLoading}
                     >
@@ -250,9 +231,9 @@ function Career() {
                         </>
                       ) : (
                         <>
-                          Send message
+                          <span>Send message</span>
                           <svg
-                            className="send-btn"
+                            className="send-btn w-6 h-6 fill-white ml-2"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"
                           >
@@ -268,9 +249,8 @@ function Career() {
           </div>
         </div>
       </div>
-      {/* Career Form ends here */}
-
-      {/* Progress wrap ends here */}
+      {/* Career area ends here */}
+      
       <div
         id="progress-wrap"
         className="progress-wrap"
