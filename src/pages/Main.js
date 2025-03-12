@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import AOS from "aos";
@@ -17,40 +17,11 @@ import agricultural from "../assets/img/agriculture.png";
 function Main() {
   AOS.init();
 
-  // Slider next btn
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} btn`}
-        style={{
-          ...style,
-          display: window.innerWidth > 1100 ? "block" : "none",
-          right: "50px",
-          top: "55%",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
+  const [activeSlide, setActiveSlide] = useState(0);
 
-  // Slider previous btn
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} btn`}
-        style={{
-          ...style,
-          display: window.innerWidth > 1100 ? "block" : "none",
-          left: "30px",
-          zIndex: "10",
-          top: "55%",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
+  const handleAfterChange = (current) => {
+    setActiveSlide(current); // Set the current slide as active
+  };
 
   // Slider animation here
   var settings = {
@@ -59,13 +30,57 @@ function Main() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3500,
     fade: true,
-    pauseOnHover: false,
+    pauseOnHover: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    afterChange: handleAfterChange,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          arrows: false, // Hide arrows
+          dots: true, // Show dots
+        },
+      },
+    ],
   };
+
+  // Slider Next Btn
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} btn`}
+        style={{
+          ...style,
+          right: "25px",
+          top: "55%",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  // Slider Previous Btn
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} btn`}
+        style={{
+          ...style,
+          left: "25px",
+          zIndex: "10",
+          top: "55%",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
 
   return (
     <div id="home" className="">
@@ -73,46 +88,50 @@ function Main() {
       <Slider className="homepage-slides" {...settings}>
         {/* Slide 1 */}
         <div className="single-slide-item hero-area-bg-1">
-          <div className="overlay"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="hero-area-content">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div
-                  className="col-lg-12"
-                  data-aos="fade-up"
-                  data-aos-duration="1500"
-                >
-                  <div className="section-title">
-                    <h6
-                      className=""
-                      data-aos="fade-up"
-                      data-aos-duration="1500"
-                      style={{ color: "#fff", marginLeft: "0px" }}
-                    >
-                      Leading in Agricultural Products and Spices
-                    </h6>
-
-                    <h1
-                      className="text-left"
-                      data-aos="fade-up"
-                      data-aos-duration="1500"
-                      style={{ maxWidth: window.innerWidth > 991 ? "75%" : "" }}
-                    >
-                      We are committed to providing you with the highest quality
-                      products and exceptional service, no matter where you are
-                      in the world.
-                    </h1>
-                  </div>
-
-                  <NavLink
-                    to="/about"
-                    className="main-btn"
-                    data-aos="fade-up"
-                    data-aos-duration="1500"
+            <div className="container mx-auto px-4">
+              <div
+                className={`mx-4 ${
+                  activeSlide === 0
+                    ? "opacity-100 animate__animated animate__fadeInUp animate__delay-0s"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="section-title">
+                  <h2
+                    className={`text-white text-[1.75rem] sm:text-2xl md:text-4xl font-semibold leading-[1.25] mb-5 ${
+                      activeSlide === 0
+                        ? "animate__animated animate__fadeInUp animate__delay-0s"
+                        : ""
+                    }`}
                   >
-                    Learn More
-                  </NavLink>
+                    Leading in Agricultural Products and Spices
+                  </h2>
+
+                  <p
+                    className={`text-sm md:text-base lg:text-lg text-white mb-5 md:w-2/3 ${
+                      activeSlide === 0
+                        ? "animate__animated animate__fadeInUp animate__delay-0s"
+                        : ""
+                    }`}
+                  >
+                    We are committed to providing you with the highest quality
+                    products and exceptional service, no matter where you are in
+                    the world.
+                  </p>
                 </div>
+
+                <NavLink
+                  to="/about"
+                  className={`inline-flex items-center px-6 py-3 bg-yellow-600 text-white font-semibold rounded-lg hover:bg-yellow-700 transition-colors ${
+                    activeSlide === 0
+                      ? "animate__animated animate__fadeInUp animate__delay-1s"
+                      : ""
+                  }`}
+                >
+                  Learn More
+                </NavLink>
               </div>
             </div>
           </div>
@@ -120,41 +139,52 @@ function Main() {
 
         {/* Slide 2 */}
         <div className="single-slide-item hero-area-bg-2">
-          <div className="overlay"></div>
+          <div className=" absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="hero-area-content">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div
-                  className="col-lg-12 animate__animated animate__fadeInUp"
-                  data-wow-delay=".2s"
-                >
-                  <div className="section-title">
-                    <h6
-                      className="animate__animated animate__fadeInDown"
-                      style={{ color: "#fff", marginLeft: "0px" }}
-                    >
-                      A comprehensive range of Seed Products
-                    </h6>
-
-                    <h1
-                      className="text-left"
-                      style={{ maxWidth: window.innerWidth > 991 ? "75%" : "" }}
-                    >
-                      We maintain high standards for product flawlessness at all
-                      phases, starting with collect gathering and ending with
-                      packaging. We also ensure that products are handled with
-                      care and supplied in accordance with international quality
-                      standards.
-                    </h1>
-                  </div>
-
-                  <NavLink
-                    to="/about"
-                    className="main-btn animate__animated animate__fadeInDown"
+            <div className="container mx-auto px-4">
+              <div
+                className={`mx-4 ${
+                  activeSlide === 1
+                    ? "opacity-100 animate__animated animate__fadeInUp animate__delay-0s"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="section-title">
+                  <h2
+                    className={`text-white text-[1.75rem] sm:text-2xl md:text-4xl font-semibold leading-[1.25] mb-5 ${
+                      activeSlide === 1
+                        ? "animate__animated animate__fadeInUp animate__delay-0s"
+                        : ""
+                    }`}
                   >
-                    Learn More
-                  </NavLink>
+                    A comprehensive range of Seed Products
+                  </h2>
+
+                  <p
+                    className={`text-xs md:text-base lg:text-lg text-white mb-5 md:w-2/3 ${
+                      activeSlide === 1
+                        ? "animate__animated animate__fadeInUp animate__delay-0s"
+                        : ""
+                    }`}
+                  >
+                    We maintain high standards for product flawlessness at all
+                    phases, starting with collect gathering and ending with
+                    packaging. We also ensure that products are handled with
+                    care and supplied in accordance with international quality
+                    standards.
+                  </p>
                 </div>
+
+                <NavLink
+                  to="/about"
+                  className={`inline-flex items-center px-6 py-3 bg-yellow-600 text-white font-semibold rounded-lg hover:bg-yellow-700 transition-colors ${
+                    activeSlide === 1
+                      ? "animate__animated animate__fadeInUp animate__delay-1s"
+                      : ""
+                  }`}
+                >
+                  Learn More
+                </NavLink>
               </div>
             </div>
           </div>
@@ -162,56 +192,68 @@ function Main() {
 
         {/* Slide 3 */}
         <div className="single-slide-item hero-area-bg-3">
-          <div className="overlay"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="hero-area-content">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div
-                  className="col-lg-12 animate__animated animate__fadeInUp"
-                  data-wow-delay=".2s"
-                >
-                  <div className="section-title">
-                    <h6
-                      className="animate__animated animate__fadeInDown"
-                      style={{ color: "#fff", marginLeft: "0px" }}
-                    >
-                      Robust infrastructure facilities
-                    </h6>
-
-                    <h1
-                      className="text-left"
-                      style={{ maxWidth: window.innerWidth > 991 ? "75%" : "" }}
-                    >
-                      The best of infrastructure, processes, planning and people
-                      bringing you the best and the most premium products in the
-                      business.
-                    </h1>
-                  </div>
-                  <NavLink
-                    to="/about"
-                    className="main-btn animate__animated animate__fadeInDown"
+            <div className="container mx-auto px-4">
+              <div
+                className={`mx-4 ${
+                  activeSlide === 2
+                    ? "opacity-100 animate__animated animate__fadeInUp animate__delay-0s"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="section-title">
+                  <h2
+                    className={`text-white text-[1.75rem] sm:text-2xl md:text-4xl font-semibold leading-[1.25] mb-5 ${
+                      activeSlide === 2
+                        ? "animate__animated animate__fadeInUp animate__delay-0s"
+                        : ""
+                    }`}
                   >
-                    Learn More
-                  </NavLink>
+                    Robust infrastructure facilities
+                  </h2>
+
+                  <p
+                    className={`text-xs md:text-base lg:text-lg text-white mb-5 md:w-2/3 ${
+                      activeSlide === 2
+                        ? "animate__animated animate__fadeInUp animate__delay-0s"
+                        : ""
+                    }`}
+                  >
+                    The best of infrastructure, processes, planning and people
+                    bringing you the best and the most premium products in the
+                    business.
+                  </p>
                 </div>
+
+                <NavLink
+                  to="/about"
+                  className={`inline-flex items-center px-6 py-3 bg-yellow-600 text-white font-semibold rounded-lg hover:bg-yellow-700 transition-colors ${
+                    activeSlide === 2
+                      ? "animate__animated animate__fadeInUp animate__delay-1s"
+                      : ""
+                  }`}
+                >
+                  Learn More
+                </NavLink>
               </div>
             </div>
           </div>
         </div>
       </Slider>
-      {/* Slidere code ends here */}
+      {/* Slider code ends here */}
 
       {/* Info area starts here */}
       <div className="info-area relative mt-[-100px] z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            <div className="info-inner md:col-span-2 border rounded-lg  bg-white shadow-md">
-              <div className="grid md:grid-cols-3">
-                <div className="info-bg bg-cover"></div>
+            <div className="info-inner md:col-span-2 rounded-lg  bg-white shadow-md">
+              <div className="grid grid-cols-1 md:grid-cols-3">
+                <div className="info-bg h-[320px] bg-center bg-cover relative w-full rounded-lg rounded-r-none"></div>
 
                 <div className=" col-span-2">
-                  <div className="info-content border-l-[10px] border-[#fcb65a] h-full p-9">
-                    <h5 className=" text-3xl mb-5">
+                  <div className="info-content border-l-[10px] border-[#fcb65a] h-full p-7 lg:p-8">
+                    <h5 className="text-2xl lg:text-3xl mb-5 text-gray-800 font-medium">
                       Leading Exporter of Agricultural Products like Red
                       Chillies and Groundnuts in india
                     </h5>
@@ -245,12 +287,12 @@ function Main() {
       {/* About us starts here */}
       <div className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14">
         <div className="section-title">
-          <h2 className=" text-3xl font-bold mb-5">
+          <h2 className=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5">
             Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="main-img">
             <img
               src={aboutImg3}
@@ -259,8 +301,8 @@ function Main() {
             />
           </div>
 
-          <div className="">
-            <p className="text-base mb-5">
+          <div>
+            <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-5">
               With over 3 decades of relentless commitment to excellence,
               <b> Sidhhartha Corporation Pvt. Ltd.</b> where we pride ourselves
               on delivering an exceptional array of premium quality agricultural
@@ -271,7 +313,7 @@ function Main() {
               we offer.
             </p>
 
-            <p className="mb-0 text-base">
+            <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
               Our endeavor is to establish ourselves as one of the key players
               in this Agro Industry Domain, leveraging our own resources as well
               as the strength of India as a sourcing destination for the world
@@ -282,7 +324,7 @@ function Main() {
         </div>
 
         <div className="text mt-5">
-          <p className="text-base">
+          <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
             By harnessing the latest technology and employing an experienced
             team of professionals, we ensure the purity, safety, and efficacy of
             every product. Our dedicated and experienced team is committed to

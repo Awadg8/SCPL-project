@@ -5,15 +5,15 @@ import Logo from "../assets/img/logo.png";
 
 function Footer() {
   // For handeling the nav click to content section
-  const scrollToAnchor = (path, anchorId, navigateTo) => {
-    navigateTo(`${path}#${anchorId}`);
-    setTimeout(() => {
-      const anchor = document.getElementById(anchorId);
-      if (anchor) {
-        anchor.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 0);
-  };
+  // const scrollToAnchor = (path, anchorId, navigateTo) => {
+  //   navigateTo(`${path}#${anchorId}`);
+  //   setTimeout(() => {
+  //     const anchor = document.getElementById(anchorId);
+  //     if (anchor) {
+  //       anchor.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }, 0);
+  // };
 
   return (
     <div>

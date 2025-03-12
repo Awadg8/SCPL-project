@@ -107,7 +107,7 @@ function Header() {
 
                       <ul className="sub-menu about-header-menu">
                         <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
-                          <NavLink to="/about">About</NavLink>
+                          <NavLink to="/about">About Us</NavLink>
                         </li>
 
                         <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
