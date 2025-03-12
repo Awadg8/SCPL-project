@@ -349,12 +349,11 @@ hr {
 
 /*Button Style */
 
-.main-btn {
+/* .main-btn {
   display: inline-block;
   background: #fcb65a;
   color: #333e38;
   text-transform: uppercase;
-  /* font-family: "Barlow Condensed", sans-serif; */
   font-family: Open Sans;
   font-size: 18px;
   font-weight: 500;
@@ -367,9 +366,9 @@ hr {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
+} */
 
-.main-btn.btn-white {
+/* .main-btn.btn-white {
   background: #fff;
   color: #333e38;
 }
@@ -378,7 +377,7 @@ hr {
   background-color: #b88124;
   color: #fff;
   transition: all 0.2s ease-in-out;
-}
+} */
 
 /*Form Style CSS */
 
@@ -1033,7 +1032,7 @@ textarea:focus::-webkit-input-placeholder {
 /* Contact Section 
 ============== */
 
-.contact-section {
+/* .contact-section {
   position: relative;
   z-index: 1;
   background-attachment: fixed;
@@ -1102,11 +1101,11 @@ textarea:focus::-webkit-input-placeholder {
 .contact-section button.main-btn:hover {
   background: #fff;
   color: #017d3f;
-}
+} */
 
-.contact-form {
+/* .contact-form {
   margin-top: 80px;
-}
+} */
 
 /* Footer Area
 ============== */
@@ -1125,9 +1124,9 @@ textarea:focus::-webkit-input-placeholder {
   margin-top: 16px;
 } */
 
-.contact-info p {
+/* .contact-info p {
   margin-bottom: 10px;
-}
+} */
 
 /* .contact-info p svg {
   fill: #b88124;
@@ -1793,7 +1792,7 @@ ul.team-social li a {
 
 /* Contact css */
 
-.contact-area {
+/* .contact-area {
   overflow: hidden;
 }
 
@@ -1806,9 +1805,9 @@ ul.team-social li a {
   padding: 15px;
   border-radius: 40%;
   float: left;
-}
+} */
 
-#contact input::placeholder,
+/* #contact input::placeholder,
 #contact textarea::placeholder {
   color: #9a9a9a;
 }
@@ -1817,9 +1816,9 @@ ul.team-social li a {
   border: none;
   width: 200px;
   margin-bottom: 20px;
-}
+} */
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .r-tabs .r-tabs-nav {
     display: block;
   }
@@ -1835,9 +1834,9 @@ ul.team-social li a {
   display: inline-block;
   margin: 0;
   list-style: none;
-}
+} */
 
-.horizontal-tabs li.r-tabs-state-active::before {
+/* .horizontal-tabs li.r-tabs-state-active::before {
   content: "";
   display: block;
   height: 2px;
@@ -1852,9 +1851,9 @@ ul.team-social li a {
   color: #414a53;
   font-size: 15px;
   font-weight: 500;
-}
+} */
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .horizontal-tabs .r-tabs-state-active a {
     background: 0 0;
   }
@@ -1872,9 +1871,9 @@ ul.team-social li a {
     display: inline-flex;
     padding: 13px 20px;
   }
-}
+} */
 
-.horizontal-tabs .r-tabs-anchor,
+/* .horizontal-tabs .r-tabs-anchor,
 .horizontal-tabs__header a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1889,7 +1888,7 @@ ul.team-social li a {
   font-weight: 700;
   text-decoration: none;
   padding: 10px 20px;
-}
+} */
 
 /* a {
   color: #ff6700;
@@ -1902,7 +1901,7 @@ ul.team-social li a {
   background-color: transparent;
 } */
 
-.tabs .r-tabs-accordion-title {
+/* .tabs .r-tabs-accordion-title {
   text-align: center;
 }
 
@@ -1918,7 +1917,7 @@ ul.team-social li a {
 
 .r-tabs .r-tabs-accordion-title {
   display: none;
-}
+} */
 
 /* Awards css */
 

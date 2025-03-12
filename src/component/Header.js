@@ -69,7 +69,7 @@ function Header() {
           isSticky ? "fixed w-full top-0" : "relative"
         }`}
       >
-        <nav className=" px-3 md:px-8 py-3 lg:pt-2 lg:pb-0 relative flex items-center justify-between w-full">
+        <nav className=" relative flex items-center justify-between w-full px-6 md:px-8 lg:px-10">
           <div className="relative">
             <div className="">
               <NavLink className="" to="/">
@@ -80,10 +80,10 @@ function Header() {
 
           <div className=" flex items-center flex-row">
             {/* Desktop Menu */}
-            <div className="pr-5 pl-[105px] hidden lg:block">
+            <div className=" hidden md:block">
               <div className="inline-block align-top">
                 <ul className="text-left flex text-[#1e7dd8] text-base font-medium">
-                  <li className="pr-4 pt-5 pb-7">
+                  <li className="pr-4">
                     <NavLink
                       to="/"
                       className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
@@ -93,7 +93,7 @@ function Header() {
                   </li>
 
                   <div className=" group">
-                    <li className="pr-4 pt-5 pb-7 about-header">
+                    <li className="pr-4 about-header">
                       <NavLink
                         to="#"
                         className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
@@ -134,7 +134,7 @@ function Header() {
                   </div>
 
                   <div className=" group">
-                    <li className="pr-4 pt-5 pb-7 product-header">
+                    <li className="pr-4 product-header">
                       <NavLink
                         to="#"
                         className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
@@ -194,7 +194,7 @@ function Header() {
                     </li>
                   </div>
 
-                  <li className="pr-4 pt-5 pb-7">
+                  <li className="pr-4">
                     <NavLink
                       to="/career"
                       className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
@@ -203,7 +203,7 @@ function Header() {
                     </NavLink>
                   </li>
 
-                  <li className=" pt-5 pb-7">
+                  <li className="">
                     <NavLink
                       to="/contact"
                       className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
@@ -216,7 +216,7 @@ function Header() {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <div className="navbar-header ml-2 md:ml-6 lg:hidden">
+            <div className="navbar-header ml-2 md:ml-6 md:hidden">
               <button
                 type="button"
                 className="navbar-toggle p-3 relative"

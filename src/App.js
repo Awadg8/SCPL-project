@@ -1,18 +1,14 @@
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./index.css";
 
-
 // Component Import
 import Header from "./component/Header";
 import Footer from "./component/Footer";
-
-// Pages Import
-import About from "./pages/About";
-import Products from "./pages/Products";
-import Career from "./pages/Career";
-import Contact from "./pages/Contact";
-import Main from "./pages/Main";
+import Loader from "./component/Loader";
+import ScrollToTop from "./component/ScrollToTop";
+import StartFromTop from "./component/StartFromTop";
 
 // CSS import
 import "./App.css";
@@ -20,17 +16,34 @@ import "./assets/css/style.css";
 // import "./assets/css/responsive.css";
 import "./assets/css/backToTop.css";
 
+// Pages Import
+// import About from "./pages/About";
+// import Products from "./pages/Products";
+// import Career from "./pages/Career";
+// import Contact from "./pages/Contact";
+// import Main from "./pages/Main";
+
+const Main = lazy(() => import("./pages/Main"));
+const About = lazy(() => import("./pages/About"));
+const Products = lazy(() => import("./pages/Products.js"));
+const Career = lazy(() => import("./pages/Career.js"));
+const Contact = lazy(() => import("./pages/Contact.js"));
+
 function App() {
   return (
     <BrowserRouter>
+      <StartFromTop />
       <Header />
-      <Routes>
-        <Route path="" element={<Main />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="" element={<Main />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Suspense>
+      <ScrollToTop />
       <Footer />
     </BrowserRouter>
   );

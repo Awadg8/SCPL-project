@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: process.env.REACT_APP_GMAIL_USERNAME,
-      to: "awadheshproactii@gmail.com",
+      to: "proactiiawadhesh@gmail.com",
       subject: subject,
       text: `Name: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nMessage: ${message}`,
     };

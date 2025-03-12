@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Career() {
-  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -13,15 +12,7 @@ function Career() {
 
   const fileInputRef = useRef(null);
 
-  const scrollToAnchor = (path, anchorId, navigateTo) => {
-    navigateTo(`${path}#${anchorId}`);
-    setTimeout(() => {
-      const anchor = document.getElementById(anchorId);
-      if (anchor) {
-        anchor.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 0);
-  };
+
 
   const handleResumeSubmit = (event) => {
     event.preventDefault();
@@ -250,24 +241,6 @@ function Career() {
         </div>
       </div>
       {/* Career area ends here */}
-      
-      <div
-        id="progress-wrap"
-        className="progress-wrap"
-        onClick={(e) => {
-          e.preventDefault();
-          scrollToAnchor("/career", "career", navigate);
-        }}
-      >
-        <svg
-          className="progress-circle svg-content"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-        >
-          <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM385 215c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-71-71L280 392c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-214.1-71 71c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 103c9.4-9.4 24.6-9.4 33.9 0L385 215z" />
-        </svg>
-      </div>
-      {/* Progress wrap ends here */}
     </div>
   );
 }
