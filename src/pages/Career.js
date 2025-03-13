@@ -105,7 +105,7 @@ function Career() {
           </div>
 
           <div className="form">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
               <div>
                 <FadeDown>
                   <h6 className="text-[#ff6700] mb-2 md:mb-5 font-medium text-2xl">
@@ -151,7 +151,7 @@ function Career() {
                       />
                     </div>
 
-                    <div className=" grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3">
                       <div>
                         <input
                           className=" w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors focus:outline-none"

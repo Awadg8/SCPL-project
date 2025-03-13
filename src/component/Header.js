@@ -55,7 +55,7 @@ function Header() {
     <div>
       {/* Header Section Here */}
       <header
-        className={` bg-[#fffde5] md:bg-white/85 z-[60] top-0 w-full shadow-lg transition-transform duration-300 ${
+        className={` bg-[#fffde5] md:bg-white/85 z-[60] backdrop-blur-[4px] top-0 w-full shadow-lg transition-transform duration-300 ${
           isSticky ? "fixed w-full top-0" : "relative"
         }`}
       >
@@ -69,7 +69,6 @@ function Header() {
                   isSticky ? "w-28 h-20 " : "w-32 h-24"
                 }`}
               />
-              {/* <img src={Logo} alt="Logo-img" className=" w-32 h-24 p-2" /> */}
             </NavLink>
           </div>
 
@@ -78,7 +77,7 @@ function Header() {
             <div className=" hidden md:block">
               <div className="inline-block align-top">
                 <ul className="text-left flex text-yellow-600 text-base font-medium">
-                  <li className="pr-4">
+                  <li className={`pr-4 ${isSticky ? "py-6" : "py-9"}`}>
                     <NavLink
                       to="/"
                       className="border-b-2 border-transparent hover:border-yellow-600 transition-all duration-300"
@@ -87,8 +86,8 @@ function Header() {
                     </NavLink>
                   </li>
 
-                  <div className=" group">
-                    <li className="pr-4 about-header">
+                  <div className="group">
+                    <li className={`pr-4 about-header ${isSticky ? "py-6" : "py-9"}`}>
                       <NavLink
                         to="#"
                         className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
@@ -128,8 +127,8 @@ function Header() {
                     </li>
                   </div>
 
-                  <div className=" group">
-                    <li className="pr-4 product-header">
+                  <div className="group">
+                    <li className={`pr-4 product-header ${isSticky ? "py-6" : "py-9"}`}>
                       <NavLink
                         to="#"
                         className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
@@ -189,7 +188,7 @@ function Header() {
                     </li>
                   </div>
 
-                  <li className="pr-4">
+                  <li className={`pr-4 ${isSticky ? "py-6" : "py-9"}`}>
                     <NavLink
                       to="/career"
                       className="border-b-2 border-transparent hover:border-yellow-600 transition-all duration-300"
@@ -198,7 +197,7 @@ function Header() {
                     </NavLink>
                   </li>
 
-                  <li className="">
+                  <li className={`pr-4 ${isSticky ? "py-6" : "py-9"}`}>
                     <NavLink
                       to="/contact"
                       className="border-b-2 border-transparent hover:border-yellow-600 transition-all duration-300"

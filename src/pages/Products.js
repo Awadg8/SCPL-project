@@ -124,13 +124,13 @@ function Products() {
           {productData.map((point, index) => (
             <div
               key={index}
-              className={`grid grid-cols-2 gap-6 py-4 items-center`}
+              className={`grid grid-cols-1 md:grid-cols-2 gap-6 py-3 md:py-4 items-center`}
             >
               <div className={`${index % 2 !== 0 ? "order-last" : ""}`}>
                 <img
                   src={point.img}
                   alt={point.heading}
-                  className=" w-full h-[350px] rounded-lg"
+                  className=" w-full  h-[270px] sm:h-[350px] rounded-lg"
                 />
               </div>
 
@@ -138,7 +138,7 @@ function Products() {
               {index % 2 === 0 ? (
                 <FadeRight>
                   <div>
-                    <h1 className="text-[#b88124] text-3xl md:text-4xl lg:text-5xl mb-5">
+                    <h1 className="text-[#b88124] text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-5">
                       {point.heading}
                     </h1>
                     <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
@@ -159,7 +159,7 @@ function Products() {
               ) : (
                 <FadeLeft>
                   <div>
-                    <h1 className="text-[#b88124] text-5xl mb-5">
+                    <h1 className="text-[#b88124] text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-5">
                       {point.heading}
                     </h1>
                     <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">

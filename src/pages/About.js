@@ -114,7 +114,7 @@ function About() {
         backgroundImage={BreadCrumbImg}
       />
 
-      <div id="about" className="">
+      <div id="about" className=" overflow-hidden">
         {/* About Us Section*/}
         <div
           id="about-us"
@@ -139,7 +139,7 @@ function About() {
                 <img
                   src={aboutImg3}
                   alt="aboutUs-img"
-                  className=" w-full h-[350px] rounded-lg"
+                  className="w-full h-[270px] sm:h-[350px] rounded-lg"
                 />
               </div>
 
@@ -222,114 +222,61 @@ function About() {
             <h6 className="text-[#ff6700] mb-5 font-medium text-2xl">
               Our Facilities
             </h6>
-
             <FadeDown>
               <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[20px] md:text-2xl lg:text-[30px] font-semibold mb-5">
                 All these processes take place at our facilities in Guntur,
-                Khammam, Chennai and Pipavav.
+                Khammam, Chennai, and Pipavav.
               </h2>
             </FadeDown>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl md:my-4">
-                <div>
-                  <img
-                    className=" w-full h-[350px] bg-cover"
-                    src={facilityImg}
-                    alt=""
-                  />
+            {[
+              {
+                title: "Guntur",
+                description:
+                  "Our facility at Guntur (Andhra Pradesh) is developed on 3.85 acres of land, with a 56,000 sq. ft. warehouse and an 88,000 sq. ft. open facility for processing, drying, quality control, packing, storage, and stuffing.",
+                img: facilityImg,
+              },
+              {
+                title: "Khammam",
+                description:
+                  "Our facility at Khammam (Telangana) spans 4 acres, including a modern warehouse of 31,000 sq. ft. and a 95,000 sq. ft. open facility for operations.",
+                img: facilityImg2,
+              },
+              {
+                title: "Chennai",
+                description:
+                  "Our facility at Chennai (Tamil Nadu) consists of a 22,500 sq. ft. godown, where all our operations like processing, quality control, packing, storage, and stuffing take place.",
+                img: facilityImg3,
+              },
+              {
+                title: "Pipavav",
+                description:
+                  "Our facility at Pipavav (Gujarat) features a 2500 sq. meter modern warehouse and an open facility for drying, bagging, and loading.",
+                img: facilityImg4,
+              },
+            ].map((facility, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-xl shadow-2xl group"
+              >
+                {/* Image */}
+                <img
+                  className="w-full h-[270px] sm:h-[350px] bg-cover transition-transform duration-300 group-hover:scale-110"
+                  src={facility.img}
+                  alt={facility.title}
+                />
+
+                {/* Overlay with animation */}
+                <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 p-6">
+                  <h2 className="text-2xl font-semibold mb-3 text-yellow-600">
+                    {facility.title}
+                  </h2>
+                  <p className="text-sm">{facility.description}</p>
                 </div>
-
-                {/* <div className="card_content">
-                  <h2 className="card_title">Guntur</h2>
-
-                  <p className="card_description">
-                    Our facility at <b>Guntur (Andhra Pradesh)</b> is developed
-                    on 3.85 acres of land, with 56,000 sq. ft. warehouse
-                    facility and 88,000 sq.ft open facility- where we carry out
-                    all the end-to-end execution of all our operations like
-                    processing, drying, quality control, packing, storage, and
-                    stuffing for all of our products.
-                  </p>
-                </div> */}
-              </article>
-            </div>
-
-            <div>
-              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl md:my-4">
-                <div>
-                  <img
-                    className=" w-full h-[350px] bg-cover"
-                    src={facilityImg2}
-                    alt=""
-                  />
-                </div>
-
-                {/* <div className="card_content">
-                  <h2 className="card_title">Khammam</h2>
-
-                  <p className="card_description">
-                    Similarly we have another facility at
-                    <b> Khammam (Telangana) </b>
-                    where we have developed 4 acres of land into a modern
-                    warehouse of 31,000 sq.ft. and an open facility of 95,000
-                    sq.ft to carry out all the processes.
-                  </p>
-                </div> */}
-              </article>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl mt-6 md:my-4">
-                <div>
-                  <img
-                    className=" w-full h-[350px] bg-cover"
-                    src={facilityImg3}
-                    alt=""
-                  />
-                </div>
-
-                {/* <div className="card_content">
-                  <span className="card_title">Chennai</span>
-
-                  <p className="card_description">
-                    Our facility at <b>Chennai (Tamil Nadu)</b> Godown premises
-                    consists of 22,500 sq ft. Our open facility- where we carry
-                    out all the end-to-end execution of all our operations like
-                    processing, quality control, packing, storage, and stuffing
-                    for all of our products.
-                  </p>
-                </div> */}
-              </article>
-            </div>
-
-            <div>
-              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl md:my-4">
-                <div>
-                  <img
-                    className=" w-full h-[350px] bg-cover"
-                    src={facilityImg4}
-                    alt=""
-                  />
-                </div>
-
-                {/* <div className="card_content">
-                  <span className="card_title">Pipavav</span>
-
-                  <p className="card_description">
-                    Our facility at
-                    <b> Pipavav (Gujarat) </b>
-                    where we have a modern warehouse of 2500 sq mtr. area and an
-                    open facility to carry out all the processes like drying,
-                    Bagging, Loading, etc.
-                  </p>
-                </div> */}
-              </article>
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 

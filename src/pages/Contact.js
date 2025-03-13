@@ -138,7 +138,7 @@ function Contact() {
             <div className="contact-form order-1">
               <form onSubmit={handleSubmit}>
                 <div>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 md:gap-3">
                     <div className="my-3">
                       <input
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors focus:outline-none"
@@ -162,7 +162,7 @@ function Contact() {
                     </div>
                   </div>
 
-                  <div className=" grid grid-cols-2 gap-3">
+                  <div className=" grid grid-cols-1 md:grid-cols-2 md:gap-3">
                     <div className="my-3">
                       <input
                         type="tel"
@@ -201,7 +201,7 @@ function Contact() {
 
                   <div>
                     <button
-                      className="flex justify-center text-lg bg-gray-500 hover:bg-yellow-600 transition-colors duration-300 mt-5 px-3 py-2 rounded-md text-white"
+                      className="flex justify-center text-base bg-gray-500 hover:bg-yellow-600 transition-colors duration-300 mt-5 p-3 rounded-md text-white"
                       type="submit"
                       disabled={isLoading}
                     >
@@ -213,8 +213,8 @@ function Contact() {
                         </>
                       ) : (
                         <>
-                          <span>Submit</span>
-                          <Send className="w-5 h-5 ml-2 mt-1" />
+                          <span>Send message</span>
+                          <Send className="w-5 h-5 ml-2" />
                         </>
                       )}
                     </button>

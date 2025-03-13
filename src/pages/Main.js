@@ -274,7 +274,7 @@ function Main() {
             </div>
 
             <div className="info-founder bg-[#fcb65a] rounded-md h-full text-center py-8 px-12">
-              <div className="info-img">
+              <div className="info-img flex justify-center">
                 <img src={agricultural} alt="" className=" w-16 h-16" />
               </div>
               <p className=" text-[#333e38] font-semibold text-5xl md:text-6xl my-4 md:my-7">

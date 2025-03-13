@@ -12,16 +12,6 @@ import StartFromTop from "./component/StartFromTop";
 
 // CSS import
 import "./App.css";
-import "./assets/css/style.css";
-// import "./assets/css/responsive.css";
-import "./assets/css/backToTop.css";
-
-// Pages Import
-// import About from "./pages/About";
-// import Products from "./pages/Products";
-// import Career from "./pages/Career";
-// import Contact from "./pages/Contact";
-// import Main from "./pages/Main";
 
 const Main = lazy(() => import("./pages/Main"));
 const About = lazy(() => import("./pages/About"));
