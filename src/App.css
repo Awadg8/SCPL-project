@@ -10,7 +10,7 @@
 }
 
 .about-header:hover .about-header-menu {
-  top: 80px;
+  top: 65px;
   opacity: 1;
   visibility: visible;
   transition: all 0.6s ease;
@@ -29,7 +29,7 @@
 }
 
 .product-header:hover .product-header-menu {
-  top: 80px;
+  top: 65px;
   opacity: 1;
   visibility: visible;
   transition: all 0.6s ease;

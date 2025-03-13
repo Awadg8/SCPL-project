@@ -86,7 +86,7 @@ function Header() {
                   <li className="pr-4">
                     <NavLink
                       to="/"
-                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      className="border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                     >
                       Home
                     </NavLink>
@@ -96,7 +96,7 @@ function Header() {
                     <li className="pr-4 about-header">
                       <NavLink
                         to="#"
-                        className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                        className="border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                       >
                         About
                         <FontAwesomeIcon
@@ -137,7 +137,7 @@ function Header() {
                     <li className="pr-4 product-header">
                       <NavLink
                         to="#"
-                        className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                        className="border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                       >
                         Products
                         <FontAwesomeIcon
@@ -197,7 +197,7 @@ function Header() {
                   <li className="pr-4">
                     <NavLink
                       to="/career"
-                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      className="border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                     >
                       Career
                     </NavLink>
@@ -206,7 +206,7 @@ function Header() {
                   <li className="">
                     <NavLink
                       to="/contact"
-                      className="sf-with-ul-pre sf-with-ul border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      className="border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
                     >
                       Contact Us
                     </NavLink>

@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
 
 import BreadCrumb from "../component/BreadCrumb";
 import BreadCrumbImg from "../assets/img/career.jpg";
@@ -59,19 +58,23 @@ function Career() {
         backgroundImage={BreadCrumbImg}
       />
 
+      {/* Career Section*/}
       <div id="career" className="">
-        {/* Career Section*/}
         <div className="career-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12">
-          <div className=" pb-10">
+          <div className=" pb-6 md:pb-10">
             <h6 className="text-[#ff6700] mb-5 font-medium text-2xl">
               Careers
             </h6>
 
-            <h3 className="heading__title mb-3">
-              Looking for tomorrow’s AGRO leaders, Today.
+            <h3 className="text-[26px] md:text-3xl lg:text-[32px] font-semibold text-gray-700 mb-3">
+              Looking for tomorrow’s AGRO leaders,{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800">
+                Today
+              </span>
+              .
             </h3>
 
-            <p className=" text-base mb-2">
+            <p className=" text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
               At Sidhhartha Corporation Pvt. Ltd. , challenging situations are
               the norm and not the exception. Our people rise to the occasion to
               deliver innovative, relevant, and sustainable solutions for our
@@ -83,31 +86,33 @@ function Career() {
               expand their horizons.
             </p>
 
-            <p className=" text-base mb-2">
+            <p className=" text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
               We believe that employees are our most asset. We give utmost
               importance to their training, development. Emphasis is laid on
               creating a learning environment and a performance oriented working
               culture.
             </p>
 
-            <p className=" text-base font-bold">COME JOIN US!</p>
+            <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-bold">
+              COME JOIN US !
+            </p>
           </div>
 
-          <div className="form p-2">
-            <div className="grid grid-cols-2 gap-6">
+          <div className="form">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h6 className="text-[#ff6700] mb-5 font-medium text-2xl">
                   Current Openings
                 </h6>
 
-                <p className=" text-base mb-2">
+                <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
                   Thanks for checking for opportunities with Sidhhartha
                   Corporation Pvt. Ltd. If you could not find a relevant
                   position please upload your Resume, we will include it in our
                   talented database.
                 </p>
 
-                <p className=" text-base">
+                <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
                   We will consider your candidature for suitable positions as
                   and when they come up. In the meantime, please check back for
                   positions that might be available in the near future.
@@ -117,14 +122,14 @@ function Career() {
               <div>
                 <form className="career-form" onSubmit={handleResumeSubmit}>
                   <div>
-                    <h5>
+                    <h5 className="text-base lg:text-lg text-gray-700 font-bold">
                       Fields for resume uploading to be below the text Come Join
                       Us!
                     </h5>
 
                     <div>
                       <input
-                        className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none"
+                        className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors focus:outline-none"
                         type="text"
                         value={name}
                         onChange={(event) => setName(event.target.value)}
@@ -136,7 +141,7 @@ function Career() {
                     <div className=" grid grid-cols-2 gap-3">
                       <div>
                         <input
-                          className=" w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none"
+                          className=" w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors focus:outline-none"
                           type="email"
                           value={email}
                           onChange={(event) => setEmail(event.target.value)}
@@ -147,7 +152,7 @@ function Career() {
 
                       <div>
                         <input
-                          className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none"
+                          className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors focus:outline-none"
                           type="tel"
                           value={phoneNumber}
                           onChange={(event) =>
@@ -161,7 +166,7 @@ function Career() {
 
                     <div>
                       <textarea
-                        className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-colors focus:outline-none resize-none"
+                        className="w-full px-4 py-2 my-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-colors focus:outline-none resize-none"
                         placeholder="Message"
                         value={message}
                         onChange={(event) => setMessage(event.target.value)}
@@ -197,7 +202,7 @@ function Career() {
 
                     <div>
                       <button
-                        className="flex justify-center bg-gray-500 mt-5 p-3 rounded-md text-white"
+                        className="flex justify-center bg-gray-500 hover:bg-yellow-600 transition-colors duration-300 mt-5 p-3 rounded-md text-white"
                         type="submit"
                         disabled={isLoading}
                       >

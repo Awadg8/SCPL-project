@@ -18,6 +18,8 @@ import productTurmeric from "../assets/img/product/Turmeric.jpg";
 import BreadCrumb from "../component/BreadCrumb";
 import BreadCrumbImg from "../assets/img/product.jpg";
 
+import { FadeRight, FadeLeft } from "../component/Animation";
+
 function Products() {
   AOS.init();
 
@@ -132,14 +134,50 @@ function Products() {
                 />
               </div>
 
-              <div>
-                <h1 className=" text-[#b88124] text-5xl mb-5">
-                  {point.heading}
-                </h1>
-                <p>{point.para1}</p>
-                {point.para2 && <p>{point.para2}</p>}
-                {point.para3 && <p>{point.para3}</p>}
-              </div>
+              {/* Text Section with Animations */}
+              {index % 2 === 0 ? (
+                <FadeRight>
+                  <div>
+                    <h1 className="text-[#b88124] text-3xl md:text-4xl lg:text-5xl mb-5">
+                      {point.heading}
+                    </h1>
+                    <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
+                      {point.para1}
+                    </p>
+                    {point.para2 && (
+                      <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
+                        {point.para2}
+                      </p>
+                    )}
+                    {point.para3 && (
+                      <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
+                        {point.para3}
+                      </p>
+                    )}
+                  </div>
+                </FadeRight>
+              ) : (
+                <FadeLeft>
+                  <div>
+                    <h1 className="text-[#b88124] text-5xl mb-5">
+                      {point.heading}
+                    </h1>
+                    <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
+                      {point.para1}
+                    </p>
+                    {point.para2 && (
+                      <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-2">
+                        {point.para2}
+                      </p>
+                    )}
+                    {point.para3 && (
+                      <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
+                        {point.para3}
+                      </p>
+                    )}
+                  </div>
+                </FadeLeft>
+              )}
             </div>
           ))}
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 import { GoRocket } from "react-icons/go";
 import { GoGoal } from "react-icons/go";
@@ -111,7 +110,7 @@ function About() {
       />
 
       <div id="about" className="">
-        {/* About us starts here */}
+        {/* About Us Section*/}
         <div
           id="about-us"
           className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
@@ -122,7 +121,7 @@ function About() {
                 About Us
               </h6>
 
-              <h2 className="  bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5">
+              <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5">
                 Leading Exporter of Agricultural Products like Red Chillies and
                 Groundnuts in India
               </h2>
@@ -168,9 +167,8 @@ function About() {
             </div>
           </div>
         </div>
-        {/* About us ends here */}
 
-        {/* Vision area starts here */}
+        {/* Vision Section */}
         <div id="vision" className="vision-area parallax text-white">
           <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12 relative grid grid-cols-1 md:grid-cols-2 gap-6">
             <div data-aos="flip-left" data-aos-duration="3000">
@@ -207,9 +205,8 @@ function About() {
             </div>
           </div>
         </div>
-        {/* Vision area ends here */}
 
-        {/* Facility area starts here */}
+        {/* Facility Section */}
         <div
           id="facilities"
           className="facility-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
@@ -326,9 +323,8 @@ function About() {
             </div>
           </div>
         </div>
-        {/* Facility area ends here */}
 
-        {/* Corevalues starts here */}
+        {/* Corevalues Section */}
         <div
           id="coreValues"
           className="coreValues-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
@@ -365,9 +361,8 @@ function About() {
             ))}
           </div>
         </div>
-        {/* Corevalues ends here */}
 
-        {/* Awards area starts here */}
+        {/* Awards Section */}
         <div
           id="awards"
           className="awards-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
@@ -470,9 +465,8 @@ function About() {
             </div>
           </div>
         </div>
-        {/* Awards areas ends here */}
 
-        {/* Certificates area starts here */}
+        {/* Certificates Section */}
         <div
           id="certificates"
           className="certificates-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
@@ -511,7 +505,6 @@ function About() {
             </div>
           </div>
         </div>
-        {/* Certificates area ends here */}
       </div>
     </>
   );
