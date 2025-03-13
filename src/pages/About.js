@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import { GoRocket } from "react-icons/go";
 import { GoGoal } from "react-icons/go";
@@ -34,6 +35,19 @@ import BreadCrumbImg from "../assets/img/slider/slide-1.jpg";
 
 function About() {
   AOS.init();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const productName = location.hash.replace("#", "");
+      const targetElement = document.getElementById(productName);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+  }, [location]);
 
   // Slider animation here
   const settings = {
@@ -117,7 +131,7 @@ function About() {
       <div id="about" className=" overflow-hidden">
         {/* About Us Section*/}
         <div
-          id="about-us"
+          id="AboutUs"
           className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div>
@@ -176,7 +190,7 @@ function About() {
         </div>
 
         {/* Vision Section */}
-        <div id="vision" className="vision-area parallax text-white">
+        <div id="Vision" className="vision-area parallax text-white">
           <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12 relative grid grid-cols-1 md:grid-cols-2 gap-6">
             <div data-aos="flip-left" data-aos-duration="3000">
               <div className="icon-item__img">
@@ -215,7 +229,7 @@ function About() {
 
         {/* Facility Section */}
         <div
-          id="facilities"
+          id="Facilities"
           className="facility-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div className="section-title">
@@ -282,7 +296,7 @@ function About() {
 
         {/* Corevalues Section */}
         <div
-          id="coreValues"
+          id="CoreValues"
           className="coreValues-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div className="section-title">
@@ -320,7 +334,7 @@ function About() {
 
         {/* Awards Section */}
         <div
-          id="awards"
+          id="Awards"
           className="awards-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div>
@@ -424,7 +438,7 @@ function About() {
 
         {/* Certificates Section */}
         <div
-          id="certificates"
+          id="Certificates"
           className="certificates-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold pb-5 text-center">

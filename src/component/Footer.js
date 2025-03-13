@@ -7,21 +7,10 @@ import ProactiiLogo from "../assets/img/proactii-logo.png";
 import { Heart } from "lucide-react";
 
 function Footer() {
-  // For handeling the nav click to content section
-  // const scrollToAnchor = (path, anchorId, navigateTo) => {
-  //   navigateTo(`${path}#${anchorId}`);
-  //   setTimeout(() => {
-  //     const anchor = document.getElementById(anchorId);
-  //     if (anchor) {
-  //       anchor.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }, 0);
-  // };
-
   return (
     <div>
       {/* Footer Section Here*/}
-      <footer className="footer-area bg-[#2e2822] ">
+      <footer className="footer-area  bg-gradient-to-br from-[#1A1F2B] via-[#232B2B] to-[#2A2B1F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14">
           <div className=" grid grid-cols-1 md:grid-cols-3">
             <div className=" text-center md:text-left">
@@ -246,7 +235,7 @@ function Footer() {
       </footer>
 
       {/* Copyright Section Here*/}
-      <div className="footer-bottom bg-[#332e28] py-4 text-white">
+      <div className="footer-bottom bg-gradient-to-br from-[#1A1F2B] via-[#232B2B] to-[#2A2B1F] py-4 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-center">
             Sidhhartha Corporation Pvt. Ltd. © Copyright All Right Reserved 2025

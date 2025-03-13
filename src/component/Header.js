@@ -87,7 +87,11 @@ function Header() {
                   </li>
 
                   <div className="group">
-                    <li className={`pr-4 about-header ${isSticky ? "py-6" : "py-9"}`}>
+                    <li
+                      className={`pr-4 about-header ${
+                        isSticky ? "py-6" : "py-9"
+                      }`}
+                    >
                       <NavLink
                         to="#"
                         className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
@@ -101,34 +105,38 @@ function Header() {
 
                       <ul className="sub-menu about-header-menu shadow-2xl">
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/about">About Us</NavLink>
+                          <NavLink to="/about#AboutUs">About Us</NavLink>
                         </li>
 
                         <li className=" pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/about">Vision & Mission</NavLink>
+                          <NavLink to="/about#Vision">Vision & Mission</NavLink>
                         </li>
 
                         <li className=" pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/about">Our Facilities</NavLink>
+                          <NavLink to="/about#Facilities">Our Facilities</NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/about">Core Values</NavLink>
+                          <NavLink to="/about#CoreValues">Core Values</NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/about">Our Awards</NavLink>
+                          <NavLink to="/about#Awards">Our Awards</NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/about">Our Certificates</NavLink>
+                          <NavLink to="/about#Certificates">Our Certificates</NavLink>
                         </li>
                       </ul>
                     </li>
                   </div>
 
                   <div className="group">
-                    <li className={`pr-4 product-header ${isSticky ? "py-6" : "py-9"}`}>
+                    <li
+                      className={`pr-4 product-header ${
+                        isSticky ? "py-6" : "py-9"
+                      }`}
+                    >
                       <NavLink
                         to="#"
                         className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
@@ -142,47 +150,63 @@ function Header() {
 
                       <ul className="sub-menu product-header-menu shadow-2xl">
                         <li className=" pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Red Chillies</NavLink>
+                          <NavLink to="/products#RedChillies">
+                            Red Chillies
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Groundnuts</NavLink>
+                          <NavLink to={`/products#Groundnut`}>
+                            Groundnuts
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Sesame seeds</NavLink>
+                          <NavLink to="/products#SesameSeeds">
+                            Sesame seeds
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Cumin seeds</NavLink>
+                          <NavLink to="/products#CuminSeeds">
+                            Cumin seeds
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Coriander seeds</NavLink>
+                          <NavLink to="/products#CorianderSeeds">
+                            Coriander seeds
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Chickpeas</NavLink>
+                          <NavLink to="/products#Chickpeas">Chickpeas</NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Fennel seeds</NavLink>
+                          <NavLink to="/products#FennelSeeds">
+                            Fennel seeds
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Fenugreek seeds</NavLink>
+                          <NavLink to="/products#FenugreekSeeds">
+                            Fenugreek seeds
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Basil seeds</NavLink>
+                          <NavLink to="/products#BasilSeeds">
+                            Basil seeds
+                          </NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Raisin</NavLink>
+                          <NavLink to="/products#Raisin">Raisin</NavLink>
                         </li>
 
                         <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
-                          <NavLink to="/products">Turmeric</NavLink>
+                          <NavLink to="/products#Turmeric">Turmeric</NavLink>
                         </li>
                       </ul>
                     </li>
