@@ -15,8 +15,6 @@ function Header() {
   const [productSubmenuOpen, setProductSubmenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // const navigate = useNavigate();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 50);
@@ -27,14 +25,6 @@ function Header() {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setMenuOpen(false);
       }
-
-      // Close the popup if clicked outside in Search Btn
-      // if (
-      //   searchPopupRef.current &&
-      //   !searchPopupRef.current.contains(event.target)
-      // ) {
-      //   setIsSearchOpen(false);
-      // }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -65,28 +55,33 @@ function Header() {
     <div>
       {/* Header Section Here */}
       <header
-        className={` bg-[#d5e4f1] lg:bg-white/85 z-[60] top-0 w-full shadow-lg transition-transform duration-300 ${
+        className={` bg-[#fffde5] md:bg-white/85 z-[60] top-0 w-full shadow-lg transition-transform duration-300 ${
           isSticky ? "fixed w-full top-0" : "relative"
         }`}
       >
-        <nav className=" relative flex items-center justify-between w-full px-6 md:px-8 lg:px-10">
+        <nav className="relative flex items-center justify-between w-full px-6 md:px-12 lg:px-16">
           <div className="relative">
-            <div className="">
-              <NavLink className="" to="/">
-                <img src={Logo} alt="Logo-img" className=" w-32 h-24 p-2" />
-              </NavLink>
-            </div>
+            <NavLink className="" to="/">
+              <img
+                src={Logo}
+                alt="Logo-img"
+                className={`p-2 transition-all duration-300 ${
+                  isSticky ? "w-28 h-20 " : "w-32 h-24"
+                }`}
+              />
+              {/* <img src={Logo} alt="Logo-img" className=" w-32 h-24 p-2" /> */}
+            </NavLink>
           </div>
 
-          <div className=" flex items-center flex-row">
+          <div className=" flex items-center flex-row lg:pr-20">
             {/* Desktop Menu */}
             <div className=" hidden md:block">
               <div className="inline-block align-top">
-                <ul className="text-left flex text-[#1e7dd8] text-base font-medium">
+                <ul className="text-left flex text-yellow-600 text-base font-medium">
                   <li className="pr-4">
                     <NavLink
                       to="/"
-                      className="border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      className="border-b-2 border-transparent hover:border-yellow-600 transition-all duration-300"
                     >
                       Home
                     </NavLink>
@@ -96,7 +91,7 @@ function Header() {
                     <li className="pr-4 about-header">
                       <NavLink
                         to="#"
-                        className="border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                        className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
                       >
                         About
                         <FontAwesomeIcon
@@ -105,28 +100,28 @@ function Header() {
                         />
                       </NavLink>
 
-                      <ul className="sub-menu about-header-menu">
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                      <ul className="sub-menu about-header-menu shadow-2xl">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/about">About Us</NavLink>
                         </li>
 
-                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className=" pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/about">Vision & Mission</NavLink>
                         </li>
 
-                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className=" pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/about">Our Facilities</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/about">Core Values</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/about">Our Awards</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/about">Our Certificates</NavLink>
                         </li>
                       </ul>
@@ -137,7 +132,7 @@ function Header() {
                     <li className="pr-4 product-header">
                       <NavLink
                         to="#"
-                        className="border-b-2 border-transparent group-hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                        className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
                       >
                         Products
                         <FontAwesomeIcon
@@ -146,48 +141,48 @@ function Header() {
                         />
                       </NavLink>
 
-                      <ul className="sub-menu product-header-menu">
-                        <li className=" pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                      <ul className="sub-menu product-header-menu shadow-2xl">
+                        <li className=" pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Red Chillies</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Groundnuts</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Sesame seeds</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Cumin seeds</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Coriander seeds</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Chickpeas</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Fennel seeds</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Fenugreek seeds</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Basil seeds</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Raisin</NavLink>
                         </li>
 
-                        <li className="pl-3 pr-3 py-2 hover:bg-blue-200 transition-colors duration-300 block">
+                        <li className="pl-3 pr-3 py-2 hover:bg-[#fffcd8] transition-colors duration-300 block">
                           <NavLink to="/products">Turmeric</NavLink>
                         </li>
                       </ul>
@@ -197,7 +192,7 @@ function Header() {
                   <li className="pr-4">
                     <NavLink
                       to="/career"
-                      className="border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      className="border-b-2 border-transparent hover:border-yellow-600 transition-all duration-300"
                     >
                       Career
                     </NavLink>
@@ -206,7 +201,7 @@ function Header() {
                   <li className="">
                     <NavLink
                       to="/contact"
-                      className="border-b-2 border-transparent hover:border-[#1e7dd8] transition-all duration-300 pb-1"
+                      className="border-b-2 border-transparent hover:border-yellow-600 transition-all duration-300"
                     >
                       Contact Us
                     </NavLink>

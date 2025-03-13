@@ -6,6 +6,8 @@ import BreadCrumbImg from "../assets/img/contact.jpg";
 
 import { Send, Phone, MapPin, Mail } from "lucide-react";
 
+import { FadeDown, FadeLeft } from "../component/Animation";
+
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -57,73 +59,83 @@ function Contact() {
           id="contact"
           className="contact-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
-          <h6 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5 text-center">
-            Contact Us
-          </h6>
+          <FadeDown>
+            <h6 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5 text-center">
+              Contact Us
+            </h6>
+          </FadeDown>
 
-          <div className=" grid grid-cols-2 gap-6 text-black">
-            <div className="contact-info">
-              <h2 className="text-[26px] md:text-3xl lg:text-[32px] font-semibold text-gray-700 mb-3">
-                Get in Touch
-              </h2>
+          <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="contact-info order-2 md:order-1">
+              <FadeLeft>
+                <h2 className="text-[26px] md:text-3xl lg:text-[32px] font-semibold text-gray-700 mb-3">
+                  Get in Touch
+                </h2>
 
-              <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-3">
-                Contact Us for premium-quality spices, groundnuts and other
-                agricultural products.
-              </p>
+                <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-3">
+                  Contact Us for premium-quality spices, groundnuts and other
+                  agricultural products.
+                </p>
+              </FadeLeft>
 
               <div className="contact-content">
                 <h3 className="text-[#ff6700] mb-5 font-medium text-2xl">
                   Visit Us
                 </h3>
 
-                <div className="contacts-inner flex items-center mb-2">
-                  <div>
-                    <MapPin className="w-12 h-12 fill-yellow-600 stroke-white bg-[#b88124] p-3 rounded-full" />
-                  </div>
+                <FadeLeft>
+                  <div className="contacts-inner flex items-center mb-2">
+                    <div>
+                      <MapPin className="w-12 h-12 fill-yellow-600 stroke-white bg-[#b88124] p-3 rounded-full" />
+                    </div>
 
-                  <div className="pl-4">
-                    <h6 className="text-lg text-gray-700 font-semibold">
-                      Address
-                    </h6>
-                    <p className=" text-base text-gray-600">
-                      2nd Floor, 205-206, J.K. Chamber, Sector-17, Vashi, Navi
-                      Mumbai, Thane, Maharashtra, 400703
-                    </p>
+                    <div className="pl-4">
+                      <h6 className="text-lg text-gray-700 font-semibold">
+                        Address
+                      </h6>
+                      <p className=" text-base text-gray-600">
+                        2nd Floor, 205-206, J.K. Chamber, Sector-17, Vashi, Navi
+                        Mumbai, Thane, Maharashtra, 400703
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </FadeLeft>
 
-                <div className="contact-inner  flex items-center mb-2">
-                  <div>
-                    <Mail className="w-12 h-12 fill-yellow-600 stroke-white bg-[#b88124] p-3 rounded-full" />
-                  </div>
+                <FadeLeft delay={0.1}>
+                  <div className="contact-inner  flex items-center mb-2">
+                    <div>
+                      <Mail className="w-12 h-12 fill-yellow-600 stroke-white bg-[#b88124] p-3 rounded-full" />
+                    </div>
 
-                  <div className="pl-4">
-                    <h6 className="text-lg text-gray-700 font-semibold">
-                      Email Address
-                    </h6>
-                    <p className=" text-base text-gray-600">
-                      marketing@sidhhartha.com
-                    </p>
+                    <div className="pl-4">
+                      <h6 className="text-lg text-gray-700 font-semibold">
+                        Email Address
+                      </h6>
+                      <p className=" text-base text-gray-600">
+                        marketing@sidhhartha.com
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </FadeLeft>
 
-                <div className="contact-inner  flex items-center">
-                  <div>
-                    <Phone className="w-12 h-12 fill-yellow-600 stroke-white bg-[#b88124] p-3 rounded-full" />
-                  </div>
+                <FadeLeft delay={0.2}>
+                  <div className="contact-inner  flex items-center">
+                    <div>
+                      <Phone className="w-12 h-12 fill-yellow-600 stroke-white bg-[#b88124] p-3 rounded-full" />
+                    </div>
 
-                  <div className="pl-4">
-                    <h6 className="text-lg text-gray-700 font-semibold">
-                      Call Now
-                    </h6>
-                    <p className=" text-base text-gray-600">+91 9944620471</p>
+                    <div className="pl-4">
+                      <h6 className="text-lg text-gray-700 font-semibold">
+                        Call Now
+                      </h6>
+                      <p className=" text-base text-gray-600">+91 9944620471</p>
+                    </div>
                   </div>
-                </div>
+                </FadeLeft>
               </div>
             </div>
 
-            <div className="contact-form">
+            <div className="contact-form order-1">
               <form onSubmit={handleSubmit}>
                 <div>
                   <div className="grid grid-cols-2 gap-3">

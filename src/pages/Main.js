@@ -14,6 +14,8 @@ import "slick-carousel/slick/slick-theme.css";
 import aboutImg3 from "../assets/img/IMG_6762.JPG";
 import agricultural from "../assets/img/agriculture.png";
 
+import { FadeUp, FadeDown, FadeRight } from "../component/Animation";
+
 function Main() {
   AOS.init();
 
@@ -83,7 +85,7 @@ function Main() {
   }
 
   return (
-    <div id="home" className="">
+    <div id="home">
       {/* Slider code starts here */}
       <Slider className="homepage-slides" {...settings}>
         {/* Slide 1 */}
@@ -100,7 +102,7 @@ function Main() {
               >
                 <div className="section-title">
                   <h2
-                    className={`text-white text-[1.75rem] sm:text-2xl md:text-4xl font-semibold leading-[1.25] mb-5 ${
+                    className={`text-white text-2xl md:text-3xl lg:text-4xl font-semibold mb-5 ${
                       activeSlide === 0
                         ? "animate__animated animate__fadeInUp animate__delay-0s"
                         : ""
@@ -151,7 +153,7 @@ function Main() {
               >
                 <div className="section-title">
                   <h2
-                    className={`text-white text-[1.75rem] sm:text-2xl md:text-4xl font-semibold leading-[1.25] mb-5 ${
+                    className={`text-white text-2xl md:text-3xl lg:text-4xl font-semibold mb-5 ${
                       activeSlide === 1
                         ? "animate__animated animate__fadeInUp animate__delay-0s"
                         : ""
@@ -161,7 +163,7 @@ function Main() {
                   </h2>
 
                   <p
-                    className={`text-xs md:text-base lg:text-lg text-white mb-5 md:w-2/3 ${
+                    className={`text-sm md:text-base lg:text-lg text-white mb-5 md:w-2/3 ${
                       activeSlide === 1
                         ? "animate__animated animate__fadeInUp animate__delay-0s"
                         : ""
@@ -204,7 +206,7 @@ function Main() {
               >
                 <div className="section-title">
                   <h2
-                    className={`text-white text-[1.75rem] sm:text-2xl md:text-4xl font-semibold leading-[1.25] mb-5 ${
+                    className={`text-white text-2xl md:text-3xl lg:text-4xl font-semibold mb-5 ${
                       activeSlide === 2
                         ? "animate__animated animate__fadeInUp animate__delay-0s"
                         : ""
@@ -214,7 +216,7 @@ function Main() {
                   </h2>
 
                   <p
-                    className={`text-xs md:text-base lg:text-lg text-white mb-5 md:w-2/3 ${
+                    className={`text-sm md:text-base lg:text-lg text-white mb-5 md:w-2/3 ${
                       activeSlide === 2
                         ? "animate__animated animate__fadeInUp animate__delay-0s"
                         : ""
@@ -249,21 +251,23 @@ function Main() {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <div className="info-inner md:col-span-2 rounded-lg  bg-white shadow-md">
               <div className="grid grid-cols-1 md:grid-cols-3">
-                <div className="info-bg h-[320px] bg-center bg-cover relative w-full rounded-lg rounded-r-none"></div>
+                <div className="info-bg h-[230px] md:h-[300px] bg-center bg-cover relative w-full rounded-lg md:rounded-r-none"></div>
 
                 <div className=" col-span-2">
                   <div className="info-content border-l-[10px] border-[#fcb65a] h-full p-7 lg:p-8">
-                    <h5 className="text-2xl lg:text-3xl mb-5 text-gray-800 font-medium">
+                    <h5 className=" text-xl md:text-2xl lg:text-3xl md:mb-5 text-gray-800 font-medium">
                       Leading Exporter of Agricultural Products like Red
                       Chillies and Groundnuts in india
                     </h5>
 
-                    <NavLink
-                      to="/products"
-                      className=" text-[#b88124] text-xl font-medium tracking-[1px] my-4"
-                    >
-                      View all products
-                    </NavLink>
+                    <FadeUp>
+                      <NavLink
+                        to="/products"
+                        className=" text-[#b88124] text-lg md:text-xl font-medium tracking-[1px] mt-3 md:my-4"
+                      >
+                        View all products
+                      </NavLink>
+                    </FadeUp>
                   </div>
                 </div>
               </div>
@@ -273,7 +277,9 @@ function Main() {
               <div className="info-img">
                 <img src={agricultural} alt="" className=" w-16 h-16" />
               </div>
-              <p className=" text-[#333e38] font-semibold text-6xl my-7">30+</p>
+              <p className=" text-[#333e38] font-semibold text-5xl md:text-6xl my-4 md:my-7">
+                30+
+              </p>
               <p className=" text-[#333e38] text-base font-semibold tracking-[4px] text-center uppercase">
                 Years <br />
                 Experience
@@ -286,11 +292,11 @@ function Main() {
 
       {/* About us starts here */}
       <div className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12">
-        <div className="section-title">
-          <h2 className=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5">
+        <FadeDown>
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[20px] md:text-2xl lg:text-[30px] font-semibold pb-5">
             Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
           </h2>
-        </div>
+        </FadeDown>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="main-img">
@@ -301,8 +307,8 @@ function Main() {
             />
           </div>
 
-          <div>
-            <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-5">
+          <FadeRight>
+            <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-3 md:mb-5">
               With over 3 decades of relentless commitment to excellence,
               <b> Sidhhartha Corporation Pvt. Ltd.</b> where we pride ourselves
               on delivering an exceptional array of premium quality agricultural
@@ -320,10 +326,10 @@ function Main() {
               for various agriculture-based items like Red Chillies, Groundnuts,
               Sesame Seeds, Basil Seeds, Rice, etc.
             </p>
-          </div>
+          </FadeRight>
         </div>
 
-        <div className="text mt-5">
+        <FadeUp className="text mt-3 md:mt-5">
           <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
             By harnessing the latest technology and employing an experienced
             team of professionals, we ensure the purity, safety, and efficacy of
@@ -332,7 +338,7 @@ function Main() {
             the highest quality ingredients, ensuring timely delivery, or
             offering unparalleled customer service.
           </p>
-        </div>
+        </FadeUp>
       </div>
       {/* About us ends here */}
     </div>

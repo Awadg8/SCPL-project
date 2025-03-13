@@ -9,7 +9,11 @@ import "aos/dist/aos.css";
 import "animate.css"; // For animations
 import Slider from "react-slick"; //For slider
 
-import { FadeUp } from "../component/Animation";
+// slider animation
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import { FadeUp, FadeDown, FadeRight } from "../component/Animation";
 
 import aboutImg3 from "../assets/img/IMG_7219.jpg";
 import facilityImg from "../assets/img/slider/slider-1.jpg";
@@ -31,6 +35,7 @@ import BreadCrumbImg from "../assets/img/slider/slide-1.jpg";
 function About() {
   AOS.init();
 
+  // Slider animation here
   const settings = {
     // dots: true,
     dots: true,
@@ -121,10 +126,12 @@ function About() {
                 About Us
               </h6>
 
-              <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5">
-                Leading Exporter of Agricultural Products like Red Chillies and
-                Groundnuts in India
-              </h2>
+              <FadeDown>
+                <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[20px] md:text-2xl lg:text-[30px] font-semibold mb-5">
+                  Leading Exporter of Agricultural Products like Red Chillies
+                  and Groundnuts in India
+                </h2>
+              </FadeDown>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -136,7 +143,7 @@ function About() {
                 />
               </div>
 
-              <div className="mb-30">
+              <FadeRight className="mb-30">
                 <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium mb-3">
                   Established in 1990, <b>Sidhhartha Corporation Pvt. Ltd. </b>
                   is a pioneering Indian exporter of premium-quality spices,
@@ -163,7 +170,7 @@ function About() {
                 <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-bold">
                   Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
                 </p>
-              </div>
+              </FadeRight>
             </div>
           </div>
         </div>
@@ -216,10 +223,12 @@ function About() {
               Our Facilities
             </h6>
 
-            <h2 className=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5">
-              All these processes take place at our facilities in Guntur,
-              Khammam, Chennai and Pipavav.
-            </h2>
+            <FadeDown>
+              <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[20px] md:text-2xl lg:text-[30px] font-semibold mb-5">
+                All these processes take place at our facilities in Guntur,
+                Khammam, Chennai and Pipavav.
+              </h2>
+            </FadeDown>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -481,13 +490,15 @@ function About() {
                 <img src={CertificateImg} alt="" className=" w-28 h-28" />
               </div>
 
-              <div className="heading text-center text-base text-gray-800 font-medium">
-                <h3 className="text-base">
-                  State Export Excellence Award <br /> <b>2006-07</b>
-                </h3>
+              <FadeUp>
+                <div className="heading text-center text-base text-gray-800 font-medium">
+                  <h3 className="text-base">
+                    State Export Excellence Award <br /> <b>2006-07</b>
+                  </h3>
 
-                <p className="text-gray-600 text-sm">Govt. Of Karnataka</p>
-              </div>
+                  <p className="text-gray-600 text-sm">Govt. Of Karnataka</p>
+                </div>
+              </FadeUp>
             </div>
 
             <div>
@@ -495,13 +506,15 @@ function About() {
                 <img src={CertificateImg} alt="" className=" w-28 h-28" />
               </div>
 
-              <div className="heading text-center text-base text-gray-800 font-medium">
-                <h3 className=" text-base">
-                  Topmost Exporter Of Chillies <br /> <b>2018-19</b>
-                </h3>
+              <FadeUp>
+                <div className="heading text-center text-base text-gray-800 font-medium">
+                  <h3 className=" text-base">
+                    Topmost Exporter Of Chillies <br /> <b>2018-19</b>
+                  </h3>
 
-                <p className="text-sm text-gray-600">Spices Board India</p>
-              </div>
+                  <p className="text-sm text-gray-600">Spices Board India</p>
+                </div>
+              </FadeUp>
             </div>
           </div>
         </div>
