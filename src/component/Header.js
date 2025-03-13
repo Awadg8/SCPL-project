@@ -93,7 +93,7 @@ function Header() {
                       }`}
                     >
                       <NavLink
-                        to="#"
+                        to="/about"
                         className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
                       >
                         About
@@ -138,7 +138,7 @@ function Header() {
                       }`}
                     >
                       <NavLink
-                        to="#"
+                        to="/products"
                         className="border-b-2 border-transparent group-hover:border-yellow-600 transition-all duration-300"
                       >
                         Products
