@@ -59,7 +59,6 @@ function About() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: false,
         },
       },
     ],
@@ -106,7 +105,7 @@ function About() {
   return (
     <>
       <BreadCrumb
-        title="Get in Touch"
+        title="About Us"
         currentPage="About Us"
         backgroundImage={BreadCrumbImg}
       />
@@ -115,7 +114,7 @@ function About() {
         {/* About us starts here */}
         <div
           id="about-us"
-          className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14"
+          className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div>
             <div className="section-title">
@@ -173,7 +172,7 @@ function About() {
 
         {/* Vision area starts here */}
         <div id="vision" className="vision-area parallax text-white">
-          <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14 relative grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12 relative grid grid-cols-1 md:grid-cols-2 gap-6">
             <div data-aos="flip-left" data-aos-duration="3000">
               <div className="icon-item__img">
                 <GoGoal className=" w-[100px] h-[100px] fill-[#b88124]" />
@@ -213,7 +212,7 @@ function About() {
         {/* Facility area starts here */}
         <div
           id="facilities"
-          className="facility-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14"
+          className="facility-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div className="section-title">
             <h6 className="text-[#ff6700] mb-5 font-medium text-2xl">
@@ -228,12 +227,16 @@ function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <article className="card">
-                <div className="temporary_text">
-                  <img className="img-fluid" src={facilityImg} alt="" />
+              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl md:my-4">
+                <div>
+                  <img
+                    className=" w-full h-[350px] bg-cover"
+                    src={facilityImg}
+                    alt=""
+                  />
                 </div>
 
-                <div className="card_content">
+                {/* <div className="card_content">
                   <h2 className="card_title">Guntur</h2>
 
                   <p className="card_description">
@@ -244,17 +247,21 @@ function About() {
                     processing, drying, quality control, packing, storage, and
                     stuffing for all of our products.
                   </p>
-                </div>
+                </div> */}
               </article>
             </div>
 
             <div>
-              <article className="card">
-                <div className="temporary_text">
-                  <img className="img-fluid" src={facilityImg2} alt="" />
+              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl md:my-4">
+                <div>
+                  <img
+                    className=" w-full h-[350px] bg-cover"
+                    src={facilityImg2}
+                    alt=""
+                  />
                 </div>
 
-                <div className="card_content">
+                {/* <div className="card_content">
                   <h2 className="card_title">Khammam</h2>
 
                   <p className="card_description">
@@ -264,19 +271,23 @@ function About() {
                     warehouse of 31,000 sq.ft. and an open facility of 95,000
                     sq.ft to carry out all the processes.
                   </p>
-                </div>
+                </div> */}
               </article>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <article className="card">
-                <div className="temporary_text">
-                  <img className="img-fluid" src={facilityImg3} alt="" />
+              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl mt-6 md:my-4">
+                <div>
+                  <img
+                    className=" w-full h-[350px] bg-cover"
+                    src={facilityImg3}
+                    alt=""
+                  />
                 </div>
 
-                <div className="card_content">
+                {/* <div className="card_content">
                   <span className="card_title">Chennai</span>
 
                   <p className="card_description">
@@ -286,17 +297,21 @@ function About() {
                     processing, quality control, packing, storage, and stuffing
                     for all of our products.
                   </p>
-                </div>
+                </div> */}
               </article>
             </div>
 
             <div>
-              <article className="card">
-                <div className="temporary_text">
-                  <img className="img-fluid" src={facilityImg4} alt="" />
+              <article className="h-[350px] relative overflow-hidden rounded-xl shadow-2xl md:my-4">
+                <div>
+                  <img
+                    className=" w-full h-[350px] bg-cover"
+                    src={facilityImg4}
+                    alt=""
+                  />
                 </div>
 
-                <div className="card_content">
+                {/* <div className="card_content">
                   <span className="card_title">Pipavav</span>
 
                   <p className="card_description">
@@ -306,7 +321,7 @@ function About() {
                     open facility to carry out all the processes like drying,
                     Bagging, Loading, etc.
                   </p>
-                </div>
+                </div> */}
               </article>
             </div>
           </div>
@@ -316,7 +331,7 @@ function About() {
         {/* Corevalues starts here */}
         <div
           id="coreValues"
-          className="coreValues-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14"
+          className="coreValues-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div className="section-title">
             <h6 className="text-[#ff6700] mb-5 font-medium text-2xl">
@@ -324,10 +339,10 @@ function About() {
             </h6>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {coreValues.map((point, index) => (
               <FadeUp key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 py-6 md:p-6 h-full border">
+                <div className="bg-white rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 py-3 md:p-6 h-full border">
                   <div className="flex items-start flex-col">
                     <div className=" flex bg-orange-100 p-4 rounded-full">
                       <img
@@ -337,14 +352,11 @@ function About() {
                       />
                     </div>
 
-                    <h5 className=" text-xl font-bold text-gray-700 my-5">
+                    <h5 className=" text-xl font-bold text-gray-700 my-3 md:my-5">
                       {point.heading}
                     </h5>
 
-                    <p
-                      className="text-gray-600 leading-relaxed
-                    "
-                    >
+                    <p className="text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
                       {point.text}
                     </p>
                   </div>
@@ -358,7 +370,7 @@ function About() {
         {/* Awards area starts here */}
         <div
           id="awards"
-          className="awards-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14"
+          className="awards-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
           <div>
             <h2 className=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold pb-5 text-center">
@@ -438,19 +450,19 @@ function About() {
               </div>
             </Slider>
 
-            <div className="full-form mt-10 text-gray-700">
+            <div className="full-form mt-10 text-[15px] leading-[1.4rem] lg:text-base text-gray-600 font-medium">
               <p>
-                * 1. IOPEPC - Indian Oilseeds and Produce Export Promotion
-                Council.
+                *&nbsp; 1. <b>IOPEPC</b> - Indian Oilseeds and Produce Export
+                Promotion Council.
               </p>
 
               <p>
-                &nbsp;&nbsp; 2. APEDA - Agricultural and Processed Food Products
-                Export Development Authority.
+                &nbsp;&nbsp; 2. <b>APEDA</b> - Agricultural and Processed Food
+                Products Export Development Authority.
               </p>
 
               <p>
-                &nbsp;&nbsp; 3. FIEO - Federation of Indian Export
+                &nbsp;&nbsp; 3. <b>FIEO</b> - Federation of Indian Export
                 Organizations.
               </p>
 
@@ -463,38 +475,38 @@ function About() {
         {/* Certificates area starts here */}
         <div
           id="certificates"
-          className="certificates-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14 text-black"
+          className="certificates-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
         >
-          <h2 className="text-3xl font-bold mb-5 text-gray-800 text-center">
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold pb-5 text-center">
             Certificates
           </h2>
 
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <div className=" flex justify-center">
                 <img src={CertificateImg} alt="" className=" w-28 h-28" />
               </div>
 
-              <div className="heading text-center">
+              <div className="heading text-center text-base text-gray-800 font-medium">
                 <h3 className="text-base">
                   State Export Excellence Award <br /> <b>2006-07</b>
                 </h3>
 
-                <p className=" text-sm">Govt. Of Karnataka</p>
+                <p className="text-gray-600 text-sm">Govt. Of Karnataka</p>
               </div>
             </div>
 
             <div>
-              <div className=" flex justify-center">
+              <div className="flex justify-center ">
                 <img src={CertificateImg} alt="" className=" w-28 h-28" />
               </div>
 
-              <div className="heading text-center">
+              <div className="heading text-center text-base text-gray-800 font-medium">
                 <h3 className=" text-base">
                   Topmost Exporter Of Chillies <br /> <b>2018-19</b>
                 </h3>
 
-                <p className="text-sm">Spices Board India</p>
+                <p className="text-sm text-gray-600">Spices Board India</p>
               </div>
             </div>
           </div>

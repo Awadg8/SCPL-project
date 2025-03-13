@@ -19,7 +19,7 @@ function Footer() {
     <div>
       <footer className="footer-area bg-[#2e2822] ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14">
-          <div className=" grid grid-cols-3">
+          <div className=" grid grid-cols-1 md:grid-cols-3">
             <div>
               <a href="/" className="logo">
                 <img src={Logo} alt="logo" className=" w-[191px] h-[131px]" />

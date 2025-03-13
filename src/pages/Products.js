@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,6 +14,9 @@ import productFenugreek from "../assets/img/product/fenugreek.webp";
 import productBasil from "../assets/img/product/BasilSeeds.webp";
 import productRaisin from "../assets/img/product/raisin.webp";
 import productTurmeric from "../assets/img/product/Turmeric.jpg";
+
+import BreadCrumb from "../component/BreadCrumb";
+import BreadCrumbImg from "../assets/img/product.jpg";
 
 function Products() {
   AOS.init();
@@ -100,60 +102,49 @@ function Products() {
   ];
 
   return (
-    <div id="product" className="product">
-      {/* Breadcrumb starts here */}
-      <div className="breadcroumb-area breadcroumb-area-product bread-bg">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="breadcroumb-title text-center">
-                <h1>Products</h1>
-                <h5>
-                  <NavLink to="/" className="">
-                    Home
-                  </NavLink>{" "}
-                  / Products
-                </h5>
+    <>
+      <BreadCrumb
+        title="Products"
+        currentPage="Products"
+        backgroundImage={BreadCrumbImg}
+      />
+
+      <div id="product" className="product">
+        {/* Product Section */}
+        <div
+          id="products"
+          className="product-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12"
+        >
+          <h6 className=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold pb-5 text-center ">
+            Our Products
+          </h6>
+
+          {productData.map((point, index) => (
+            <div
+              key={index}
+              className={`grid grid-cols-2 gap-6 py-4 items-center`}
+            >
+              <div className={`${index % 2 !== 0 ? "order-last" : ""}`}>
+                <img
+                  src={point.img}
+                  alt={point.heading}
+                  className=" w-full h-[350px] rounded-lg"
+                />
+              </div>
+
+              <div>
+                <h1 className=" text-[#b88124] text-5xl mb-5">
+                  {point.heading}
+                </h1>
+                <p>{point.para1}</p>
+                {point.para2 && <p>{point.para2}</p>}
+                {point.para3 && <p>{point.para3}</p>}
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-      {/* Breadcrumb ends here */}
-
-      {/* Product area starts here */}
-      <div
-        id="products"
-        className="product-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14"
-      >
-        <h6 className=" text-3xl font-bold mb-5 text-gray-800 text-center ">
-          Our Products
-        </h6>
-
-        {productData.map((point, index) => (
-          <div
-            key={index}
-            className={`grid grid-cols-2 gap-6 py-4 items-center`}
-          >
-            <div className={`${index % 2 !== 0 ? "order-last" : ""}`}>
-              <img
-                src={point.img}
-                alt={point.heading}
-                className=" w-full h-[350px] rounded-lg"
-              />
-            </div>
-
-            <div>
-              <h1 className=" text-[#b88124] text-5xl mb-5">{point.heading}</h1>
-              <p>{point.para1}</p>
-              {point.para2 && <p>{point.para2}</p>}
-              {point.para3 && <p>{point.para3}</p>}
-            </div>
-          </div>
-        ))}
-      </div>
-      {/* Product area ends here */}
-    </div>
+    </>
   );
 }
 

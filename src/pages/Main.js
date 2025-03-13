@@ -285,7 +285,7 @@ function Main() {
       {/* Info area ends here */}
 
       {/* About us starts here */}
-      <div className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 lg:py-14">
+      <div className="about-area max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 lg:py-12">
         <div className="section-title">
           <h2 className=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-800 text-[26px] md:text-3xl lg:text-[32px] font-semibold mb-5">
             Sidhhartha Corporation Pvt. Ltd - Taking India to The World!
